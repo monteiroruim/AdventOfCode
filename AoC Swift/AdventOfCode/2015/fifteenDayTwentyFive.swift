@@ -8,7 +8,7 @@
 
 import Foundation
 
-class day25 {
+class fifteenDayTwentyFive {
     
     var maxMatrixSize: Int
     var previousValue: Int
@@ -22,7 +22,7 @@ class day25 {
         self.positionX = 2978
         self.positonY = 3083
         self.date = Date()
-        self.returnMatrixValue()
+        self.partOne()
     }
     
     init (maxMatrixSize: Int) {
@@ -31,10 +31,10 @@ class day25 {
         self.positionX = 2978
         self.positonY = 3083
         self.date = Date()
-        self.returnMatrixValue()
+        self.partOne()
     }
     
-    func returnMatrixValue() {
+    func partOne() {
     
         outerLoop: for diagonal in 1...maxMatrixSize {
             var row = diagonal
@@ -46,7 +46,7 @@ class day25 {
                 }
                 row-=1
                 column+=1
-                previousValue = (previousValue * 252533) % 33554393
+                previousValue = (previousValue * 252533) % 33554393 // expected 2650453
             }
         }
     }
