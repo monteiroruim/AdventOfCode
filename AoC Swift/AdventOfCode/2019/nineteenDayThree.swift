@@ -12,6 +12,9 @@ let wireTwistOne = "R1009,U286,L371,U985,R372,D887,R311,U609,L180,D986,L901,D592
 
 let wireTwistTwo = "L1010,D347,R554,U465,L30,D816,R891,D778,R184,U253,R694,U346,L743,D298,L956,U703,R528,D16,L404,D818,L640,D50,R534,D99,L555,U974,L779,D774,L690,U19,R973,D588,L631,U35,L410,D332,L74,D858,R213,U889,R977,U803,L624,U627,R601,U499,L213,U692,L234,U401,L894,U733,R414,D431,R712,D284,R965,D624,R848,D17,R86,D285,R502,U516,L709,U343,L558,D615,L150,D590,R113,D887,R469,U584,L434,D9,L994,D704,R740,D541,R95,U219,L634,D184,R714,U81,L426,D437,R927,U232,L361,D756,R685,D206,R116,U844,R807,U811,L382,D338,L660,D997,L551,D294,L895,D208,R37,D90,R44,D131,R77,U883,R449,D24,R441,U659,R826,U259,R98,D548,R118,D470,L259,U170,R518,U731,L287,U191,L45,D672,L691,U117,R156,U308,R230,U112,L938,U644,R911,U110,L1,U162,R943,U433,R98,U610,R428,U231,R35,U590,R554,U612,R191,U261,R793,U3,R507,U632,L571,D535,R30,U281,L613,U199,R168,D948,R486,U913,R534,U131,R974,U399,L525,D174,L595,D567,L394,D969,L779,U346,L969,D943,L845,D727,R128,U241,L616,U117,R791,D419,L913,D949,R628,D738,R776,D294,L175,D708,R568,U484,R589,D930,L416,D114,L823,U16,R260,U450,R534,D94,R695,D982,R186,D422,L789,D886,L761,U30,R182,U930,L483,U863,L318,U343,L380,U650,R542,U92,L339,D390,L55,U343,L641,D556,R616,U936,R118,D997,R936,D979,L594,U326,L975,U52,L89,U679,L91,D969,R878,D798,R193,D858,R95,D989,R389,U960,R106,D564,R48,D151,L121,D241,L369,D476,L24,D229,R601,U849,L632,U894,R27,U200,L698,U788,L330,D73,R405,D526,L154,U942,L504,D579,L815,D643,L81,U172,R879,U28,R715,U367,L366,D964,R16,D415,L501,D176,R641,U523,L979,D556,R831"
 
+let testInputA = "R8,U5,L5,D3"
+let testInputB = "U7,R6,D4,L4"
+
 let testInputOneA = "R75,D30,R83,U83,L12,D49,R71,U7,L72"
 let testInputOneB = "U62,R66,U55,R34,D71,R55,D58,R83" //distance 159
 let testInputTwoA = "R98,U47,R26,D63,R33,U87,L62,D20,R33,U53,R51"
@@ -38,14 +41,14 @@ class nineteenDayThree {
         
     var date: Date
     var minDistance: Int
-    var q: Point
-    var wirePath = [Point]()
+    
+    var firstWirePath = [Point]()
+    var secondWirePath = [Point]()
     var duplictedWirePath = [Point]()
     var wireTwisteOneString = [String]()
     var wireTwisteTwoString = [String]()
     
     init() {
-        q = Point(x: 3, y: 3)
         minDistance = Int.max
         date = Date()
         
@@ -53,25 +56,26 @@ class nineteenDayThree {
     }
     
     func wireStringsCreation() {
-//        wireTwisteOneString = wireTwistOne.components(separatedBy: ",")
-//        wireTwisteTwoString = wireTwistTwo.components(separatedBy: ",")
-        wireTwisteOneString = testInputOneA.components(separatedBy: ",")
-        wireTwisteTwoString = testInputOneB.components(separatedBy: ",")
+        wireTwisteOneString = wireTwistOne.components(separatedBy: ",")
+        wireTwisteTwoString = wireTwistTwo.components(separatedBy: ",")
+//        wireTwisteOneString = testInputOneA.components(separatedBy: ",")
+//        wireTwisteTwoString = testInputOneB.components(separatedBy: ",")
 //        wireTwisteOneString = testInputTwoA.components(separatedBy: ",")
 //        wireTwisteTwoString = testInputTwoB.components(separatedBy: ",")
-        
+//        wireTwisteOneString = testInputA.components(separatedBy: ",")
+//        wireTwisteTwoString = testInputB.components(separatedBy: ",")
     }
     
     func manhattanDistance(endPoint: Point) -> Int {
         (abs(endPoint.x)) + (abs(endPoint.y))
     }
     
-    func pathToCoordinates(path: [String]) {
+    func createFirstPath(path: [String]) {
         print("Calculating the first wire path...")
         
         var currentX = 0
         var currentY = 0
-        wirePath.append(Point(x: currentX, y: currentY))
+        firstWirePath.append(Point(x: currentX, y: currentY))
         
         for value in path {
             if let steps = Int.parseIntFromString(from: value) {
@@ -81,36 +85,37 @@ class nineteenDayThree {
                 if (direction == "R") {
                     for _ in 1...steps {
                         currentX += 1
-                        wirePath.append(Point(x: currentX, y: currentY))
+                        firstWirePath.append(Point(x: currentX, y: currentY))
                     }
                 } else if (direction == "L") {
                     for _ in 1...steps {
                         currentX -= 1
-                        wirePath.append(Point(x: currentX, y: currentY))
+                        firstWirePath.append(Point(x: currentX, y: currentY))
                     }
                 } else if (direction == "U") {
                     for _ in 1...steps {
                         currentY += 1
-                        wirePath.append(Point(x: currentX, y: currentY))
+                        firstWirePath.append(Point(x: currentX, y: currentY))
                     }
                 } else { // D
                     for _ in 1...steps {
                         currentY -= 1
-                        wirePath.append(Point(x: currentX, y: currentY))
+                        firstWirePath.append(Point(x: currentX, y: currentY))
                     }
                 }
-                //print(direction, " \(steps)")
+                
             }
         }
         
     }
     
-    func checCurrentPath(values: [String]) {
+    func checkIntersectionSecondPath(values: [String]) {
         print("Calculating the duplicates in the second wire path...")
         
         var currentX = 0
         var currentY = 0
         var point = Point(x: currentX, y: currentY)
+        secondWirePath.append(Point(x: currentX, y: currentY))
         
         for value in values {
             if let steps = Int.parseIntFromString(from: value) {
@@ -121,7 +126,8 @@ class nineteenDayThree {
                     for _ in 1...steps {
                         currentX += 1
                         point = Point(x: currentX, y: currentY)
-                        if wirePath.contains(where: { $0.x == point.x && $0.y == point.y }) {
+                        secondWirePath.append(point)
+                        if firstWirePath.contains(where: { $0.x == point.x && $0.y == point.y }) {
                             duplictedWirePath.append(Point(x: currentX, y: currentY))
                            }
                     }
@@ -129,7 +135,8 @@ class nineteenDayThree {
                     for _ in 1...steps {
                         currentX -= 1
                         point = Point(x: currentX, y: currentY)
-                        if wirePath.contains(where: { $0.x == point.x && $0.y == point.y }) {
+                        secondWirePath.append(point)
+                        if firstWirePath.contains(where: { $0.x == point.x && $0.y == point.y }) {
                             duplictedWirePath.append(Point(x: currentX, y: currentY))
                            }
                     }
@@ -137,7 +144,8 @@ class nineteenDayThree {
                     for _ in 1...steps {
                         currentY += 1
                         point = Point(x: currentX, y: currentY)
-                        if wirePath.contains(where: { $0.x == point.x && $0.y == point.y }) {
+                        secondWirePath.append(point)
+                        if firstWirePath.contains(where: { $0.x == point.x && $0.y == point.y }) {
                             duplictedWirePath.append(Point(x: currentX, y: currentY))
                            }
                     }
@@ -145,7 +153,8 @@ class nineteenDayThree {
                     for _ in 1...steps {
                         currentY -= 1
                         point = Point(x: currentX, y: currentY)
-                        if wirePath.contains(where: { $0.x == point.x && $0.y == point.y }) {
+                        secondWirePath.append(point)
+                        if firstWirePath.contains(where: { $0.x == point.x && $0.y == point.y }) {
                             duplictedWirePath.append(Point(x: currentX, y: currentY))
                            }
                     }
@@ -169,12 +178,44 @@ class nineteenDayThree {
         //print("Duplicated WirePath Total: \(wirePath.count)")
     }
     
+    func findMinimumSteps() {
+        print("Calculating the minimum steps...")
+        var stepsCount = Int.max
+        var stepsTemp = 0
+        
+        for i in 0..<duplictedWirePath.count {
+            //print("finding: \(duplictedWirePath[i].x),\(duplictedWirePath[i].y)")
+            
+            for first in 0..<firstWirePath.count {
+                if (firstWirePath[first].x == duplictedWirePath[i].x) && ((firstWirePath[first].y == duplictedWirePath[i].y)) {
+                    //print("#1 found: \(duplictedWirePath[i].x),\(duplictedWirePath[i].y) at \(first)")
+                    stepsTemp += first
+                }
+            }
+
+            for second in 0..<secondWirePath.count {
+                if (secondWirePath[second].x == duplictedWirePath[i].x) && ((secondWirePath[second].y == duplictedWirePath[i].y)) {
+                    //print("#2 found: \(duplictedWirePath[i].x),\(duplictedWirePath[i].y) at \(second)")
+                    stepsTemp += second
+                }
+            }
+            
+            if  stepsTemp < stepsCount {
+                stepsCount = stepsTemp
+            }
+            stepsTemp = 0
+        }
+        
+        print("Minimum Steps \(stepsCount)")
+    }
+    
     func partOne(){
         wireStringsCreation()
         
-        pathToCoordinates(path: wireTwisteOneString)
-        checCurrentPath(values: wireTwisteTwoString)
+        createFirstPath(path: wireTwisteOneString)
+        checkIntersectionSecondPath(values: wireTwisteTwoString)
         findMinimumDistance()
+        findMinimumSteps()
     }
     
 }
