@@ -1,4 +1,4 @@
-from AoC2019 import d1, d2
+from AoC2019 import d1, d2, d3
 
 # replace print with logging features and create requirements.txt
 
@@ -44,3 +44,20 @@ a22.override_position_val(1, 38)
 a22.override_position_val(2, 92)
 a22.restore_gravity()
 print("answer (100* noun + verb)", 100*38 + 92)
+
+
+print("exercice 3.1")
+
+input_1 = "R75,D30,R83,U83,L12,D49,R71,U7,L72"
+input_2 = "U62,R66,U55,R34,D71,R55,D58,R83"
+
+list_1 = input_1.split(",")
+list_2 = input_2.split(",")
+
+e31 = d3.d3(list_1, list_2)
+e31.get_shortest_distance()
+print("the solution for the exercice is {}".format(e31.shortest_distance))
+
+print("exercice 3.2")
+
+print("the solution for the exercice is {}".format(e31.shortest_distance))
