@@ -17,6 +17,7 @@ class d3:
         self.coordinates_1 = []
         self.coordinates_2 = []
         self.intersect_list = []
+        self.less_step = 999999999999
 
 
     def parseInstruction(self, instruction_def):
@@ -28,31 +29,47 @@ class d3:
 
     def expandCoordinates(self, input_array):
         coordinate_list = []
-        y_increment_factor = 1
-        x_increment_factor = 1
         last_inc_y = 0  
         last_inc_x = 0
         for c in input_array:
             coordinate_list_tmp = []
             uprl, dist = self.parseInstruction(c)
-            last_inc_x, last_inc_y = coordinate_list[-1] if len(coordinate_list) > 0 else (0,0)
+            if len(coordinate_list) > 0: 
+                last_inc_x, last_inc_y = coordinate_list[-1] 
+            else:
+                coordinate_list.append((0,0))
+                
+            i = 1
             if uprl == "R":
-                for i in range(last_inc_x, last_inc_x+dist+1):
-                    coordinate_list_tmp.append((i,last_inc_y))               
+                idx=last_inc_x
+                while (i<=dist):
+                    idx+=1
+                    i+=1
+                    coordinate_list_tmp.append((idx,last_inc_y))               
             elif uprl == "L":
-                for i in range(last_inc_x, last_inc_x-dist-1, -1):
-                    coordinate_list_tmp.append((i,last_inc_y))
+                idx=last_inc_x
+                while (i<=dist):
+                    idx-=1
+                    i+=1
+                    coordinate_list_tmp.append((idx,last_inc_y))  
             elif uprl == "U":
-                for i in range(last_inc_y, last_inc_y+dist+1):
-                    coordinate_list_tmp.append((last_inc_x,i))
+                idx=last_inc_y
+                while (i<=dist):
+                    idx+=1
+                    i+=1
+                    coordinate_list_tmp.append((last_inc_x,idx))  
             elif uprl == "D":
-                for i in range(last_inc_y, last_inc_y-dist-1, -1):
-                    coordinate_list_tmp.append((last_inc_x,i))
+                idx=last_inc_y
+                while (i<=dist):
+                    idx-=1
+                    i+=1
+                    coordinate_list_tmp.append((last_inc_x,idx))  
             else:
                 print("unknown instruction")
                 exit() 
 
             coordinate_list=coordinate_list + coordinate_list_tmp
+            
       
         return coordinate_list
 
@@ -77,7 +94,17 @@ class d3:
     def get_shortest_distance(self):
         self.path2coordinates()
         self.intersect_list = self.intersect_arrays()
-        
-        for i, val in enumerate(self.intersect_list):
+        if (0,0) in self.intersect_list:
+            self.intersect_list.remove((0,0))
+
+        for val in self.intersect_list:
             self.shortest_distance = self.manhattan_distance(val)
-        
+
+
+    def calc_less_steps(self):
+        for ic in self.intersect_list:
+            val1 = self.coordinates_1.index(ic)
+            val2 = self.coordinates_2.index(ic)
+            tot_val = abs(val1) + abs(val2)
+            if tot_val < self.less_step:
+                self.less_step = tot_val
