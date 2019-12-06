@@ -10,6 +10,7 @@
 		083CB2942395193400801C5D /* nineteenDayOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CB2932395193400801C5D /* nineteenDayOne.swift */; };
 		08AFDB8F238FF6C500E72EAF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AFDB8E238FF6C500E72EAF /* main.swift */; };
 		08AFDB962390059A00E72EAF /* fifteenDayTwentyFive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AFDB952390059A00E72EAF /* fifteenDayTwentyFive.swift */; };
+		08BF442F239940A200674DEA /* nineteenDayFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF442E239940A200674DEA /* nineteenDayFour.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,7 @@
 		08AFDB8E238FF6C500E72EAF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		08AFDB952390059A00E72EAF /* fifteenDayTwentyFive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fifteenDayTwentyFive.swift; sourceTree = "<group>"; };
 		08AFDB9823900E5E00E72EAF /* fifteenDayTwentyFive.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = fifteenDayTwentyFive.md; sourceTree = "<group>"; };
+		08BF442E239940A200674DEA /* nineteenDayFour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nineteenDayFour.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			children = (
 				083CB2962395195A00801C5D /* nineteenDayOne.md */,
 				083CB2932395193400801C5D /* nineteenDayOne.swift */,
+				08BF442E239940A200674DEA /* nineteenDayFour.swift */,
 			);
 			path = 2019;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08BF442F239940A200674DEA /* nineteenDayFour.swift in Sources */,
 				08AFDB8F238FF6C500E72EAF /* main.swift in Sources */,
 				08AFDB962390059A00E72EAF /* fifteenDayTwentyFive.swift in Sources */,
 				083CB2942395193400801C5D /* nineteenDayOne.swift in Sources */,

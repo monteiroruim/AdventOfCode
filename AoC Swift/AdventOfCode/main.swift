@@ -11,6 +11,7 @@ import Foundation
 
 
 //var d = fifteenDayTwentyFive()
-var c = fifteenDayTwentyFive(maxMatrixSize: 10000)
+//var c = fifteenDayTwentyFive(maxMatrixSize: 10000)
+//var d = nineteenDayOne()
 
-var d = nineteenDayOne()
+var nineFour = nineteenDayFour()
