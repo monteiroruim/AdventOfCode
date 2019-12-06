@@ -16,89 +16,87 @@ extension BinaryInteger {
 
 class nineteenDayFour {
     
-    // Range 165432-707912
-    var numberOfPasswords: Int
     let maxRange: Int
     var minRange: Int
     
     init () {
-        numberOfPasswords = 0
         maxRange = 707912
         minRange = 165432
         partOne()
     }
-
+    
     func checkDoubleAndIncrementalDigits(digits: [Int]) -> Bool {
         var isDouble: Bool
-        var isIncremental: Bool
         var counter = 0
         isDouble = false
-        isIncremental = true
-        var counterRepeated = 0
         
         for i in 0..<6 {
             for k in i+1..<6 {
-                
-                print("    at \(digits[i]) with \(digits[k])")
                 if (digits[i] == digits[k]) {
-                    print("yes at \(i) \(digits[i]) with \(digits[k])")
                     counter+=1
+                    isDouble = true
                 }
-                if (!(digits[i] <= digits[k])) {
-                    isIncremental=false
-                }
-                
-//                if ((digits[i] == digits[k])) {
-//                    counterRepeated+=1
-////                    print(counterRepeated)
-//                    print("\(digits[i]) \(digits[k]) \(counterRepeated)")
-//                }
-//                print(counterRepeated)
-//                counterRepeated=0
             }
         }
         
-        if counter > 0 {
-            isDouble = true
-        }
-        
-        print(counter)
-//        print(counterRepeated)
-//        if (counterRepeated == 3 || counterRepeated == 10) {
-//            isDouble = false
-//        }
-        
-        return (isDouble && isIncremental)
+        return (isDouble)
     }
     
-    func checkNumberOfPasswords() -> Int{
+    func checkNumberOfPasswords() -> (Int, Int){
         print("Checking the number of passwords...")
+        var adjacentPasswords = 0
+        var numberOfPasswords = 0
         
         for i in minRange...maxRange {
             let numbers = i.digits
             
-            if (checkDoubleAndIncrementalDigits(digits: numbers)) {
-                numberOfPasswords+=1
+            if numbers.sorted() == numbers {
+                
+                if (checkDoubleAndIncrementalDigits(digits: numbers)) {
+                    numberOfPasswords+=1
+                }
+                
+                if (hasAtLeast2Pair(numbers)) {
+                    adjacentPasswords += 1
+                }
             }
-            
         }
-        return numberOfPasswords
+        return (numberOfPasswords, adjacentPasswords)
     }
     
+    func hasAtLeast2Pair(_ array: [Int]) -> Bool {
+        var count = 0
+        var dict: [Int:Int] = [:]
+        var dupe = false
+        for pair in zip(array, array.dropFirst()) {
+            if pair.0 == pair.1 {
+                count += 1
+                dict[pair.0] = count
+            }
+            else {
+                if count == 1 {
+                    dupe = true
+                    break
+                }
+                count = 0
+            }
+        }
+        if count == 1 {
+            dupe = true
+        }
+        return dupe
+    }
+    
+    
     func partOne() {
-//        print("Number of passwords: \(checkNumberOfPasswords())")
+        let date = Date()
+        let numberOfPasswords = checkNumberOfPasswords()
+        print("# passwords: \(numberOfPasswords.0), # adjacents \(numberOfPasswords.1) in", Date().timeIntervalSince(date)) // 1315 high 854 low
         // p1 validators
-//        print("\(checkDoubleAndIncrementalDigits(digits: [1,1,1,1,1,1]))")
-//        print("\(checkDoubleAndIncrementalDigits(digits: [2,2,3,4,5,0]))")
-//        print("\(checkDoubleAndIncrementalDigits(digits: [1,2,3,7,8,9]))")
+        //        print("\(checkDoubleAndIncrementalDigits(digits: [1,1,1,1,1,1]))")
+        //        print("\(checkDoubleAndIncrementalDigits(digits: [2,2,3,4,5,0]))")
+        //        print("\(checkDoubleAndIncrementalDigits(digits: [1,2,3,7,8,9]))")
         
-        // p2 validators
-//        print("\(checkDoubleAndIncrementalDigits(digits: [1,1,2,2,3,3]))")
-//        print("\(checkDoubleAndIncrementalDigits(digits: [1,2,3,4,4,4]))")
-        print("\(checkDoubleAndIncrementalDigits(digits: [1,2,3,4,6,6]))")
-//        print("\(checkDoubleAndIncrementalDigits(digits: [1,4,4,4,4,4]))")
-//        print("\(checkDoubleAndIncrementalDigits(digits: [4,4,4,5,6,7]))")
-
     }
     
 }
