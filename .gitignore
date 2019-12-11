@@ -29,5 +29,8 @@ DerivedData/
 .Trashes
 ehthumbs.db
 Thumbs.db
-*.log
+
 *.pyc
+__pychache__/
+.vscode/
+*.log

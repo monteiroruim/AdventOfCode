@@ -8,10 +8,10 @@
 
 import Foundation
 
-
-
-//var d = fifteenDayTwentyFive()
+//var d = fifteenDtyTwentyFive()
 //var c = fifteenDayTwentyFive(maxMatrixSize: 10000)
 //var d = nineteenDayOne()
-
+//var nineThree = nineteenDayThree()
+// var nineTwo = nineteenDayTwo()
 var nineFour = nineteenDayFour()
+
