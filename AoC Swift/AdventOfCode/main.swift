@@ -16,5 +16,5 @@ import Foundation
 //var nineOne = nineteenDayOne()
 //var nineTwo = nineteenDayTwo()
 //var nineThree = nineteenDayThree()
-var nineFour = nineteenDayFour()
-
+//var nineFour = nineteenDayFour()
+var nineFive = nineteenDayFive()
