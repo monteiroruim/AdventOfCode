@@ -8,10 +8,13 @@
 
 import Foundation
 
+// 2015
 //var d = fifteenDtyTwentyFive()
 //var c = fifteenDayTwentyFive(maxMatrixSize: 10000)
-//var d = nineteenDayOne()
-//var nineThree = nineteenDayThree()
-// var nineTwo = nineteenDayTwo()
+
+// 2019
+var nineOne = nineteenDayOne()
+var nineThree = nineteenDayThree()
+var nineTwo = nineteenDayTwo()
 var nineFour = nineteenDayFour()
 
