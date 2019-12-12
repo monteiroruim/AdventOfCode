@@ -30,13 +30,6 @@ struct Point {
     }
 }
 
-// Extract the Int value from the string L1010,D347,...
-extension Int {
-    static func parseIntFromString(from string: String) -> Int? {
-        return Int(string.components(separatedBy: CharacterSet.decimalDigits.inverted).joined())
-    }
-}
-
 class nineteenDayThree {
         
     var date: Date
