@@ -109,3 +109,7 @@ d61 = d6.d6(d61_input_file)
 d61.process_coordinates()
 print(len(d61.info_table.keys()))
 print("the answer is {}".format(d61.result_61))
+
+print("exercice 6.2")
+d61.get_answer62()
+print("the answer is {}".format(d61.result_62))

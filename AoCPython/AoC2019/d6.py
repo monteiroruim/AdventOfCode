@@ -10,6 +10,7 @@ class d6:
         self.info_table = {}
         self.parse_input(file_path_input)
         self.result_61 = 0
+        self.result_62 = 0
 
     def parse_input(self, path_file_name):
         with open(path_file_name, 'r') as f:
@@ -43,16 +44,14 @@ class d6:
                     prt = self.parent_array[self.child_array.index(prt)]
                     path_to_root.append(prt)
                 else:
-                    print("root found", prt)
                     prt = ""
-            print(" - - - ", coordinate, path_to_root)
+            
             self.info_table[coordinate] = path_to_root
             self.fill_parents(coordinate)
-            #print(self.info_table)
+            
     
     def process_coordinates(self):
         for i in range(1, len(self.child_array)):
-            # print(self.child_array[i], self.parent_array[i])
             self.calc_path(self.child_array[i], self.parent_array[i])
         
         self.get_answer61()
@@ -61,5 +60,16 @@ class d6:
     def get_answer61(self):
         for key in self.info_table.keys():
             self.result_61 += len(self.info_table[key])
+
+
+    def get_answer62(self):
+        for k,v in enumerate(self.info_table['SAN']):
+            if v in self.info_table['YOU']:
+                first_match = v
+                self.result_62 = k + self.info_table['YOU'].index(v)
+                break
+        print(self.info_table['SAN'])
+        print(self.info_table['YOU'])
+        print(first_match)
 
         
