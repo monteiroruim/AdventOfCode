@@ -16,5 +16,12 @@ import Foundation
 //var nineOne = nineteenDayOne()
 //var nineTwo = nineteenDayTwo()
 //var nineThree = nineteenDayThree()
-var nineFour = nineteenDayFour()
+//var nineFour = nineteenDayFour()
 
+//var nineSix = nineteenDaySix()
+
+let startTime = CFAbsoluteTimeGetCurrent()
+
+var expenseCalculator = ExpenseReport()
+
+print("\nExec time: ", NSString(format: "%.5f", CFAbsoluteTimeGetCurrent() - startTime), "s")
