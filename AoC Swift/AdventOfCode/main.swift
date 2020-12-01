@@ -25,3 +25,4 @@ let startTime = CFAbsoluteTimeGetCurrent()
 var expenseCalculator = ExpenseReport()
 
 print("\nExec time: ", NSString(format: "%.5f", CFAbsoluteTimeGetCurrent() - startTime), "s")
+
