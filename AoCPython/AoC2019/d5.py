@@ -3,29 +3,43 @@ class d5:
     class to resolve exercices from day 5
     extending d2 intcode program
     '''
-    def __init__(self, i_intcode, digit_input):
+    def __init__(self, intcode, input_number, calc=False):
         '''
         constructor for d5 exercice
         :param intcode is array of integers with the coding sequences
         '''
         self.oper_pointer = 0
         self.output = 0
-        self.input_digit = digit_input
+        self.input_digit = input_number
         self.flag_composite_opcode = 0
+        self.intcode = intcode
+        self.n_items = len(self.intcode)
+        if calc:
+            self.upgrade_test()
 
-        if len(i_intcode) == 0:
+
+    def set_intcode(self, new_intcode):
+        if len(new_intcode) == 0:
             print("No intcode program provided output: ", self.output)
             exit()
         else:
-            self.intcode = i_intcode
+            self.intcode = new_intcode
+            self.n_items = len(self.intcode)
 
-        self.n_items = len(self.intcode)
+
+    def set_input(self, input_digit):
+        self.input_digit = input_digit
+
+
+    def get_output(self):
+        return self.output
+
 
     def get_pos_value(self, op_val, op_mode):
         #print("definitions", op_val, op_mode, ": ", pos_val, self.intcode[op_val])
         return self.intcode[op_val] if int(op_mode) == 0 else op_val
 
-    def apply_operation(self, working_data, input_digit, op_code, instr_modes):
+    def apply_operation(self, working_data, op_code, instr_modes):
         # print("Operation", op_code)
         # print("working array", working_data)
         # print("instructions mode ", instr_modes)
@@ -34,9 +48,9 @@ class d5:
         elif op_code == 2:
             self.intcode[working_data[3]] = self.get_pos_value(working_data[1], instr_modes[0]) * self.get_pos_value( working_data[2], instr_modes[1])
         elif op_code == 3:
-            self.intcode[working_data[1]] = input_digit
+            self.intcode[working_data[1]] = self.input_digit
         elif op_code == 4:
-            print("self.output", self.output)
+            # print("self.output", self.output)
             self.output = self.get_pos_value( working_data[1], instr_modes[0])
         elif op_code == 5:
             self.oper_pointer = self.get_pos_value( working_data[2], instr_modes[1]) if self.get_pos_value( working_data[1], instr_modes[0]) != 0 else 0
@@ -61,7 +75,7 @@ class d5:
                 return 99, def_instr_modes
             else:
                 my_modes_inv = str_instruction[::-1]
-                return int(my_modes_inv[0:1]), \
+                return int(str_instruction[-2:]), \
                     my_modes_inv[2:].ljust(3,'0')
         else:
             return 0,def_instr_modes
@@ -69,7 +83,7 @@ class d5:
     
     def get_array_from_intcode(self, start_point):
         opcode, instr_modes = self.get_opcode(self.intcode[start_point])
-        #print("returned work data", opcode, instr_modes)
+        # print("returned work data", opcode, instr_modes)
         if opcode == 99:
             return [], self.n_items, opcode, instr_modes
         elif opcode == 1:
@@ -101,16 +115,11 @@ class d5:
       
             if len(instr_array) == 0:
                 print("exiting ", i, "because of value ", self.intcode[i], " output: ", self.output)
-                exit()
+                break
             
-            self.apply_operation(instr_array, self.input_digit, op_code, instr_modes)
+            self.apply_operation(instr_array, op_code, instr_modes)
             if self.oper_pointer > 0:
                 i = self.oper_pointer
                 self.oper_pointer = 0
             else:
                 i = i + increment
-
-            
-
-
-
