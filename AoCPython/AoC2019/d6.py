@@ -2,7 +2,7 @@ class d6:
     def __init__(self, file_path_input):
         '''
         constructor for d6 class exercice
-        :param intcode is array of integers with the coding sequences
+        :param file_path_input is array of tupples with the relations between the coordinates
         '''
         self.parent_array = []
         self.child_array = []
