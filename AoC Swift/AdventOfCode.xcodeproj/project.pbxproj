@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		083CB2942395193400801C5D /* nineteenDayOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CB2932395193400801C5D /* nineteenDayOne.swift */; };
+		08719AC725764ADC00804E6D /* ExerciseInputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08719AC625764ADC00804E6D /* ExerciseInputs.swift */; };
+		08959FC223A3A42700A091C8 /* nineteenDayTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08959FC123A3A42700A091C8 /* nineteenDayTwo.swift */; };
+		08959FC523A3A42C00A091C8 /* nineteenDayThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08959FC423A3A42C00A091C8 /* nineteenDayThree.swift */; };
+		08959FC823A3A43900A091C8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08959FC723A3A43800A091C8 /* Utils.swift */; };
+		08A7CBDC25762DD9009C502C /* ExpenseReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A7CBDB25762DD9009C502C /* ExpenseReport.swift */; };
 		08AFDB8F238FF6C500E72EAF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AFDB8E238FF6C500E72EAF /* main.swift */; };
 		08AFDB962390059A00E72EAF /* fifteenDayTwentyFive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AFDB952390059A00E72EAF /* fifteenDayTwentyFive.swift */; };
 		08BF442F239940A200674DEA /* nineteenDayFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF442E239940A200674DEA /* nineteenDayFour.swift */; };
@@ -28,6 +33,14 @@
 /* Begin PBXFileReference section */
 		083CB2932395193400801C5D /* nineteenDayOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nineteenDayOne.swift; sourceTree = "<group>"; };
 		083CB2962395195A00801C5D /* nineteenDayOne.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = nineteenDayOne.md; sourceTree = "<group>"; };
+		08719AC625764ADC00804E6D /* ExerciseInputs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseInputs.swift; sourceTree = "<group>"; };
+		08959FC023A3A42700A091C8 /* nineteenDayTwo.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = nineteenDayTwo.md; sourceTree = "<group>"; };
+		08959FC123A3A42700A091C8 /* nineteenDayTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nineteenDayTwo.swift; sourceTree = "<group>"; };
+		08959FC323A3A42C00A091C8 /* nineteenDayThree.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = nineteenDayThree.md; sourceTree = "<group>"; };
+		08959FC423A3A42C00A091C8 /* nineteenDayThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nineteenDayThree.swift; sourceTree = "<group>"; };
+		08959FC623A3A43500A091C8 /* nineteenDayFour.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = nineteenDayFour.md; sourceTree = "<group>"; };
+		08959FC723A3A43800A091C8 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		08A7CBDB25762DD9009C502C /* ExpenseReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseReport.swift; sourceTree = "<group>"; };
 		08AFDB8B238FF6C500E72EAF /* AdventOfCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AdventOfCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		08AFDB8E238FF6C500E72EAF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		08AFDB952390059A00E72EAF /* fifteenDayTwentyFive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fifteenDayTwentyFive.swift; sourceTree = "<group>"; };
@@ -51,9 +64,31 @@
 			children = (
 				083CB2962395195A00801C5D /* nineteenDayOne.md */,
 				083CB2932395193400801C5D /* nineteenDayOne.swift */,
+				08959FC023A3A42700A091C8 /* nineteenDayTwo.md */,
+				08959FC123A3A42700A091C8 /* nineteenDayTwo.swift */,
+				08959FC323A3A42C00A091C8 /* nineteenDayThree.md */,
+				08959FC423A3A42C00A091C8 /* nineteenDayThree.swift */,
+				08959FC623A3A43500A091C8 /* nineteenDayFour.md */,
 				08BF442E239940A200674DEA /* nineteenDayFour.swift */,
 			);
 			path = 2019;
+			sourceTree = "<group>";
+		};
+		08A7CBD525762BC3009C502C /* 2020 */ = {
+			isa = PBXGroup;
+			children = (
+				08A7CBDB25762DD9009C502C /* ExpenseReport.swift */,
+			);
+			path = 2020;
+			sourceTree = "<group>";
+		};
+		08A7CBE0257631A7009C502C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				08959FC723A3A43800A091C8 /* Utils.swift */,
+				08719AC625764ADC00804E6D /* ExerciseInputs.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		08AFDB82238FF6C500E72EAF = {
@@ -76,8 +111,10 @@
 			isa = PBXGroup;
 			children = (
 				08AFDB8E238FF6C500E72EAF /* main.swift */,
-				083CB2952395193B00801C5D /* 2019 */,
+				08A7CBE0257631A7009C502C /* Utils */,
 				08AFDB97239005B800E72EAF /* 2015 */,
+				083CB2952395193B00801C5D /* 2019 */,
+				08A7CBD525762BC3009C502C /* 2020 */,
 			);
 			path = AdventOfCode;
 			sourceTree = "<group>";
@@ -117,8 +154,8 @@
 		08AFDB83238FF6C500E72EAF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1120;
-				LastUpgradeCheck = 1120;
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = "Pereira Orlando";
 				TargetAttributes = {
 					08AFDB8A238FF6C500E72EAF = {
@@ -150,7 +187,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				08BF442F239940A200674DEA /* nineteenDayFour.swift in Sources */,
+				08A7CBDC25762DD9009C502C /* ExpenseReport.swift in Sources */,
+				08959FC223A3A42700A091C8 /* nineteenDayTwo.swift in Sources */,
 				08AFDB8F238FF6C500E72EAF /* main.swift in Sources */,
+				08959FC823A3A43900A091C8 /* Utils.swift in Sources */,
+				08719AC725764ADC00804E6D /* ExerciseInputs.swift in Sources */,
+				08959FC523A3A42C00A091C8 /* nineteenDayThree.swift in Sources */,
 				08AFDB962390059A00E72EAF /* fifteenDayTwentyFive.swift in Sources */,
 				083CB2942395193400801C5D /* nineteenDayOne.swift in Sources */,
 			);
@@ -185,6 +227,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -194,7 +237,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -209,10 +252,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -245,6 +288,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -264,7 +308,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -277,6 +321,7 @@
 		08AFDB93238FF6C500E72EAF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -286,6 +331,7 @@
 		08AFDB94238FF6C500E72EAF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
