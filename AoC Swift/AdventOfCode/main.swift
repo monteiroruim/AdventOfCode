@@ -22,7 +22,11 @@ import Foundation
 
 let startTime = CFAbsoluteTimeGetCurrent()
 
-var expenseCalculator = ExpenseReport()
+// Day 01
+//var expenseCalculator = ExpenseReport()
+
+// Day 02
+var passwordPolocy = PasswordPolicy()
 
 print("\nExec time: ", NSString(format: "%.5f", CFAbsoluteTimeGetCurrent() - startTime), "s")
 
