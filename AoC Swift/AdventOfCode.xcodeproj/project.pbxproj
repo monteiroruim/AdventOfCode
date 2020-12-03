@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		083CB2942395193400801C5D /* nineteenDayOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CB2932395193400801C5D /* nineteenDayOne.swift */; };
 		08719AC725764ADC00804E6D /* ExerciseInputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08719AC625764ADC00804E6D /* ExerciseInputs.swift */; };
+		0879749025777E010016B1A3 /* PasswordPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0879748F25777E010016B1A3 /* PasswordPolicy.swift */; };
 		08959FC223A3A42700A091C8 /* nineteenDayTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08959FC123A3A42700A091C8 /* nineteenDayTwo.swift */; };
 		08959FC523A3A42C00A091C8 /* nineteenDayThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08959FC423A3A42C00A091C8 /* nineteenDayThree.swift */; };
 		08959FC823A3A43900A091C8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08959FC723A3A43800A091C8 /* Utils.swift */; };
@@ -34,6 +35,7 @@
 		083CB2932395193400801C5D /* nineteenDayOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nineteenDayOne.swift; sourceTree = "<group>"; };
 		083CB2962395195A00801C5D /* nineteenDayOne.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = nineteenDayOne.md; sourceTree = "<group>"; };
 		08719AC625764ADC00804E6D /* ExerciseInputs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseInputs.swift; sourceTree = "<group>"; };
+		0879748F25777E010016B1A3 /* PasswordPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordPolicy.swift; sourceTree = "<group>"; };
 		08959FC023A3A42700A091C8 /* nineteenDayTwo.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = nineteenDayTwo.md; sourceTree = "<group>"; };
 		08959FC123A3A42700A091C8 /* nineteenDayTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nineteenDayTwo.swift; sourceTree = "<group>"; };
 		08959FC323A3A42C00A091C8 /* nineteenDayThree.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = nineteenDayThree.md; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				08A7CBDB25762DD9009C502C /* ExpenseReport.swift */,
+				0879748F25777E010016B1A3 /* PasswordPolicy.swift */,
 			);
 			path = 2020;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				08A7CBDC25762DD9009C502C /* ExpenseReport.swift in Sources */,
 				08959FC223A3A42700A091C8 /* nineteenDayTwo.swift in Sources */,
 				08AFDB8F238FF6C500E72EAF /* main.swift in Sources */,
+				0879749025777E010016B1A3 /* PasswordPolicy.swift in Sources */,
 				08959FC823A3A43900A091C8 /* Utils.swift in Sources */,
 				08719AC725764ADC00804E6D /* ExerciseInputs.swift in Sources */,
 				08959FC523A3A42C00A091C8 /* nineteenDayThree.swift in Sources */,
