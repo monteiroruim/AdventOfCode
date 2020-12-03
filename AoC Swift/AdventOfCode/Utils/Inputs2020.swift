@@ -9,7 +9,7 @@
 import Foundation
 
 
-class ExerciseInputs {
+class Inputs2020 {
     
     static let day03TobogganTrajectory = """
     ........#....#..##..#...#.....#

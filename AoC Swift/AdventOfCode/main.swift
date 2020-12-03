@@ -8,9 +8,13 @@
 
 import Foundation
 
+let startTime = CFAbsoluteTimeGetCurrent()
+
 // 2015
 //var fiveTwentyFive = fifteenDayTwentyFive()
 //var fiveTwentyFiveB = fifteenDayTwentyFive(maxMatrixSize: 10000)
+//var dayOne = fiftteenDayOne()
+var dayTwo = fifteenDayTwo()
 
 // 2019
 //var nineOne = nineteenDayOne()
@@ -20,8 +24,8 @@ import Foundation
 
 //var nineSix = nineteenDaySix()
 
-let startTime = CFAbsoluteTimeGetCurrent()
 
+//2020
 // Day 01
 //var expenseCalculator = ExpenseReport()
 
@@ -29,7 +33,7 @@ let startTime = CFAbsoluteTimeGetCurrent()
 //var passwordPolocy = PasswordPolicy()
 
 //Day 03
-var toboggan = TobogganTrajectory()
+//var toboggan = TobogganTrajectory()
 
 print("\nExec time: ", NSString(format: "%.5f", CFAbsoluteTimeGetCurrent() - startTime), "s")
 
