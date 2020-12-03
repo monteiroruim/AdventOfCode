@@ -17,8 +17,11 @@ class fileHandler:
 
 
     def parse_2_int_array(self, path_file_name):
-        print(path_file_name)
         with open(path_file_name, 'r') as f:
             numbers = set([int(entry) for entry in f.readlines()])
             return numbers
     
+    def parse_line_2_list(self, path_file_name):
+        with open(path_file_name, 'r') as f:
+            result_set = [line.replace('\n', '').replace('\r', '') for line in f]
+        return result_set
