@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		082B95D52578CCFD0059C418 /* TobogganTrajectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B95D42578CCFD0059C418 /* TobogganTrajectory.swift */; };
 		083CB2942395193400801C5D /* nineteenDayOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CB2932395193400801C5D /* nineteenDayOne.swift */; };
 		08719AC725764ADC00804E6D /* ExerciseInputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08719AC625764ADC00804E6D /* ExerciseInputs.swift */; };
 		0879749025777E010016B1A3 /* PasswordPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0879748F25777E010016B1A3 /* PasswordPolicy.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		082B95D42578CCFD0059C418 /* TobogganTrajectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TobogganTrajectory.swift; sourceTree = "<group>"; };
 		083CB2932395193400801C5D /* nineteenDayOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nineteenDayOne.swift; sourceTree = "<group>"; };
 		083CB2962395195A00801C5D /* nineteenDayOne.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = nineteenDayOne.md; sourceTree = "<group>"; };
 		08719AC625764ADC00804E6D /* ExerciseInputs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseInputs.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				08A7CBDB25762DD9009C502C /* ExpenseReport.swift */,
 				0879748F25777E010016B1A3 /* PasswordPolicy.swift */,
+				082B95D42578CCFD0059C418 /* TobogganTrajectory.swift */,
 			);
 			path = 2020;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08BF442F239940A200674DEA /* nineteenDayFour.swift in Sources */,
+				082B95D52578CCFD0059C418 /* TobogganTrajectory.swift in Sources */,
 				08A7CBDC25762DD9009C502C /* ExpenseReport.swift in Sources */,
 				08959FC223A3A42700A091C8 /* nineteenDayTwo.swift in Sources */,
 				08AFDB8F238FF6C500E72EAF /* main.swift in Sources */,

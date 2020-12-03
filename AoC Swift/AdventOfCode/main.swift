@@ -26,7 +26,10 @@ let startTime = CFAbsoluteTimeGetCurrent()
 //var expenseCalculator = ExpenseReport()
 
 // Day 02
-var passwordPolocy = PasswordPolicy()
+//var passwordPolocy = PasswordPolicy()
+
+//Day 03
+var toboggan = TobogganTrajectory()
 
 print("\nExec time: ", NSString(format: "%.5f", CFAbsoluteTimeGetCurrent() - startTime), "s")
 
