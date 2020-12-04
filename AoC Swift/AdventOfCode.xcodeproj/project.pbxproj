@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		082B95D52578CCFD0059C418 /* TobogganTrajectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B95D42578CCFD0059C418 /* TobogganTrajectory.swift */; };
+		082B95DA25793AE30059C418 /* fiftteenDayOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B95D925793AE30059C418 /* fiftteenDayOne.swift */; };
+		082B95DD25793B040059C418 /* fiftteenDayTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B95DC25793B040059C418 /* fiftteenDayTwo.swift */; };
+		082B95E025793B3A0059C418 /* Inputs2015.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B95DF25793B3A0059C418 /* Inputs2015.swift */; };
 		083CB2942395193400801C5D /* nineteenDayOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CB2932395193400801C5D /* nineteenDayOne.swift */; };
-		08719AC725764ADC00804E6D /* ExerciseInputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08719AC625764ADC00804E6D /* ExerciseInputs.swift */; };
+		086A21C2257A1EF6009A9D6F /* PassportProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A21C1257A1EF6009A9D6F /* PassportProcessing.swift */; };
+		08719AC725764ADC00804E6D /* Inputs2020.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08719AC625764ADC00804E6D /* Inputs2020.swift */; };
 		0879749025777E010016B1A3 /* PasswordPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0879748F25777E010016B1A3 /* PasswordPolicy.swift */; };
 		08959FC223A3A42700A091C8 /* nineteenDayTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08959FC123A3A42700A091C8 /* nineteenDayTwo.swift */; };
 		08959FC523A3A42C00A091C8 /* nineteenDayThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08959FC423A3A42C00A091C8 /* nineteenDayThree.swift */; };
@@ -32,9 +37,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		082B95D42578CCFD0059C418 /* TobogganTrajectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TobogganTrajectory.swift; sourceTree = "<group>"; };
+		082B95D925793AE30059C418 /* fiftteenDayOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fiftteenDayOne.swift; sourceTree = "<group>"; };
+		082B95DC25793B040059C418 /* fiftteenDayTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fiftteenDayTwo.swift; sourceTree = "<group>"; };
+		082B95DF25793B3A0059C418 /* Inputs2015.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inputs2015.swift; sourceTree = "<group>"; };
 		083CB2932395193400801C5D /* nineteenDayOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nineteenDayOne.swift; sourceTree = "<group>"; };
 		083CB2962395195A00801C5D /* nineteenDayOne.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = nineteenDayOne.md; sourceTree = "<group>"; };
-		08719AC625764ADC00804E6D /* ExerciseInputs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseInputs.swift; sourceTree = "<group>"; };
+		086A21C1257A1EF6009A9D6F /* PassportProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportProcessing.swift; sourceTree = "<group>"; };
+		08719AC625764ADC00804E6D /* Inputs2020.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inputs2020.swift; sourceTree = "<group>"; };
 		0879748F25777E010016B1A3 /* PasswordPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordPolicy.swift; sourceTree = "<group>"; };
 		08959FC023A3A42700A091C8 /* nineteenDayTwo.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = nineteenDayTwo.md; sourceTree = "<group>"; };
 		08959FC123A3A42700A091C8 /* nineteenDayTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nineteenDayTwo.swift; sourceTree = "<group>"; };
@@ -81,6 +91,8 @@
 			children = (
 				08A7CBDB25762DD9009C502C /* ExpenseReport.swift */,
 				0879748F25777E010016B1A3 /* PasswordPolicy.swift */,
+				082B95D42578CCFD0059C418 /* TobogganTrajectory.swift */,
+				086A21C1257A1EF6009A9D6F /* PassportProcessing.swift */,
 			);
 			path = 2020;
 			sourceTree = "<group>";
@@ -89,7 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				08959FC723A3A43800A091C8 /* Utils.swift */,
-				08719AC625764ADC00804E6D /* ExerciseInputs.swift */,
+				082B95DF25793B3A0059C418 /* Inputs2015.swift */,
+				08719AC625764ADC00804E6D /* Inputs2020.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -127,6 +140,8 @@
 			children = (
 				08AFDB9823900E5E00E72EAF /* fifteenDayTwentyFive.md */,
 				08AFDB952390059A00E72EAF /* fifteenDayTwentyFive.swift */,
+				082B95D925793AE30059C418 /* fiftteenDayOne.swift */,
+				082B95DC25793B040059C418 /* fiftteenDayTwo.swift */,
 			);
 			path = 2015;
 			sourceTree = "<group>";
@@ -190,14 +205,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				08BF442F239940A200674DEA /* nineteenDayFour.swift in Sources */,
+				082B95D52578CCFD0059C418 /* TobogganTrajectory.swift in Sources */,
 				08A7CBDC25762DD9009C502C /* ExpenseReport.swift in Sources */,
+				086A21C2257A1EF6009A9D6F /* PassportProcessing.swift in Sources */,
 				08959FC223A3A42700A091C8 /* nineteenDayTwo.swift in Sources */,
 				08AFDB8F238FF6C500E72EAF /* main.swift in Sources */,
 				0879749025777E010016B1A3 /* PasswordPolicy.swift in Sources */,
 				08959FC823A3A43900A091C8 /* Utils.swift in Sources */,
-				08719AC725764ADC00804E6D /* ExerciseInputs.swift in Sources */,
+				08719AC725764ADC00804E6D /* Inputs2020.swift in Sources */,
+				082B95DA25793AE30059C418 /* fiftteenDayOne.swift in Sources */,
 				08959FC523A3A42C00A091C8 /* nineteenDayThree.swift in Sources */,
+				082B95DD25793B040059C418 /* fiftteenDayTwo.swift in Sources */,
 				08AFDB962390059A00E72EAF /* fifteenDayTwentyFive.swift in Sources */,
+				082B95E025793B3A0059C418 /* Inputs2015.swift in Sources */,
 				083CB2942395193400801C5D /* nineteenDayOne.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
