@@ -1,13 +1,16 @@
 import os
 import time
-from AoC2020 import ExpenseReport, PasswordPolicy, SlopeLandscape
 from utils import utils
+from AoC2020 import ExpenseReport, PasswordPolicy, \
+                    SlopeLandscape, PassportScanner
+
 
 # day 1 exercice calculate Elf expenses
 print("Day 1 - Expense reports")
 start_time = time.time()
 inputHandler = utils.fileHandler()
-result_set = inputHandler.parse_2_int_array(os.getcwd() + "/AoCPython/AoC2020/expense_input.txt")
+result_set = inputHandler.parse_2_int_array(os.getcwd() 
+    + "/AoCPython/AoC2020/expense_input.txt")
 l_expenses = ExpenseReport.ExpenseReport(result_set)
 l_expenses.result()
 print("--- %s seconds ---" % (time.time() - start_time))
@@ -17,12 +20,11 @@ print("Day 2 - Password policy")
 start_time = time.time()
 test_result_set = ['1-3 a: abcde', '1-3 b: cdefg', '2-9 c: ccccccccc']
 pass_policy = utils.fileHandler()
-result_set = pass_policy.parse_line_2_list(os.getcwd() + "/AoCPython/AoC2020/passPolicy_input.txt") # create a map with limits, validation and pwd string from input file
+result_set = pass_policy.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2020/passPolicy_input.txt")
 l_pass_policy = PasswordPolicy.PasswordPolicy(result_set)
 l_pass_policy.result()
 print("--- %s seconds ---" % (time.time() - start_time))
-# instance of the pass policies according to map
-# apply validation and show results
 
 # day 3 check slope landscape and count trees in the shortest paths
 print("Day 3 - Slope Landscape")
@@ -31,7 +33,31 @@ test_result_set = ['..##.......','#...#...#..','.#....#..#.','..#.#...#.#',
                     '.#...##..#.','..#.##.....','.#.#.#....#','.#........#',
                     '#.##...#...','#...##....#','.#..#...#.#']
 slope_map = utils.fileHandler()
-result_set = slope_map.parse_line_2_list(os.getcwd() + "/AoCPython/AoC2020/slope_input.txt")
+result_set = slope_map.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2020/slope_input.txt")
 l_slope_landscape = SlopeLandscape.SlopeLandscape(result_set)
 l_slope_landscape.result()
+print("--- %s seconds ---" % (time.time() - start_time))
+
+# day 4 process batch passports (ids) and identify valid ones
+print("Day 4 - Passport scanner")
+start_time = time.time()
+test_result_set = ['ecl:gry pid:860033327 eyr:2020 hcl:#fffffd',
+'byr:1937 iyr:2017 cid:147 hgt:183cm',
+'',
+'iyr:2013 ecl:amb cid:350 eyr:2023 pid:028048884',
+'hcl:#cfa07d byr:1929',
+'',
+'hcl:#ae17e1 iyr:2013',
+'eyr:2024',
+'ecl:brn pid:760753108 byr:1931',
+'hgt:179cm',
+'',
+'hcl:#cfa07d eyr:2025 pid:166559648',
+'iyr:2011 ecl:brn hgt:59in']
+passport_batch = utils.fileHandler()
+result_set = passport_batch.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2020/passport_input.txt")
+l_passport_scanner = PassportScanner.PassportScanner(result_set)
+l_passport_scanner.result()
 print("--- %s seconds ---" % (time.time() - start_time))
