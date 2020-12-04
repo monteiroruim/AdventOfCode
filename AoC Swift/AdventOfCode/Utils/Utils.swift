@@ -23,3 +23,18 @@ extension String {
         return (0...matches.count).map {String(self[ranges[$0].upperBound..<ranges[$0+1].lowerBound])}
     }
 }
+
+extension String {
+    var isNumericalOnly: String {
+        let pattern = UnicodeScalar("0")..."9"
+        return String(unicodeScalars.compactMap { pattern ~= $0 ? Character($0) : nil })
+    }
+    var isLettersOnly: String {
+        let pattern = UnicodeScalar("a")..."z"
+        return String(unicodeScalars.compactMap { pattern ~= $0 ? Character($0) : nil })
+    }
+    var isLettersSubSetOnly: String {
+        let pattern = UnicodeScalar("a")..."f"
+        return String(unicodeScalars.compactMap { pattern ~= $0 ? Character($0) : nil })
+    }
+}
