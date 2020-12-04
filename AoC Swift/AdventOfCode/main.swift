@@ -14,7 +14,7 @@ let startTime = CFAbsoluteTimeGetCurrent()
 //var fiveTwentyFive = fifteenDayTwentyFive()
 //var fiveTwentyFiveB = fifteenDayTwentyFive(maxMatrixSize: 10000)
 //var dayOne = fiftteenDayOne()
-var dayTwo = fifteenDayTwo()
+//var dayTwo = fifteenDayTwo()
 
 // 2019
 //var nineOne = nineteenDayOne()
@@ -34,6 +34,8 @@ var dayTwo = fifteenDayTwo()
 
 //Day 03
 //var toboggan = TobogganTrajectory()
+
+var passport = PassportProcessing()
 
 print("\nExec time: ", NSString(format: "%.5f", CFAbsoluteTimeGetCurrent() - startTime), "s")
 
