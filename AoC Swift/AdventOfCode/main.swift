@@ -35,7 +35,10 @@ let startTime = CFAbsoluteTimeGetCurrent()
 //Day 03
 //var toboggan = TobogganTrajectory()
 
-var passport = PassportProcessing()
+// Day 04
+//var passport = PassportProcessing()
+
+var binaryBoarding = BinaryBoarding()
 
 print("\nExec time: ", NSString(format: "%.5f", CFAbsoluteTimeGetCurrent() - startTime), "s")
 
