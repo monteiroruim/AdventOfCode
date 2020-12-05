@@ -15,6 +15,7 @@
 		086A21C2257A1EF6009A9D6F /* PassportProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A21C1257A1EF6009A9D6F /* PassportProcessing.swift */; };
 		08719AC725764ADC00804E6D /* Inputs2020.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08719AC625764ADC00804E6D /* Inputs2020.swift */; };
 		0879749025777E010016B1A3 /* PasswordPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0879748F25777E010016B1A3 /* PasswordPolicy.swift */; };
+		0881448E257B74C1007B46C4 /* BinaryBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0881448D257B74C1007B46C4 /* BinaryBoarding.swift */; };
 		08959FC223A3A42700A091C8 /* nineteenDayTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08959FC123A3A42700A091C8 /* nineteenDayTwo.swift */; };
 		08959FC523A3A42C00A091C8 /* nineteenDayThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08959FC423A3A42C00A091C8 /* nineteenDayThree.swift */; };
 		08959FC823A3A43900A091C8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08959FC723A3A43800A091C8 /* Utils.swift */; };
@@ -46,6 +47,7 @@
 		086A21C1257A1EF6009A9D6F /* PassportProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportProcessing.swift; sourceTree = "<group>"; };
 		08719AC625764ADC00804E6D /* Inputs2020.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inputs2020.swift; sourceTree = "<group>"; };
 		0879748F25777E010016B1A3 /* PasswordPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordPolicy.swift; sourceTree = "<group>"; };
+		0881448D257B74C1007B46C4 /* BinaryBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryBoarding.swift; sourceTree = "<group>"; };
 		08959FC023A3A42700A091C8 /* nineteenDayTwo.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = nineteenDayTwo.md; sourceTree = "<group>"; };
 		08959FC123A3A42700A091C8 /* nineteenDayTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nineteenDayTwo.swift; sourceTree = "<group>"; };
 		08959FC323A3A42C00A091C8 /* nineteenDayThree.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = nineteenDayThree.md; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				0879748F25777E010016B1A3 /* PasswordPolicy.swift */,
 				082B95D42578CCFD0059C418 /* TobogganTrajectory.swift */,
 				086A21C1257A1EF6009A9D6F /* PassportProcessing.swift */,
+				0881448D257B74C1007B46C4 /* BinaryBoarding.swift */,
 			);
 			path = 2020;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				08959FC823A3A43900A091C8 /* Utils.swift in Sources */,
 				08719AC725764ADC00804E6D /* Inputs2020.swift in Sources */,
 				082B95DA25793AE30059C418 /* fiftteenDayOne.swift in Sources */,
+				0881448E257B74C1007B46C4 /* BinaryBoarding.swift in Sources */,
 				08959FC523A3A42C00A091C8 /* nineteenDayThree.swift in Sources */,
 				082B95DD25793B040059C418 /* fiftteenDayTwo.swift in Sources */,
 				08AFDB962390059A00E72EAF /* fifteenDayTwentyFive.swift in Sources */,
