@@ -1,7 +1,7 @@
 import re
 
 class PassportScanner():
-    def __init__(self, input_map, ):
+    def __init__(self, input_map ):
         self.input = input_map
         self.data_dict = dict()
         self.mandatory_keys = ['byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid']

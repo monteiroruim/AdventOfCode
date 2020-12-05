@@ -1,8 +1,7 @@
 import os
 import time
 from utils import utils
-from AoC2020 import ExpenseReport, PasswordPolicy, \
-                    SlopeLandscape, PassportScanner
+from AoC2020 import ExpenseReport, PasswordPolicy, SlopeLandscape, PassportScanner, BoardingPassScanner \
 
 
 # day 1 exercice calculate Elf expenses
@@ -60,4 +59,15 @@ result_set = passport_batch.parse_line_2_list(os.getcwd()
     + "/AoCPython/AoC2020/passport_input.txt")
 l_passport_scanner = PassportScanner.PassportScanner(result_set)
 l_passport_scanner.result()
+print("--- %s seconds ---" % (time.time() - start_time))
+
+# day 2 check boarding pass and fin your place
+print("Day 5 - Binary boarding")
+start_time = time.time()
+test_result_set = ['BFFFBBFRRR', 'FFFBBBFRRR', 'BBFFBBFRLL', 'FBFBBFFRLR']
+boarding_passes = utils.fileHandler()
+result_set = boarding_passes.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2020/boardingPass_input.txt")
+l_scanner = BoardingPassScanner.BoardingPassScanner(result_set)
+l_scanner.result()
 print("--- %s seconds ---" % (time.time() - start_time))
