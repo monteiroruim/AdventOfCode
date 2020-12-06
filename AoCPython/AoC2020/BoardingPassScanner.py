@@ -48,7 +48,6 @@ class BoardingPassScanner():
        self.max_seat_id = max(self.seat_list)
 
 
-
     def find_my_seat(self):
         self.seat_list.sort()
         for x in range(self.seat_list[0], self.seat_list[-1]): 
