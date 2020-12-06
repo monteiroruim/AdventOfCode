@@ -23,6 +23,7 @@
 		08AFDB8F238FF6C500E72EAF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AFDB8E238FF6C500E72EAF /* main.swift */; };
 		08AFDB962390059A00E72EAF /* fifteenDayTwentyFive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AFDB952390059A00E72EAF /* fifteenDayTwentyFive.swift */; };
 		08BF442F239940A200674DEA /* nineteenDayFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF442E239940A200674DEA /* nineteenDayFour.swift */; };
+		08C4B653257D0CFE00301DE3 /* CustomsDeclaration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C4B652257D0CFE00301DE3 /* CustomsDeclaration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,6 +61,8 @@
 		08AFDB952390059A00E72EAF /* fifteenDayTwentyFive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fifteenDayTwentyFive.swift; sourceTree = "<group>"; };
 		08AFDB9823900E5E00E72EAF /* fifteenDayTwentyFive.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = fifteenDayTwentyFive.md; sourceTree = "<group>"; };
 		08BF442E239940A200674DEA /* nineteenDayFour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nineteenDayFour.swift; sourceTree = "<group>"; };
+		08C4B652257D0CFE00301DE3 /* CustomsDeclaration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomsDeclaration.swift; sourceTree = "<group>"; };
+		08C4B65B257DA0D700301DE3 /* day06-customs.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "day06-customs.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,11 +94,13 @@
 		08A7CBD525762BC3009C502C /* 2020 */ = {
 			isa = PBXGroup;
 			children = (
+				08C4B65B257DA0D700301DE3 /* day06-customs.txt */,
 				08A7CBDB25762DD9009C502C /* ExpenseReport.swift */,
 				0879748F25777E010016B1A3 /* PasswordPolicy.swift */,
 				082B95D42578CCFD0059C418 /* TobogganTrajectory.swift */,
 				086A21C1257A1EF6009A9D6F /* PassportProcessing.swift */,
 				0881448D257B74C1007B46C4 /* BinaryBoarding.swift */,
+				08C4B652257D0CFE00301DE3 /* CustomsDeclaration.swift */,
 			);
 			path = 2020;
 			sourceTree = "<group>";
@@ -207,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08C4B653257D0CFE00301DE3 /* CustomsDeclaration.swift in Sources */,
 				08BF442F239940A200674DEA /* nineteenDayFour.swift in Sources */,
 				082B95D52578CCFD0059C418 /* TobogganTrajectory.swift in Sources */,
 				08A7CBDC25762DD9009C502C /* ExpenseReport.swift in Sources */,
