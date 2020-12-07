@@ -2,7 +2,7 @@ import os
 import time
 from utils import utils
 from AoC2020 import ExpenseReport, PasswordPolicy, SlopeLandscape, PassportScanner, BoardingPassScanner \
-    , CustomDeclaration
+    , CustomDeclaration, LuggageScan
 
 
 # day 1 exercice calculate Elf expenses
@@ -83,4 +83,24 @@ result_set = custom_declaration.parse_line_2_list(os.getcwd()
     + "/AoCPython/AoC2020/customDeclaration_input.txt")
 l_report = CustomDeclaration.CustomDeclaration(result_set)
 l_report.result()
+print("--- %s seconds ---" % (time.time() - start_time))
+
+
+# day 7 analyse luggage patterns  
+print("Day 7 - Handy Haversacks")
+start_time = time.time()
+test_result_set = ['light red bags contain 1 bright white bag, 2 muted yellow bags.',
+        'dark orange bags contain 3 bright white bags, 4 muted yellow bags.',
+        'bright white bags contain 1 shiny gold bag.',
+        'muted yellow bags contain 2 shiny gold bags, 9 faded blue bags.',
+        'shiny gold bags contain 1 dark olive bag, 2 vibrant plum bags.',
+        'dark olive bags contain 3 faded blue bags, 4 dotted black bags.',
+        'vibrant plum bags contain 5 faded blue bags, 6 dotted black bags.',
+        'faded blue bags contain no other bags.',
+        'dotted black bags contain no other bags.']
+luggage_list = utils.fileHandler()
+result_set = luggage_list.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2020/Haversacks_input.txt")
+l_luggage = LuggageScan.LuggageScan(result_set)
+l_luggage.result()
 print("--- %s seconds ---" % (time.time() - start_time))
