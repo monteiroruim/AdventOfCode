@@ -12,8 +12,10 @@
 		082B95DD25793B040059C418 /* fiftteenDayTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B95DC25793B040059C418 /* fiftteenDayTwo.swift */; };
 		082B95E025793B3A0059C418 /* Inputs2015.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B95DF25793B3A0059C418 /* Inputs2015.swift */; };
 		083CB2942395193400801C5D /* nineteenDayOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CB2932395193400801C5D /* nineteenDayOne.swift */; };
+		085209D7257F6A62007AD9FC /* HandheldHalting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085209D6257F6A62007AD9FC /* HandheldHalting.swift */; };
 		086A21C2257A1EF6009A9D6F /* PassportProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A21C1257A1EF6009A9D6F /* PassportProcessing.swift */; };
 		08719AC725764ADC00804E6D /* Inputs2020.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08719AC625764ADC00804E6D /* Inputs2020.swift */; };
+		08747E8D257E1210000FA898 /* LugaggeProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08747E8C257E1210000FA898 /* LugaggeProcessing.swift */; };
 		0879749025777E010016B1A3 /* PasswordPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0879748F25777E010016B1A3 /* PasswordPolicy.swift */; };
 		0881448E257B74C1007B46C4 /* BinaryBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0881448D257B74C1007B46C4 /* BinaryBoarding.swift */; };
 		08959FC223A3A42700A091C8 /* nineteenDayTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08959FC123A3A42700A091C8 /* nineteenDayTwo.swift */; };
@@ -45,8 +47,10 @@
 		082B95DF25793B3A0059C418 /* Inputs2015.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inputs2015.swift; sourceTree = "<group>"; };
 		083CB2932395193400801C5D /* nineteenDayOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nineteenDayOne.swift; sourceTree = "<group>"; };
 		083CB2962395195A00801C5D /* nineteenDayOne.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = nineteenDayOne.md; sourceTree = "<group>"; };
+		085209D6257F6A62007AD9FC /* HandheldHalting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandheldHalting.swift; sourceTree = "<group>"; };
 		086A21C1257A1EF6009A9D6F /* PassportProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportProcessing.swift; sourceTree = "<group>"; };
 		08719AC625764ADC00804E6D /* Inputs2020.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inputs2020.swift; sourceTree = "<group>"; };
+		08747E8C257E1210000FA898 /* LugaggeProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LugaggeProcessing.swift; sourceTree = "<group>"; };
 		0879748F25777E010016B1A3 /* PasswordPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordPolicy.swift; sourceTree = "<group>"; };
 		0881448D257B74C1007B46C4 /* BinaryBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryBoarding.swift; sourceTree = "<group>"; };
 		08959FC023A3A42700A091C8 /* nineteenDayTwo.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = nineteenDayTwo.md; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 				086A21C1257A1EF6009A9D6F /* PassportProcessing.swift */,
 				0881448D257B74C1007B46C4 /* BinaryBoarding.swift */,
 				08C4B652257D0CFE00301DE3 /* CustomsDeclaration.swift */,
+				08747E8C257E1210000FA898 /* LugaggeProcessing.swift */,
+				085209D6257F6A62007AD9FC /* HandheldHalting.swift */,
 			);
 			path = 2020;
 			sourceTree = "<group>";
@@ -215,6 +221,8 @@
 				08C4B653257D0CFE00301DE3 /* CustomsDeclaration.swift in Sources */,
 				08BF442F239940A200674DEA /* nineteenDayFour.swift in Sources */,
 				082B95D52578CCFD0059C418 /* TobogganTrajectory.swift in Sources */,
+				08747E8D257E1210000FA898 /* LugaggeProcessing.swift in Sources */,
+				085209D7257F6A62007AD9FC /* HandheldHalting.swift in Sources */,
 				08A7CBDC25762DD9009C502C /* ExpenseReport.swift in Sources */,
 				086A21C2257A1EF6009A9D6F /* PassportProcessing.swift in Sources */,
 				08959FC223A3A42700A091C8 /* nineteenDayTwo.swift in Sources */,
