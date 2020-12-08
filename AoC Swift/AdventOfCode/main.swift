@@ -42,7 +42,15 @@ let startTime = CFAbsoluteTimeGetCurrent()
 //var binaryBoarding = BinaryBoarding()
 
 //Day 06
-var customs = CustomsDeclaration()
+//var customs = CustomsDeclaration()
+
+//Day 07
+//var lugagge = LugaggeProcessing()
+
+//Day 08
+var handheldHalting = HandheldHalting()
+
+//Day 09
 
 print("\nExec time: ", NSString(format: "%.5f", CFAbsoluteTimeGetCurrent() - startTime), "s")
 
