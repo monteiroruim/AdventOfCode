@@ -15,7 +15,7 @@ class BinaryBoarding {
     var column: Double
     
     init() {
-        self.boardingPass = Inputs2020.day05BoardingPass
+        self.boardingPass = Input2020d05.day05BoardingPass
         self.row = 0.0
         self.column = 0.0
         partOne()

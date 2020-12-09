@@ -26,31 +26,15 @@ let startTime = CFAbsoluteTimeGetCurrent()
 
 
 //2020
-// Day 01
-//var expenseCalculator = ExpenseReport()
-
-// Day 02
-//var passwordPolocy = PasswordPolicy()
-
-//Day 03
-//var toboggan = TobogganTrajectory()
-
-// Day 04
-//var passport = PassportProcessing()
-
-//Day 05
-//var binaryBoarding = BinaryBoarding()
-
-//Day 06
-//var customs = CustomsDeclaration()
-
-//Day 07
-//var lugagge = LugaggeProcessing()
-
-//Day 08
-var handheldHalting = HandheldHalting()
-
-//Day 09
+//var day01ExpenseCalculator = ExpenseReport()
+//var day02PasswordPolicy = PasswordPolicy()
+//var day03Toboggan = TobogganTrajectory()
+//var day04Passport = PassportProcessing()
+//var day05BinaryBoarding = BinaryBoarding()
+//var day06Customs = CustomsDeclaration()
+//var day07Lugagge = LugaggeProcessing()
+//var day08HandheldHalting = HandheldHalting()
+var day09EncodingError = EncodingError()
 
 print("\nExec time: ", NSString(format: "%.5f", CFAbsoluteTimeGetCurrent() - startTime), "s")
 

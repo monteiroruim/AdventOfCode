@@ -20,7 +20,7 @@ class TobogganTrajectory {
     }
     
     init() {
-        self.tobogganMap = Inputs2020.day03TobogganTrajectory
+        self.tobogganMap = Input2020d03.day03TobogganTrajectory
         self.moveDown = 0
         self.moveRight = 0
         
