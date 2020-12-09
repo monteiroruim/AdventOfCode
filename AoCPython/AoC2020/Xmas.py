@@ -4,7 +4,6 @@ class Xmas():
         self.result1 = 0
         self.result2 = 0
         self.input_length = len(self.input)
-        self.result1_idx = 0
         if preamble_slice is None:
             self.preamble = 25 # value from exercice
         else:
@@ -16,16 +15,11 @@ class Xmas():
         min_idx = 0
         l_exit = True
         while (max_idx < self.input_length and l_exit):
-            #for codes in self.input[min_idx:max_idx] 
             if any(self.input[max_idx] == y + z for yi, y in enumerate(self.input[min_idx:max_idx]) for zi, z in enumerate(self.input[min_idx:max_idx]) if zi != yi):
-            #    print(self.input[min_idx:max_idx])
-            #    print(l_exit, max_idx, min_idx, self.input[max_idx])
                 max_idx+=1
                 min_idx+=1
             else:                
                 l_exit = False            
-            #print(l_exit, max_idx, min_idx, self.input[max_idx])
-        self.result1_idx = max_idx
         self.result1 = self.input[max_idx]
         
     
@@ -35,7 +29,6 @@ class Xmas():
         start_idx = 0
         res_found = False
         while not(res_found):
-            #print("reset", candidate_list)
             start_idx +=1
             candidate_list = []
             contiguous_sum = 0
@@ -43,7 +36,6 @@ class Xmas():
                 contiguous_sum += num
                 candidate_list.append(num)
                 if contiguous_sum == self.result1:
-                    #print("found", candidate_list, min(candidate_list) , max(candidate_list))
                     self.result2 = min(candidate_list) + max(candidate_list)
                     res_found = True
                     break
