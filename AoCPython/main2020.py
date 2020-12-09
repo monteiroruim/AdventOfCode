@@ -2,7 +2,7 @@ import os
 import time
 from utils import utils
 from AoC2020 import ExpenseReport, PasswordPolicy, SlopeLandscape, PassportScanner, BoardingPassScanner \
-    , CustomDeclaration, LuggageScan
+    , CustomDeclaration, LuggageScan, GameConsole
 
 
 # day 1 exercice calculate Elf expenses
@@ -103,4 +103,15 @@ result_set = luggage_list.parse_line_2_list(os.getcwd()
     + "/AoCPython/AoC2020/Haversacks_input.txt")
 l_luggage = LuggageScan.LuggageScan(result_set)
 l_luggage.result()
+print("--- %s seconds ---" % (time.time() - start_time))
+
+# day 8 in flight console 
+print("Day 8 - Handheld Halting")
+start_time = time.time()
+test_result_set = ['nop +0','acc +1','jmp +4','acc +3','jmp -3','acc -99','acc +1','jmp -4','acc +6']
+console_instructions = utils.fileHandler()
+result_set = console_instructions.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2020/consoleInstructions_input.txt")
+l_console = GameConsole.GameConsole(result_set)
+l_console.result()
 print("--- %s seconds ---" % (time.time() - start_time))
