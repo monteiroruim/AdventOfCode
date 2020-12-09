@@ -13,7 +13,7 @@ class HandheldHalting {
     var operationList: [String]
 
     init() {
-        self.operationList = Inputs2020.day08HandheldHalting.components(separatedBy: "\n")
+        self.operationList = Input2020d08.day08HandheldHalting.components(separatedBy: "\n")
         
         partOne(list: self.operationList)
         partTwoB(list: self.operationList)
