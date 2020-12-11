@@ -13,7 +13,7 @@ class LugaggeProcessing {
     var luggaggeList: [String]
     
     init() {
-        self.luggaggeList = Inputs2020.day07Luggage
+        self.luggaggeList = Input2020d07.day07Luggage
         partOne(lugagge: self.luggaggeList)
         partTwo(luggage: self.luggaggeList)
     }
