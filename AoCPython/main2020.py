@@ -2,7 +2,7 @@ import os
 import time
 from utils import utils
 from AoC2020 import ExpenseReport, PasswordPolicy, SlopeLandscape, PassportScanner, BoardingPassScanner \
-    , CustomDeclaration, LuggageScan, GameConsole, Xmas
+    , CustomDeclaration, LuggageScan, GameConsole, Xmas, AdapterArray
 
 
 # day 1 exercice calculate Elf expenses
@@ -42,19 +42,10 @@ print("--- %s seconds ---" % (time.time() - start_time))
 # day 4 process batch passports (ids) and identify valid ones
 print("Day 4 - Passport scanner")
 start_time = time.time()
-test_result_set = ['ecl:gry pid:860033327 eyr:2020 hcl:#fffffd',
-'byr:1937 iyr:2017 cid:147 hgt:183cm',
-'',
-'iyr:2013 ecl:amb cid:350 eyr:2023 pid:028048884',
-'hcl:#cfa07d byr:1929',
-'',
-'hcl:#ae17e1 iyr:2013',
-'eyr:2024',
-'ecl:brn pid:760753108 byr:1931',
-'hgt:179cm',
-'',
-'hcl:#cfa07d eyr:2025 pid:166559648',
-'iyr:2011 ecl:brn hgt:59in']
+test_result_set = ['ecl:gry pid:860033327 eyr:2020 hcl:#fffffd','byr:1937 iyr:2017 cid:147 hgt:183cm','',
+'iyr:2013 ecl:amb cid:350 eyr:2023 pid:028048884','hcl:#cfa07d byr:1929','',
+'hcl:#ae17e1 iyr:2013','eyr:2024','ecl:brn pid:760753108 byr:1931','hgt:179cm','',
+'hcl:#cfa07d eyr:2025 pid:166559648','iyr:2011 ecl:brn hgt:59in']
 passport_batch = utils.fileHandler()
 result_set = passport_batch.parse_line_2_list(os.getcwd() 
     + "/AoCPython/AoC2020/input/PassportScanner.txt")
@@ -126,4 +117,16 @@ result_set = xmas_instructions.parse_2_int_array(os.getcwd()
 #xmas_encoding = Xmas.Xmas(test_result_set, 5)
 xmas_encoding = Xmas.Xmas(result_set)
 xmas_encoding.result()
+print("--- %s seconds ---" % (time.time() - start_time))
+
+# day 10 Xmas encoding error
+print("Day 10 - Adapter Array")
+start_time = time.time()
+test_result_set1 = [16,10,15,5,1,11,7,19,6,12,4]
+test_result_set = [28,33,18,42,31,14,46,20,48,47,24,23,49,45,19,38,39,11,1,32,25,35,8,17,7,9,4,2,34,10,3]
+adapter_array = utils.fileHandler()
+result_set = adapter_array.parse_2_int_set(os.getcwd() 
+    + "/AoCPython/AoC2020/input/AdapterArray.txt")
+valid_adapter = AdapterArray.AdapterArray(result_set)
+valid_adapter.result()
 print("--- %s seconds ---" % (time.time() - start_time))
