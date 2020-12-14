@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		08198962258782EC005BDFD5 /* Input2020d10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08198961258782EC005BDFD5 /* Input2020d10.swift */; };
 		0819896525878314005BDFD5 /* Day10AdapterArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819896425878314005BDFD5 /* Day10AdapterArray.swift */; };
+		0819896C25879730005BDFD5 /* Input2020d12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819896B25879730005BDFD5 /* Input2020d12.swift */; };
+		0819896F25879797005BDFD5 /* Day12RainRisk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819896E25879797005BDFD5 /* Day12RainRisk.swift */; };
 		082B95D52578CCFD0059C418 /* TobogganTrajectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B95D42578CCFD0059C418 /* TobogganTrajectory.swift */; };
 		082B95DA25793AE30059C418 /* fiftteenDayOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B95D925793AE30059C418 /* fiftteenDayOne.swift */; };
 		082B95DD25793B040059C418 /* fiftteenDayTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B95DC25793B040059C418 /* fiftteenDayTwo.swift */; };
@@ -56,6 +58,8 @@
 /* Begin PBXFileReference section */
 		08198961258782EC005BDFD5 /* Input2020d10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input2020d10.swift; sourceTree = "<group>"; };
 		0819896425878314005BDFD5 /* Day10AdapterArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day10AdapterArray.swift; sourceTree = "<group>"; };
+		0819896B25879730005BDFD5 /* Input2020d12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input2020d12.swift; sourceTree = "<group>"; };
+		0819896E25879797005BDFD5 /* Day12RainRisk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day12RainRisk.swift; sourceTree = "<group>"; };
 		082B95D42578CCFD0059C418 /* TobogganTrajectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TobogganTrajectory.swift; sourceTree = "<group>"; };
 		082B95D925793AE30059C418 /* fiftteenDayOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fiftteenDayOne.swift; sourceTree = "<group>"; };
 		082B95DC25793B040059C418 /* fiftteenDayTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fiftteenDayTwo.swift; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 				085209D6257F6A62007AD9FC /* HandheldHalting.swift */,
 				0819896425878314005BDFD5 /* Day10AdapterArray.swift */,
 				08E1FD2325836A81009822D5 /* Day11SeatingSystem.swift */,
+				0819896E25879797005BDFD5 /* Day12RainRisk.swift */,
 			);
 			path = 2020;
 			sourceTree = "<group>";
@@ -203,6 +208,7 @@
 				08FAF95425810CBE00D28B99 /* Input2020d09.swift */,
 				08198961258782EC005BDFD5 /* Input2020d10.swift */,
 				08E1FD2625836ABD009822D5 /* Input2020d11.swift */,
+				0819896B25879730005BDFD5 /* Input2020d12.swift */,
 			);
 			path = 2020;
 			sourceTree = "<group>";
@@ -287,6 +293,7 @@
 				08FAF96525810CBE00D28B99 /* Input2020d07.swift in Sources */,
 				08959FC223A3A42700A091C8 /* nineteenDayTwo.swift in Sources */,
 				08AFDB8F238FF6C500E72EAF /* main.swift in Sources */,
+				0819896C25879730005BDFD5 /* Input2020d12.swift in Sources */,
 				0879749025777E010016B1A3 /* PasswordPolicy.swift in Sources */,
 				08959FC823A3A43900A091C8 /* Utils.swift in Sources */,
 				082B95DA25793AE30059C418 /* fiftteenDayOne.swift in Sources */,
@@ -302,6 +309,7 @@
 				08E1FD2425836A81009822D5 /* Day11SeatingSystem.swift in Sources */,
 				08FAF96225810CBE00D28B99 /* Input2020d02.swift in Sources */,
 				08FAF96425810CBE00D28B99 /* Input2020d04.swift in Sources */,
+				0819896F25879797005BDFD5 /* Day12RainRisk.swift in Sources */,
 				08FAF96725810CBE00D28B99 /* Input2020d08.swift in Sources */,
 				083CB2942395193400801C5D /* nineteenDayOne.swift in Sources */,
 				08FAF9492580B85700D28B99 /* EncodingError.swift in Sources */,

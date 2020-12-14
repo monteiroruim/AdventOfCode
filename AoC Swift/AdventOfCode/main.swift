@@ -36,7 +36,8 @@ let startTime = CFAbsoluteTimeGetCurrent()
 //var day08HandheldHalting = HandheldHalting()
 //var day09EncodingError = EncodingError()
 //var day10AdapterArray = Day10AdapterArray()
-var day11Seating = Day11SeatingSystem()
+//var day11Seating = Day11SeatingSystem()
+var day12RainRisk = RainRisk()
 
 
 print("\nExec time: ", NSString(format: "%.5f", CFAbsoluteTimeGetCurrent() - startTime), "s")
