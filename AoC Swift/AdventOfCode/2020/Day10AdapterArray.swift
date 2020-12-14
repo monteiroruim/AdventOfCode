@@ -2,7 +2,7 @@
 //  Day10AdapterArray.swift
 //  AdventOfCode
 //
-//  Created by Pereira Orlando on 10.12.20.
+//  Created by Pereira Orlando on 14.12.20.
 //  Copyright © 2020 Pereira Orlando. All rights reserved.
 //
 

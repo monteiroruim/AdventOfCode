@@ -2,12 +2,11 @@
 //  Input2020d10.swift
 //  AdventOfCode
 //
-//  Created by Pereira Orlando on 09.12.20.
+//  Created by Pereira Orlando on 14.12.20.
 //  Copyright © 2020 Pereira Orlando. All rights reserved.
 //
 
 import Foundation
-
 
 class Input2020d10 {
     
@@ -175,5 +174,5 @@ class Input2020d10 {
 102
 72
 """
-    
+
 }
