@@ -2,7 +2,8 @@ import os
 import time
 from utils import utils
 from AoC2020 import ExpenseReport, PasswordPolicy, SlopeLandscape, PassportScanner, BoardingPassScanner \
-    , CustomDeclaration, LuggageScan, GameConsole, Xmas, AdapterArray, SeatingSystem, RainRisk
+    , CustomDeclaration, LuggageScan, GameConsole, Xmas, AdapterArray, SeatingSystem, RainRisk \
+    , ShuttleSearch
 
 
 # day 1 exercice calculate Elf expenses
@@ -152,5 +153,17 @@ rain_map = utils.fileHandler()
 result_set = rain_map.parse_line_2_list(os.getcwd() 
     + "/AoCPython/AoC2020/input/RainRisk.txt")
 path_area = RainRisk.RainRisk(result_set)
+path_area.result()
+print("--- %s seconds ---" % (time.time() - start_time))
+
+
+# day 13 Shuttle Search on time table
+print("Day 13 - Shuttle Search")
+start_time = time.time()
+test_result_set = ['939','7,13,x,x,59,x,31,19']
+timetable = utils.fileHandler()
+result_set = timetable.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2020/input/ShuttleSearch.txt")
+path_area = ShuttleSearch.ShuttleSearch(result_set)
 path_area.result()
 print("--- %s seconds ---" % (time.time() - start_time))
