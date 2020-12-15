@@ -1,4 +1,4 @@
-import copy
+from copy import deepcopy
 class GameConsole():
     def __init__(self, input_map):
         self.input = input_map
@@ -36,7 +36,7 @@ class GameConsole():
     def fix_corrupted(self, commands):
         while not(self.stop):
             for j, val in enumerate(self.input):
-                tmp = copy.deepcopy(self.input)
+                tmp = deepcopy(self.input)
                 instr, _ = val.split(' ', 1)
                 if instr == 'jmp':
                     tmp[j] = tmp[j].replace('jmp', 'nop')

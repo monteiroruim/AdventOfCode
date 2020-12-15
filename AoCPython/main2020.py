@@ -2,7 +2,7 @@ import os
 import time
 from utils import utils
 from AoC2020 import ExpenseReport, PasswordPolicy, SlopeLandscape, PassportScanner, BoardingPassScanner \
-    , CustomDeclaration, LuggageScan, GameConsole, Xmas, AdapterArray
+    , CustomDeclaration, LuggageScan, GameConsole, Xmas, AdapterArray, SeatingSystem, RainRisk
 
 
 # day 1 exercice calculate Elf expenses
@@ -129,4 +129,28 @@ result_set = adapter_array.parse_2_int_set(os.getcwd()
     + "/AoCPython/AoC2020/input/AdapterArray.txt")
 valid_adapter = AdapterArray.AdapterArray(result_set)
 valid_adapter.result()
+print("--- %s seconds ---" % (time.time() - start_time))
+
+
+# day 11 Ferry waiting area Seating System
+print("Day 11 - Seating System")
+start_time = time.time()
+test_result_set = ['L.LL.LL.LL','LLLLLLL.LL','L.L.L..L..','LLLL.LL.LL','L.LL.LL.LL',
+                    'L.LLLLL.LL','..L.L.....','LLLLLLLLLL','L.LLLLLL.L','L.LLLLL.LL']
+seat_map = utils.fileHandler()
+result_set = seat_map.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2020/input/SeatingSystem.txt")
+waiting_area = SeatingSystem.SeatingSystem(test_result_set)
+waiting_area.result()
+print("--- %s seconds ---" % (time.time() - start_time))
+
+# day 12 Ferry Manhatan distance
+print("Day 12 - Rain risk")
+start_time = time.time()
+test_result_set = ['F10','N3','F7','R90','F11']
+rain_map = utils.fileHandler()
+result_set = rain_map.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2020/input/RainRisk.txt")
+path_area = RainRisk.RainRisk(result_set)
+path_area.result()
 print("--- %s seconds ---" % (time.time() - start_time))
