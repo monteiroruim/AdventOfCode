@@ -11,6 +11,8 @@
 		0819896525878314005BDFD5 /* Day10AdapterArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819896425878314005BDFD5 /* Day10AdapterArray.swift */; };
 		0819896C25879730005BDFD5 /* Input2020d12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819896B25879730005BDFD5 /* Input2020d12.swift */; };
 		0819896F25879797005BDFD5 /* Day12RainRisk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819896E25879797005BDFD5 /* Day12RainRisk.swift */; };
+		081989742587B9AB005BDFD5 /* Input2020d13.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081989732587B9AB005BDFD5 /* Input2020d13.swift */; };
+		081989772587BA1C005BDFD5 /* Day13ShuttleSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081989762587BA1C005BDFD5 /* Day13ShuttleSearch.swift */; };
 		082B95D52578CCFD0059C418 /* TobogganTrajectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B95D42578CCFD0059C418 /* TobogganTrajectory.swift */; };
 		082B95DA25793AE30059C418 /* fiftteenDayOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B95D925793AE30059C418 /* fiftteenDayOne.swift */; };
 		082B95DD25793B040059C418 /* fiftteenDayTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B95DC25793B040059C418 /* fiftteenDayTwo.swift */; };
@@ -60,6 +62,8 @@
 		0819896425878314005BDFD5 /* Day10AdapterArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day10AdapterArray.swift; sourceTree = "<group>"; };
 		0819896B25879730005BDFD5 /* Input2020d12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input2020d12.swift; sourceTree = "<group>"; };
 		0819896E25879797005BDFD5 /* Day12RainRisk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day12RainRisk.swift; sourceTree = "<group>"; };
+		081989732587B9AB005BDFD5 /* Input2020d13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input2020d13.swift; sourceTree = "<group>"; };
+		081989762587BA1C005BDFD5 /* Day13ShuttleSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day13ShuttleSearch.swift; sourceTree = "<group>"; };
 		082B95D42578CCFD0059C418 /* TobogganTrajectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TobogganTrajectory.swift; sourceTree = "<group>"; };
 		082B95D925793AE30059C418 /* fiftteenDayOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fiftteenDayOne.swift; sourceTree = "<group>"; };
 		082B95DC25793B040059C418 /* fiftteenDayTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fiftteenDayTwo.swift; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 				0819896425878314005BDFD5 /* Day10AdapterArray.swift */,
 				08E1FD2325836A81009822D5 /* Day11SeatingSystem.swift */,
 				0819896E25879797005BDFD5 /* Day12RainRisk.swift */,
+				081989762587BA1C005BDFD5 /* Day13ShuttleSearch.swift */,
 			);
 			path = 2020;
 			sourceTree = "<group>";
@@ -209,6 +214,7 @@
 				08198961258782EC005BDFD5 /* Input2020d10.swift */,
 				08E1FD2625836ABD009822D5 /* Input2020d11.swift */,
 				0819896B25879730005BDFD5 /* Input2020d12.swift */,
+				081989732587B9AB005BDFD5 /* Input2020d13.swift */,
 			);
 			path = 2020;
 			sourceTree = "<group>";
@@ -295,6 +301,7 @@
 				08AFDB8F238FF6C500E72EAF /* main.swift in Sources */,
 				0819896C25879730005BDFD5 /* Input2020d12.swift in Sources */,
 				0879749025777E010016B1A3 /* PasswordPolicy.swift in Sources */,
+				081989742587B9AB005BDFD5 /* Input2020d13.swift in Sources */,
 				08959FC823A3A43900A091C8 /* Utils.swift in Sources */,
 				082B95DA25793AE30059C418 /* fiftteenDayOne.swift in Sources */,
 				0819896525878314005BDFD5 /* Day10AdapterArray.swift in Sources */,
@@ -302,6 +309,7 @@
 				08959FC523A3A42C00A091C8 /* nineteenDayThree.swift in Sources */,
 				082B95DD25793B040059C418 /* fiftteenDayTwo.swift in Sources */,
 				08AFDB962390059A00E72EAF /* fifteenDayTwentyFive.swift in Sources */,
+				081989772587BA1C005BDFD5 /* Day13ShuttleSearch.swift in Sources */,
 				082B95E025793B3A0059C418 /* Inputs2015.swift in Sources */,
 				08FAF95F25810CBE00D28B99 /* Input2020d01.swift in Sources */,
 				08FAF95E25810CBE00D28B99 /* Input2020d09.swift in Sources */,
