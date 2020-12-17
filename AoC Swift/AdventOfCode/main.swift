@@ -38,7 +38,8 @@ let startTime = CFAbsoluteTimeGetCurrent()
 //var day10AdapterArray = Day10AdapterArray()
 //var day11Seating = Day11SeatingSystem()
 //var day12RainRisk = RainRisk()
-var day13ShuttleSearch = ShuttleSearch()
+//var day13ShuttleSearch = ShuttleSearch()
+var day14DockingData = DockingData()
 
 print("\nExec time: ", NSString(format: "%.5f", CFAbsoluteTimeGetCurrent() - startTime), "s")
 
