@@ -3,7 +3,7 @@ import time
 from utils import utils
 from AoC2020 import ExpenseReport, PasswordPolicy, SlopeLandscape, PassportScanner, BoardingPassScanner \
     , CustomDeclaration, LuggageScan, GameConsole, Xmas, AdapterArray, SeatingSystem, RainRisk \
-    , ShuttleSearch
+    , ShuttleSearch, DockingData
 
 
 # day 1 exercice calculate Elf expenses
@@ -166,4 +166,17 @@ result_set = timetable.parse_line_2_list(os.getcwd()
     + "/AoCPython/AoC2020/input/ShuttleSearch.txt")
 path_area = ShuttleSearch.ShuttleSearch(result_set)
 path_area.result()
+print("--- %s seconds ---" % (time.time() - start_time))
+
+
+# day 14 Docking Data check bit maps and retrieve sum in decimal for all positions in memory
+print("Day 14 -  Docking Data")
+start_time = time.time()
+test_result_set = ['mask = XXXXXXXXXXXXXXXXXXXXXXXXXXXXX1XXXX0X','mem[8] = 11','mem[7] = 101', 'mem[8] = 0']
+test_result_set1 = ['mask = 000000000000000000000000000000X1001X','mem[42] = 100','mask = 00000000000000000000000000000000X0XX','mem[26] = 1']
+timetable = utils.fileHandler()
+result_set = timetable.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2020/input/DockingData.txt")
+dock_program = DockingData.DockingData(result_set)
+dock_program.result()
 print("--- %s seconds ---" % (time.time() - start_time))
