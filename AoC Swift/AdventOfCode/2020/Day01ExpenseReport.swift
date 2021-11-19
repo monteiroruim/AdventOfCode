@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ExpenseReport {
+class Day01ExpenseReport {
     
     private let valueToFind: Int
     private var expense: [Int]

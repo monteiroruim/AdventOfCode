@@ -28,7 +28,7 @@
 		08959FC223A3A42700A091C8 /* nineteenDayTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08959FC123A3A42700A091C8 /* nineteenDayTwo.swift */; };
 		08959FC523A3A42C00A091C8 /* nineteenDayThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08959FC423A3A42C00A091C8 /* nineteenDayThree.swift */; };
 		08959FC823A3A43900A091C8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08959FC723A3A43800A091C8 /* Utils.swift */; };
-		08A7CBDC25762DD9009C502C /* ExpenseReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A7CBDB25762DD9009C502C /* ExpenseReport.swift */; };
+		08A7CBDC25762DD9009C502C /* Day01ExpenseReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A7CBDB25762DD9009C502C /* Day01ExpenseReport.swift */; };
 		08AFDB8F238FF6C500E72EAF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AFDB8E238FF6C500E72EAF /* main.swift */; };
 		08AFDB962390059A00E72EAF /* fifteenDayTwentyFive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AFDB952390059A00E72EAF /* fifteenDayTwentyFive.swift */; };
 		08BF442F239940A200674DEA /* nineteenDayFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF442E239940A200674DEA /* nineteenDayFour.swift */; };
@@ -87,7 +87,7 @@
 		08959FC423A3A42C00A091C8 /* nineteenDayThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nineteenDayThree.swift; sourceTree = "<group>"; };
 		08959FC623A3A43500A091C8 /* nineteenDayFour.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = nineteenDayFour.md; sourceTree = "<group>"; };
 		08959FC723A3A43800A091C8 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		08A7CBDB25762DD9009C502C /* ExpenseReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseReport.swift; sourceTree = "<group>"; };
+		08A7CBDB25762DD9009C502C /* Day01ExpenseReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day01ExpenseReport.swift; sourceTree = "<group>"; };
 		08AFDB8B238FF6C500E72EAF /* AdventOfCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AdventOfCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		08AFDB8E238FF6C500E72EAF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		08AFDB952390059A00E72EAF /* fifteenDayTwentyFive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fifteenDayTwentyFive.swift; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 			children = (
 				08C4B65B257DA0D700301DE3 /* day06-customs.txt */,
 				08FAF9482580B85700D28B99 /* EncodingError.swift */,
-				08A7CBDB25762DD9009C502C /* ExpenseReport.swift */,
+				08A7CBDB25762DD9009C502C /* Day01ExpenseReport.swift */,
 				0879748F25777E010016B1A3 /* PasswordPolicy.swift */,
 				082B95D42578CCFD0059C418 /* TobogganTrajectory.swift */,
 				086A21C1257A1EF6009A9D6F /* PassportProcessing.swift */,
@@ -306,7 +306,7 @@
 				08E1FD2725836ABD009822D5 /* Input2020d11.swift in Sources */,
 				085209D7257F6A62007AD9FC /* HandheldHalting.swift in Sources */,
 				08198962258782EC005BDFD5 /* Input2020d10.swift in Sources */,
-				08A7CBDC25762DD9009C502C /* ExpenseReport.swift in Sources */,
+				08A7CBDC25762DD9009C502C /* Day01ExpenseReport.swift in Sources */,
 				086A21C2257A1EF6009A9D6F /* PassportProcessing.swift in Sources */,
 				08F03CCF258B6D34007A7EE1 /* Input2020d15.swift in Sources */,
 				08FAF96525810CBE00D28B99 /* Input2020d07.swift in Sources */,
