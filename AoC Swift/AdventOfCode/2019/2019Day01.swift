@@ -111,7 +111,7 @@ let massValues = [
     67730
 ]
 
-class nineteenDayOne {
+class nineteenDay01 {
     
     var fuelPartOne: Int
     var fuelPartTwo: Int

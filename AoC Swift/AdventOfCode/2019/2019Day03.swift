@@ -30,7 +30,7 @@ struct Point {
     }
 }
 
-class nineteenDayThree {
+class nineteenDay03 {
         
     var date: Date
     var minDistance: Int

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class fifteenDayTwo {
+class fifteenDay02 {
     
     var boxesSizes: [String]
     let separator: String

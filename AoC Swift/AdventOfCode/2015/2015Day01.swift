@@ -8,7 +8,7 @@
 
 import Foundation
 
-class fiftteenDayOne {
+class fiftteenDay01 {
     
     let input: String
     

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class fifteenDayTwentyFive {
+class fifteenDay25 {
     
     var maxMatrixSize: Int
     var previousValue: Int

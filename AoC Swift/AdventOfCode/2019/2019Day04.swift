@@ -14,7 +14,7 @@ extension BinaryInteger {
     }
 }
 
-class nineteenDayFour {
+class nineteenDay04 {
     
     let maxRange: Int
     var minRange: Int
