@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PasswordPolicy {
+class Day02PasswordPolicy {
     
     let passwordList: [String]
     var lowestNumber: Int

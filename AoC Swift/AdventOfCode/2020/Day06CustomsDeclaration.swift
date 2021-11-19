@@ -9,7 +9,7 @@
 import Foundation
 import Cocoa
 
-class CustomsDeclaration {
+class Day06CustomsDeclaration {
     var tempArray: [Character]
     var sumPartOne: Int
     var sumPartTwo: Int
@@ -82,10 +82,10 @@ class CustomsDeclaration {
     
     func partOneWithExternalFile() {
         self.sumPartOne = 0
-        let path = "/Users/pereiro2/Developer/AdventOfCode/AoC Swift/AdventOfCode/2020/day06-customs.txt"
+        let path = "/Users/pereiro2/Developer/AdventOfCode/AoC Swift/AdventOfCode/2020/Day06customs.txt"
         (readAndProcessFile(path) == 1) ? print("Error reading ", path) : nil
         
-        print("Part 1 answer: \(self.sumPartOne)")
+        //print("Part 1 answer: \(self.sumPartOne)")
     }
     
 }
