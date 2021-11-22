@@ -16,7 +16,8 @@ class TwentyOneDay01 {
     }
     
     private func PartOne() {
-        print("2021")
+        
+        
     }
     
     private func PartTwo() {

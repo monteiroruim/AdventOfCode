@@ -11,10 +11,12 @@ import Foundation
 let startTime = CFAbsoluteTimeGetCurrent()
 
 // 2015
-//var fiveTwentyFive = fifteenDay25()
-//var fiveTwentyFiveB = fifteenDay25(maxMatrixSize: 10000)
-//var dayOne = fiftteenDay01()
-//var dayTwo = fifteenDay02()
+//var fifteenday25 = fifteenDay25()
+//var fifteenday25B = fifteenDay25(maxMatrixSize: 10000)
+//var fifteenday01 = fiftteenDay01()
+//var fifteenday02 = fifteenDay02()
+//var fifteenday03 = FifteenDay03()
+var fifteenday04 = FifteenDay04()
 
 // 2019
 //var nineOne = nineteenDay01()
@@ -40,7 +42,7 @@ let startTime = CFAbsoluteTimeGetCurrent()
 //var day15Recitaton = Day15RambunctiousRecitation()
 //var day16TicketRegistration = Day16TicketTranslation()
 
-var twentyoneDay01 = TwentyOneDay01()
+//var twentyoneDay01 = TwentyOneDay01()
 
 print("\nExec time: ", NSString(format: "%.5f", CFAbsoluteTimeGetCurrent() - startTime), "s")
 
