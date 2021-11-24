@@ -3,7 +3,7 @@ import time
 from utils import utils
 from AoC2020 import ExpenseReport, PasswordPolicy, SlopeLandscape, PassportScanner, BoardingPassScanner \
     , CustomDeclaration, LuggageScan, GameConsole, Xmas, AdapterArray, SeatingSystem, RainRisk \
-    , ShuttleSearch, DockingData, RambunctiousRecitation
+    , ShuttleSearch, DockingData, RambunctiousRecitation, TicketTranslation
 
 
 # day 1 exercice calculate Elf expenses
@@ -186,6 +186,18 @@ print("Day 15: Rambunctious Recitation")
 start_time = time.time()
 test_input_set = [3,1,2]
 input_set = [6,19,0,5,7,13,1]
-mem_game = RambunctiousRecitation.RambunctiousRecitation(input_set)
-mem_game.result()
+mem_game = RambunctiousRecitation.RambunctiousRecitation(test_input_set)
+#mem_game.result()
+print("--- %s seconds ---" % (time.time() - start_time))
+
+# Day 16: Ticket Translation
+print("Day 16: Ticket Translation")
+start_time = time.time()
+test_input_set = ['class: 0-1 or 4-19','row: 0-5 or 8-19','seat: 0-13 or 16-19','',
+'your ticket:','11,12,13','','nearby tickets:','3,9,18','15,1,5','5,14,9','38,6,12']
+timetable = utils.fileHandler()
+input_set = timetable.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2020/input/TicketTranslation.txt")
+ticket = TicketTranslation.TicketTranslation(input_set)
+ticket.result()
 print("--- %s seconds ---" % (time.time() - start_time))
