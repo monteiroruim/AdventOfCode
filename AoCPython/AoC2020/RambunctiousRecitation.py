@@ -6,6 +6,7 @@ class RambunctiousRecitation():
         self.target_1 = 2020
         self.target_2 = 30000000
         self.input_dict = dict()
+        self.preset_memory()
 
 
     def preset_memory(self):
@@ -28,7 +29,6 @@ class RambunctiousRecitation():
 
     
     def result(self):
-        self.preset_memory()
         self.memory_game()
         print("Result part 1: " , self.result1)
         print("Result part 2: " , self.result2)
