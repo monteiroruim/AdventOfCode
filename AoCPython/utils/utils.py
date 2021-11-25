@@ -32,3 +32,11 @@ class fileHandler:
         with open(path_file_name, 'r') as f:
             result_set = [line.replace('\n', '').replace('\r', '') for line in f]
         return result_set
+
+    def parse_file_2_str(self, path_file_name):
+        result_set = []
+        with open(path_file_name, 'r') as f:
+            for line in f:
+                for instr in line:
+                    result_set.append(instr)
+        return result_set
