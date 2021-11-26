@@ -10,7 +10,7 @@ import Foundation
 
 class Template {
     
-    init() {
+    public init() {
         print("puzzle answer (part 1): \(PartOne())")
         print("puzzle answer (part 2): \(PartTwo())")
     }
