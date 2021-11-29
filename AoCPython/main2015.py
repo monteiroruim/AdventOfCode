@@ -1,8 +1,20 @@
 import os
-import os
 import time
 from utils import utils
-from AoC2015 import d7, d6, d5, d4, d3, d2, d1, d25
+from AoC2015 import d8, \
+    d7, d6, d5, d4, d3, d2, d1, d25
+
+# day 8 
+start_time = time.time()
+tst = d8.diff_chr_vs_inmem().run_test()
+inputHandler = utils.fileHandler()
+input_set = inputHandler.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2015/input/d8.txt")
+print("Day 8: Matchsticks")
+char_counter = d8.d8(input_set)
+char_counter.diff_chr_vs_inmem()
+print("--- %s seconds ---" % (time.time() - start_time))
+exit()
 
 
 # day 1 
@@ -104,6 +116,17 @@ circuit2 = d7.d7(input_set, 2)
 circuit2.get_wire_values('a')
 print("--- %s seconds ---" % (time.time() - start_time))
 
+# day 8 
+start_time = time.time()
+tst = d8.diff_chr_vs_inmem().run_test()
+inputHandler = utils.fileHandler()
+input_set = inputHandler.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2015/input/d8.txt")
+print("Day 8: Matchsticks")
+char_counter = d8.d8(input_set)
+char_counter.diff_chr_vs_inmem()
+print("--- %s seconds ---" % (time.time() - start_time))
+exit()
 
 # day 25
 print("Day 1 - Expense reports")
