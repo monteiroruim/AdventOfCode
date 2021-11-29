@@ -42,7 +42,7 @@ class FifteenDay07 {
         
         if (part == 2) {
             wires["b"] = 46065 // call P
-            wiresCheck["b"] = 1
+            wiresCheck["b"] = 1 
         }
         
         while (wires["lx"] == nil ) {
