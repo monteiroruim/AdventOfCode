@@ -18,7 +18,8 @@ let startTime = CFAbsoluteTimeGetCurrent()
 //var fifteenday03 = FifteenDay03()
 //var fifteenday04 = FifteenDay04()
 //var fifteenday05 = FifteenDay05()
-var fifteenday06 = FifteenDay06()
+//var fifteenday06 = FifteenDay06()
+var fifteenday07 = FifteenDay07()
 
 // 2019
 //var nineOne = nineteenDay01()

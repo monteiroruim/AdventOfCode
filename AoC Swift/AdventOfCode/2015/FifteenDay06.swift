@@ -54,7 +54,6 @@ class FifteenDay06 {
     
     public func countMatrix() -> Int {
         var total = 0
-        var britness = 0
         for i in 0...999 {
             for j in 0...999 {
                 if (matrixPartOne[i][j] == 1) {
