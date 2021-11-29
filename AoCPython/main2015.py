@@ -1,20 +1,19 @@
 import os
-import os
 import time
 from utils import utils
-from AoC2015 import d6, d5, d4, d3, d2, d1, d25
+from AoC2015 import d8, \
+    d7, d6, d5, d4, d3, d2, d1, d25
 
-# day 6 
-print("Day 6: Probably a Fire Hazard")
+# day 8 
 start_time = time.time()
+tst = d8.diff_chr_vs_inmem().run_test()
 inputHandler = utils.fileHandler()
 input_set = inputHandler.parse_line_2_list(os.getcwd() 
-    + "/AoCPython/AoC2015/input/d6.txt")
-test_set = ['toggle 0,0 through 999,0' , 'turn on 0,0 through 999,999', 'turn off 499,499 through 500,500'] # 'toggle 0,0 through 999,0' , 'turn off 499,499 through 500,500','turn on 0,0 through 999,999'
-christmas_light_grid = d6.d6(input_set)
-christmas_light_grid.get_number_lights_on()
+    + "/AoCPython/AoC2015/input/d8.txt")
+print("Day 8: Matchsticks")
+char_counter = d8.d8(input_set)
+char_counter.diff_chr_vs_inmem()
 print("--- %s seconds ---" % (time.time() - start_time))
-
 exit()
 
 
@@ -49,6 +48,8 @@ test_set = ['^','v','^','v','^','v','^','v','^','v']# ['^', '>','v', '<'], ['^',
 neighbouhood_map = d3.d3(input_set)
 print("---- first part ---- ")
 neighbouhood_map.calc_houses()
+print("--- %s seconds ---" % (time.time() - start_time))
+start_time = time.time()
 print("---- second part ---- ")
 neighbouhood_map.calc_houses_new()
 print("--- %s seconds ---" % (time.time() - start_time))
@@ -62,6 +63,8 @@ test_set = 'pqrstuv' # 'abcdef' - 609043, 'pqrstuv' - 1048970
 print("---- first part ---- ")
 miner = d4.d4(input_set)
 miner.get_lowest_integer()
+print("--- %s seconds ---" % (time.time() - start_time))
+start_time = time.time()
 print("---- second part ---- ")
 miner.set_new_hit_key('000000')
 miner.get_lowest_integer()
@@ -84,6 +87,46 @@ print("---- second part ---- ")
 # santa_file2.get_good_strings_count() 
 santa_file.get_good_strings_count()
 print("--- %s seconds ---" % (time.time() - start_time))
+
+#day 6
+print("Day 6: Probably a Fire Hazard")
+start_time = time.time()
+inputHandler = utils.fileHandler()
+input_set = inputHandler.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2015/input/d6.txt")
+test_set = ['toggle 0,0 through 999,0' , 'turn on 0,0 through 999,999', 'turn off 499,499 through 500,500'] # 'toggle 0,0 through 999,0' , 'turn off 499,499 through 500,500','turn on 0,0 through 999,999'
+christmas_light_grid = d6.d6(input_set)
+christmas_light_grid.get_number_lights_on()
+print("--- %s seconds ---" % (time.time() - start_time))
+
+
+print("Day 7: Some Assembly Required")
+start_time = time.time()
+inputHandler = utils.fileHandler()
+input_set = inputHandler.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2015/input/d7.txt")
+test_set = ['123 -> x','456 -> y','x AND y -> d','x OR y -> e','x LSHIFT 2 -> f','y RSHIFT 2 -> g','NOT x -> h','NOT y -> i']
+print("---- first part ---- ")
+circuit = d7.d7(input_set)
+circuit.get_wire_values('a')
+print("--- %s seconds ---" % (time.time() - start_time))
+start_time = time.time()
+print("---- second part ---- ")
+circuit2 = d7.d7(input_set, 2)
+circuit2.get_wire_values('a')
+print("--- %s seconds ---" % (time.time() - start_time))
+
+# day 8 
+start_time = time.time()
+tst = d8.diff_chr_vs_inmem().run_test()
+inputHandler = utils.fileHandler()
+input_set = inputHandler.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2015/input/d8.txt")
+print("Day 8: Matchsticks")
+char_counter = d8.d8(input_set)
+char_counter.diff_chr_vs_inmem()
+print("--- %s seconds ---" % (time.time() - start_time))
+exit()
 
 # day 25
 print("Day 1 - Expense reports")
