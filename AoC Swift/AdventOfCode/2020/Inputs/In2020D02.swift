@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Input2020d02 {
+class In2020D02 {
     
     static let day02PasswordListDebug = """
     1-3 a: abpde

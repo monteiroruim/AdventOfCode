@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Input2020d10 {
+class In2020D10 {
     
     static let day10AdapterArrayDebug1 = """
 16

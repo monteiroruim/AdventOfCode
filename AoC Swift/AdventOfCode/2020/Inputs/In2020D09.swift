@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Input2020d09{
+class In2020D09{
     
     static let day09EncodingErrorDebug = """
 35

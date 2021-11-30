@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Input2020d11 {
+class In2020D11 {
     
     static let day11SeatingListDebug = """
 L.LL.LL.LL

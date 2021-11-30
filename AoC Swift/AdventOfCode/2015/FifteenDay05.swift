@@ -105,7 +105,7 @@ class FifteenDay05 {
      dvszwmarrgswjxmb   is naughty because it contains only one vowel.
      */
     private func PartOne() -> Int{
-        let strings = Input2015D05.strings.split(usingRegex: "\n")
+        let strings = In2015D05.strings.split(usingRegex: "\n")
         var niceCount = 0
         
         for i in strings {
@@ -125,7 +125,7 @@ class FifteenDay05 {
      ieodomkazucvgmuy   is naughty because it has a repeating letter with one between (odo), but no pair that appears twice.
      */
     private func PartTwo() -> Int {
-        let strings = Input2015D05.strings.split(usingRegex: "\n")
+        let strings = In2015D05.strings.split(usingRegex: "\n")
         var niceCount = 0
         
         for i in strings {

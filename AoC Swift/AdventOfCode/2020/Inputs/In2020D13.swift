@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Input2020d13 {
+class In2020D13 {
     
     static let day13BusListDebug = """
 939

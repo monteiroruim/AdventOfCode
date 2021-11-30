@@ -10,7 +10,7 @@ import Foundation
 
 class ShuttleSearch {
     
-    var globalInstructions = Input2020d13.day13BusList.components(separatedBy: .newlines)
+    var globalInstructions = In2020D13.day13BusList.components(separatedBy: .newlines)
     
     struct Bus {
         var arrival: Int

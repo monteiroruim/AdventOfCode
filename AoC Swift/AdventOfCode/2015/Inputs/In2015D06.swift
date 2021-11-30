@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Input2015D06 {
+class In2015D06 {
     
     private let instructionsDebug = """
 turn on 489,959 through 759,964

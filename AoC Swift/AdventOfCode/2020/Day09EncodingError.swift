@@ -10,7 +10,7 @@ import Foundation
 
 class EncodingError {
     
-    var enconding = Input2020d09.day09EncodingError.components(separatedBy: "\n").compactMap{ Int($0) }
+    var enconding = In2020D09.day09EncodingError.components(separatedBy: "\n").compactMap{ Int($0) }
     
     init() {
         let invalidNumber = partOne(encList: enconding)

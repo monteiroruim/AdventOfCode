@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Input2020d03 {
+class In2020D03 {
     
     static let day03TobogganTrajectory = """
     ........#....#..##..#...#.....#

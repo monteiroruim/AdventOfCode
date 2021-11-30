@@ -13,7 +13,7 @@ class fiftteenDay01 {
     let input: String
     
     init() {
-        self.input = Inputs2015.DayOne
+        self.input = In2015D01.DayOne
         partOne()
     }
     

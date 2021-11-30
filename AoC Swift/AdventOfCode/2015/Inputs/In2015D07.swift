@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Input2015D07 {
+class In2015D07 {
     
     private var inputDebug = """
 123 -> x

@@ -10,12 +10,12 @@ import Foundation
 
 class Day11SeatingSystem {
     
-    var seatingList = Input2020d11.day11SeatingList.components(separatedBy: .newlines).map{ Array($0) }
+    var seatingList = In2020D11.day11SeatingList.components(separatedBy: .newlines).map{ Array($0) }
     
     init() {
         partOne()
         
-        self.seatingList = Input2020d11.day11SeatingList.components(separatedBy: .newlines).map{ Array($0) }
+        self.seatingList = In2020D11.day11SeatingList.components(separatedBy: .newlines).map{ Array($0) }
         partTwo()
     }
     

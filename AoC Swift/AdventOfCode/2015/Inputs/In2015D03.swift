@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Input2015D03 {
+class In2015D03 {
     
     static let partOneDebug01 = "^>v<"
     static let partOneDebug02 = "^v^v^v^v^v"

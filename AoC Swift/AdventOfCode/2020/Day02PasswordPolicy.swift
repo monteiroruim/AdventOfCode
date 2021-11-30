@@ -19,7 +19,7 @@ class Day02PasswordPolicy {
     var validPasswordsPartTwo: Int
     
     init() {
-        self.passwordList = Input2020d02.day02PasswordList.components(separatedBy: "\n").compactMap { String($0) }
+        self.passwordList = In2020D02.day02PasswordList.components(separatedBy: "\n").compactMap { String($0) }
         self.lowestNumber = 0
         self.highestNumber = 0
         self.password = ""

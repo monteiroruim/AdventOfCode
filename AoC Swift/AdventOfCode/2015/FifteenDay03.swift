@@ -32,7 +32,7 @@ class FifteenDay03 {
         var points = [Point2D]()
         points.append(point)
         
-        for i in Input2015D03.partOne {
+        for i in In2015D03.partOne {
             switch i { //^>v<
             case "^":
                 point.y = point.y + 1
@@ -74,7 +74,7 @@ class FifteenDay03 {
         points.append(point)
         pointsRobot.append(pointRobot)
         
-        for (i, value) in Input2015D03.partOne.enumerated() {
+        for (i, value) in In2015D03.partOne.enumerated() {
             switch value {
             case "^":
                 if (i % 2 == 0) {

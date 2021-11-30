@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Input2020d12 {
+class In2020D12 {
     
     static let day12navigationInstructionsDebug = """
 F10

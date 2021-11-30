@@ -15,7 +15,7 @@ class Day06CustomsDeclaration {
     var sumPartTwo: Int
     
     init () {
-        let customsDeclaration: [String] = Input2020d06.day06CustomDeclarationsForm
+        let customsDeclaration: [String] = In2020D06.day06CustomDeclarationsForm
         self.tempArray = ["."]
         self.sumPartOne = 0
         self.sumPartTwo = 0

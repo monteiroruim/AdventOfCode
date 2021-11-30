@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Input2020d15 {
+class In2020D15 {
     
     static let d15RambunctiousRecitationDebug1 = "0,3,6"
     static let d15RambunctiousRecitationDebug2 = "1,3,2"

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Input2020d06{
+class In2020D06{
     
     static let day06CustomDeclarationsFormDebug = """
 abc

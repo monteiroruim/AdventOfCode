@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Input2020d07 {
+class In2020D07 {
     
     static let day07LuggageDebug2 = """
 shiny gold bags contain 2 dark red bags.

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Input2020d04 {
+class In2020D04 {
     
     static let day04ValidPassports = """
     pid:087499704 hgt:74in ecl:grn iyr:2012 eyr:2030 byr:1980 hcl:#623a2f

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Input2020d14 {
+class In2020D14 {
     
     static let d14DockingDataDebug = """
 mask = XXXXXXXXXXXXXXXXXXXXXXXXXXXXX1XXXX0X

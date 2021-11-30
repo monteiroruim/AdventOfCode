@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Input2020d01 {
+class In2020D01 {
     
     static let day01ExpenseListDebug = """
     1721

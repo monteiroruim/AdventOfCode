@@ -10,7 +10,7 @@ import Foundation
 
 class Day16TicketTranslation {
     
-    var input = Input2020d16.ticketTranslation
+    var input = In2020D16.ticketTranslation
     var rules: [Rule]
     var ticket: [Int]
     var nearby: [[Int]]

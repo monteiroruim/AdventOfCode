@@ -16,7 +16,7 @@ class FifteenDay07 {
     private var wiresCheck: [String : Int] = [:]
     
     public init() {
-        self.input = Input2015D07().getInput().split(usingRegex: "\n")
+        self.input = In2015D07().getInput().split(usingRegex: "\n")
         
         print("puzzle answer (part 1): \(PartOne())")
         print("puzzle answer (part 2): \(PartTwo())")

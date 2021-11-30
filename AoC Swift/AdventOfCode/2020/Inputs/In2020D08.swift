@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Input2020d08 {
+class In2020D08 {
     
     static let day08HandheldHaltingDebug = """
 nop +0

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Input2020d05 {
+class In2020D05 {
     
     static let day05BoardingPass = """
     BFFBFBFLRL

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Input2020d16 {
+class In2020D16 {
     
     static let ticketTranslationDebug = """
 class: 1-3 or 5-7

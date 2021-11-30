@@ -10,7 +10,7 @@ import Foundation
 
 class RainRisk {
     
-    var globalInstructions = Input2020d12.day12navigationInstructions.components(separatedBy: .newlines)
+    var globalInstructions = In2020D12.day12navigationInstructions.components(separatedBy: .newlines)
     
     struct Point {
         var x: Int

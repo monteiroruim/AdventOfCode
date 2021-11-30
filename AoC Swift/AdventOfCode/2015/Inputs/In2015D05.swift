@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Input2015D05 {
+class In2015D05 {
     
     static let stringsDebug = """
 ugknbfddgicrmopn

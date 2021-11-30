@@ -13,15 +13,20 @@ class Template {
     public init() {
         print("puzzle answer (part 1): \(PartOne())")
         print("puzzle answer (part 2): \(PartTwo())")
+        Tests()
     }
     
-    private func PartOne() {
-        
-        
+    private func PartOne() -> Int {
+        0
     }
     
-    private func PartTwo() {
-        
+    private func PartTwo() -> Int {
+        0
+    }
+
+    private func Tests() {
+        assert(PartOne() == 0, "OK")
+        assert(PartTwo() == 0, "OK")
     }
     
 }

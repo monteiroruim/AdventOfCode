@@ -13,7 +13,7 @@ class PassportProcessing {
     var passportList: [String]
     
     init() {
-        self.passportList = Input2020d04.day04PassportList
+        self.passportList = In2020D04.day04PassportList
         partOne()
     }
     

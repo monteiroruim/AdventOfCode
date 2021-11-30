@@ -18,7 +18,7 @@ class fifteenDay02 {
     var sum: Int
     
     init() {
-        self.boxesSizes = Inputs2015.DayTwo
+        self.boxesSizes = In2015D02.DayTwo
         self.separator = "x"
         self.l = 0
         self.w = 0
