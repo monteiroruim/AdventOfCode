@@ -24,7 +24,7 @@ class TwentyOneDay01 {
         var sum = 0
         var value = 0
         for i in input {
-            (i > value) ? sum = sum + 1 : nil
+            (i > value) ? sum += 1 : nil
             value =  i
         }
         return sum-1
@@ -42,22 +42,12 @@ class TwentyOneDay01 {
      260              G H
      263                H
      */
-    /*
-     A: 607 (N/A - no previous sum)
-     B: 618 (increased)
-     C: 618 (no change)
-     D: 617 (decreased)
-     E: 647 (increased)
-     F: 716 (increased)
-     G: 769 (increased)
-     H: 792 (increased)
-     */
     private func PartTwo() -> Int {
         var sum = 0
         var value = 0
         for i in 0...input.count - 3 {
             let localSum = input[i] + input[i+1] + input[i+2]
-            (localSum > value) ? sum = sum + 1 : nil
+            (localSum > value) ? sum += 1 : nil
             value =  localSum
         }
         return sum - 1

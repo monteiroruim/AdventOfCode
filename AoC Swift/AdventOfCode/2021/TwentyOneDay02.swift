@@ -1,14 +1,14 @@
 //
-//  Template.swift
+//  TwentyOneDay02.swift
 //  AdventOfCode
 //
-//  Created by Pereira Orlando on 22.11.21.
+//  Created by Pereira Orlando on 01.12.21.
 //  Copyright © 2021 Pereira Orlando. All rights reserved.
 //
 
 import Foundation
 
-class Template {
+class TwentyOneDay02 {
     
     //private var input: [String]
     
