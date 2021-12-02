@@ -1,18 +1,18 @@
 import os
 import time
 from utils import utils
-from AoC2015 import d8, \
+from AoC2015 import d9, d8, \
     d7, d6, d5, d4, d3, d2, d1, d25
 
-# day 8 
+# day 9
 start_time = time.time()
-tst = d8.diff_chr_vs_inmem().run_test()
+tst = d9.test().run()
 inputHandler = utils.fileHandler()
 input_set = inputHandler.parse_line_2_list(os.getcwd() 
-    + "/AoCPython/AoC2015/input/d8.txt")
-print("Day 8: Matchsticks")
-char_counter = d8.d8(input_set)
-char_counter.diff_chr_vs_inmem()
+    + "/AoCPython/AoC2015/input/d9.txt")
+print("--- Day 9: All in a Single Night ---")
+dist_calc = d9.d9(input_set)
+dist_calc.get_shortest_route()
 print("--- %s seconds ---" % (time.time() - start_time))
 exit()
 
