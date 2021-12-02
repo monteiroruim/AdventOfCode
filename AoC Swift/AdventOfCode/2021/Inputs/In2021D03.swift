@@ -1,20 +1,18 @@
 //
-//  TemplateInput.swift
+//  In2021D03.swift
 //  AdventOfCode
 //
-//  Created by Pereira Orlando on 01.12.21.
+//  Created by Pereira Orlando on 02.12.21.
 //  Copyright © 2021 Pereira Orlando. All rights reserved.
 //
 
 import Foundation
 
-class TemplateInput {
+class In2021D03 {
     
     private var inputDebug = """
-
 """
     private var input = """
-
 """
     
     public init() {

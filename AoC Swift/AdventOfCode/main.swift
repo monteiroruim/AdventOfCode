@@ -48,7 +48,8 @@ let startTime = CFAbsoluteTimeGetCurrent()
 //var day15Recitaton = Day15RambunctiousRecitation()
 //var day16TicketRegistration = Day16TicketTranslation()
 
-var twentyoneDay01 = TwentyOneDay01()
+//var twentyoneDay01 = TwentyOneDay01()
+var twentyoneDay02 = TwentyOneDay02()
 
 print("\nExec time: ", NSString(format: "%.5f", CFAbsoluteTimeGetCurrent() - startTime), "s")
 
