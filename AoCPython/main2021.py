@@ -1,10 +1,27 @@
 import os
 import time
 from utils import utils
-from AoC2021 import d1
+from AoC2021 import d1, d2
 
 
-# day 1 exercice calculate Elf expenses
+# day 2
+print("Day 2: Dive!")
+start_time = time.time()
+print("- testing")
+tst = d2.test_d2().run_test()
+start_time = time.time()
+print("- calculation")
+inputHandler = utils.fileHandler()
+input_set = inputHandler.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2021/input/d2.txt")
+pilot = d2.d2(input_set)
+pilot.calc_distance()
+print("part1 :", pilot.result1)
+pilot.calc_distance_with_aim()
+print("part2 :", pilot.result2)
+print("--- %s seconds ---" % (time.time() - start_time))
+
+# day 1 
 print("Day 1: Sonar Sweeps")
 start_time = time.time()
 print("- testing")
