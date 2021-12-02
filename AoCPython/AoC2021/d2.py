@@ -51,20 +51,9 @@ class d2:
 
     def calc_distance(self):
         self.forward = sum([int(cmd.split()[1]) for cmd in self.init_val if cmd.find("forward") > -1]) 
-        self.depth += sum([int(cmd.split()[1])*-1 for cmd in self.init_val if cmd.find("up") > -1])
+        self.depth -= sum([int(cmd.split()[1]) for cmd in self.init_val if cmd.find("up") > -1])
         self.depth += sum([int(cmd.split()[1]) for cmd in self.init_val if cmd.find("down") > -1]) 
-        '''for cmd in self.init_val:
-            direction, ammount = cmd.split()
-            if direction == "forward":
-                self.forward += int(ammount)
-            elif direction == "down":
-                self.depth += int(ammount)
-            elif direction == "up":
-                self.depth -= int(ammount)
-            else:
-                print("unknown instruction", direction)
-        '''
-        #self.depth = down + up
+
         self.result1 = self.depth*self.forward
 
 
