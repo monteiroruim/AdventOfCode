@@ -8,6 +8,13 @@
 
 import Foundation
 
+@available (macOS 10.15, * )
+extension String {
+    subscript(idx: Int) -> String {
+        String(self[index(startIndex, offsetBy: idx)])
+    }
+}
+
 // Extract the Int value from the string L1010,D347,...
 extension Int {
     static func parseIntFromString(from string: String) -> Int? {
