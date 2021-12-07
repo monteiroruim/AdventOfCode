@@ -8,6 +8,19 @@
 
 import Foundation
 
+extension Array {
+    func decompose() -> (Iterator.Element, [Iterator.Element])? {
+        guard let x = first else { return nil }
+        return (x, Array(self[1..<count]))
+    }
+}
+
+func between<T>(x: T, _ ys: [T]) -> [[T]] {
+    guard let (head, tail) = ys.decompose() else { return [[x]] }
+    return [[x] + ys] + between(x:x, tail).map { [head] + $0 }
+}
+
+
 @available (macOS 10.15, * )
 extension String {
     subscript(idx: Int) -> String {
