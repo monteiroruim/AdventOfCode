@@ -1,10 +1,28 @@
 import os
 import time
 from utils import utils
-from AoC2021 import d1, d2, d3
+from AoC2021 import d1, d2, d3, d4
 
 
-# day 2
+
+# day 4 - 25410
+print("Day 4: Giant Squid")
+start_time = time.time()
+print("- testing")
+tst = d4.test().run()
+start_time = time.time()
+print("- calculation")
+inputHandler = utils.fileHandler()
+input_set = inputHandler.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2021/input/d4.txt")
+bingo_session = d4.d4(input_set)
+bingo_session.start_draw()
+print("part1 :", bingo_session.get_res_pt1())
+print("part2 :", bingo_session.get_res_pt2())
+print("--- %s seconds ---" % (time.time() - start_time))
+exit()
+
+# day 3
 print("Day 3: Binary Diagnostic")
 start_time = time.time()
 print("- testing")
@@ -20,7 +38,6 @@ print("part1 :", submarine.get_res_pt1())
 submarine.calc_life_support()
 print("part2 :", submarine.get_res_pt2())
 print("--- %s seconds ---" % (time.time() - start_time))
-
 
 # day 2
 print("Day 2: Dive!")

@@ -61,7 +61,6 @@ class d3:
         self.o2_rate = l_o2[0]
         self.co2_rate = l_co2[0]
 
-        
         self.result2 = int(self.o2_rate, 2) * int(self.co2_rate, 2)
 
 
