@@ -28,6 +28,8 @@
 		085209D7257F6A62007AD9FC /* Day08HandheldHalting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085209D6257F6A62007AD9FC /* Day08HandheldHalting.swift */; };
 		08554AB62758D616009AE36B /* In2021D03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08554AB52758D616009AE36B /* In2021D03.swift */; };
 		08554AB82758D63B009AE36B /* TwentyOneDay03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08554AB72758D63B009AE36B /* TwentyOneDay03.swift */; };
+		085B7F37275F5CDB0096EA89 /* In2021D05.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085B7F36275F5CDB0096EA89 /* In2021D05.swift */; };
+		085B7F39275F5CE60096EA89 /* TwentyOneDay05.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085B7F38275F5CE60096EA89 /* TwentyOneDay05.swift */; };
 		086A21C2257A1EF6009A9D6F /* Day04PassportProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A21C1257A1EF6009A9D6F /* Day04PassportProcessing.swift */; };
 		08747E8D257E1210000FA898 /* Day07LugaggeProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08747E8C257E1210000FA898 /* Day07LugaggeProcessing.swift */; };
 		0879749025777E010016B1A3 /* Day02PasswordPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0879748F25777E010016B1A3 /* Day02PasswordPolicy.swift */; };
@@ -108,6 +110,8 @@
 		085209D6257F6A62007AD9FC /* Day08HandheldHalting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day08HandheldHalting.swift; sourceTree = "<group>"; };
 		08554AB52758D616009AE36B /* In2021D03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = In2021D03.swift; sourceTree = "<group>"; };
 		08554AB72758D63B009AE36B /* TwentyOneDay03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwentyOneDay03.swift; sourceTree = "<group>"; };
+		085B7F36275F5CDB0096EA89 /* In2021D05.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = In2021D05.swift; sourceTree = "<group>"; };
+		085B7F38275F5CE60096EA89 /* TwentyOneDay05.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwentyOneDay05.swift; sourceTree = "<group>"; };
 		086A21C1257A1EF6009A9D6F /* Day04PassportProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day04PassportProcessing.swift; sourceTree = "<group>"; };
 		08747E8C257E1210000FA898 /* Day07LugaggeProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day07LugaggeProcessing.swift; sourceTree = "<group>"; };
 		0879748F25777E010016B1A3 /* Day02PasswordPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day02PasswordPolicy.swift; sourceTree = "<group>"; };
@@ -225,6 +229,7 @@
 				08CD39D027578AD70019674E /* TwentyOneDay02.swift */,
 				08554AB72758D63B009AE36B /* TwentyOneDay03.swift */,
 				08BF4446275A5FF5009EC8ED /* TwentyOneDay04.swift */,
+				085B7F38275F5CE60096EA89 /* TwentyOneDay05.swift */,
 			);
 			path = 2021;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 				08CD39CE27578ACA0019674E /* In2021D02.swift */,
 				08554AB52758D616009AE36B /* In2021D03.swift */,
 				08BF4444275A5FD9009EC8ED /* In2021D04.swift */,
+				085B7F36275F5CDB0096EA89 /* In2021D05.swift */,
 			);
 			path = Inputs;
 			sourceTree = "<group>";
@@ -382,6 +388,7 @@
 				08747E8D257E1210000FA898 /* Day07LugaggeProcessing.swift in Sources */,
 				08CD39D327578BBB0019674E /* TemplateInput.swift in Sources */,
 				08E93EBF274BDC7400BFFEA1 /* Template.swift in Sources */,
+				085B7F39275F5CE60096EA89 /* TwentyOneDay05.swift in Sources */,
 				08FAF96625810CBE00D28B99 /* In2020D05.swift in Sources */,
 				08E1FD2725836ABD009822D5 /* In2020D11.swift in Sources */,
 				085209D7257F6A62007AD9FC /* Day08HandheldHalting.swift in Sources */,
@@ -399,6 +406,7 @@
 				08554AB62758D616009AE36B /* In2021D03.swift in Sources */,
 				0830CF59275525D200F5292F /* FifteenDay09.swift in Sources */,
 				08959FC223A3A42700A091C8 /* NineteenDay02.swift in Sources */,
+				085B7F37275F5CDB0096EA89 /* In2021D05.swift in Sources */,
 				08AFDB8F238FF6C500E72EAF /* main.swift in Sources */,
 				0819896C25879730005BDFD5 /* In2020D12.swift in Sources */,
 				08C19F2A2747DB9F000F5074 /* Day16TicketTranslation.swift in Sources */,
