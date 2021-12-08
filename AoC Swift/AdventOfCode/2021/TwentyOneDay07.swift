@@ -17,7 +17,7 @@ class TwentyOneDay07 {
     public init() {
         print("puzzle answer (part 1): \(PartOne())")
         print("puzzle answer (part 2): \(PartTwo())")
-//        Tests()
+        Tests()
     }
     
     private func PartOne() -> Int {
@@ -35,26 +35,6 @@ class TwentyOneDay07 {
         return fuel
     }
     
-    /*
-     [16, 1, 2, 0, 4, 2, 7, 1, 2, 14]
-     
-     the first step costs 1
-     the second step costs 2
-     the third step costs 3
-     
-     Move from 16 to 5: 66 fuel
-     Move from 1 to 5: 10 fuel
-     Move from 2 to 5: 6 fuel
-     Move from 0 to 5: 15 fuel
-     Move from 4 to 5: 1 fuel
-     Move from 2 to 5: 6 fuel
-     Move from 7 to 5: 3 fuel
-     Move from 1 to 5: 10 fuel
-     Move from 2 to 5: 6 fuel
-     Move from 14 to 5: 45 fuel
-     
-     168
-     */
     func fuelCalculation(for distance: Int) -> Int {
             distance * (distance + 1) / 2
     }
@@ -77,8 +57,8 @@ class TwentyOneDay07 {
     }
 
     private func Tests() {
-        assert(PartOne() == 0, "OK")
-        assert(PartTwo() == 0, "OK")
+        assert(PartOne() == 351901, "OK")
+        assert(PartTwo() == 101079875, "OK")
     }
     
 }
