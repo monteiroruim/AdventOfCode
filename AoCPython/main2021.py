@@ -1,7 +1,26 @@
 import os
 import time
 from utils import utils
-from AoC2021 import d1, d2, d3, d4, d5, d6
+from AoC2021 import d1, d2, d3, d4, d5, d6, d7
+
+
+# day 7
+print("Day 7: The Treachery of Whales")
+start_time = time.time()
+print("- testing")
+tst = d7.test().run()
+start_time = time.time()
+print("- calculation")
+inputHandler = utils.fileHandler()
+input_set = inputHandler.parse_line_2_int_array(os.getcwd() 
+    + "/AoCPython/AoC2021/input/d7.txt")
+crabs = d7.d7(input_set)
+crabs.get_least_fuel()
+print("part1 :", crabs.get_res_pt1())
+
+print("part2 :", crabs.get_res_pt2())
+print("--- %s seconds ---" % (time.time() - start_time))
+exit()
 
 # day 6 
 print("Day 6: Lanternfish")
@@ -19,7 +38,6 @@ print("part1 :", lantern_fish.get_res_pt1())
 lantern_fish.forecast_growth(256)
 print("part2 :", lantern_fish.get_res_pt2())
 print("--- %s seconds ---" % (time.time() - start_time))
-exit()
 
 # day 5 
 print("Day 5: Hydrothermal Venture")
