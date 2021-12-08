@@ -40,3 +40,9 @@ class fileHandler:
                 for instr in line:
                     result_set.append(instr)
         return result_set
+
+    
+    def parse_line_2_int_array(self, path_file_name, delimiter=','):
+        with open(path_file_name, 'r') as f:
+            result_set = [int(n) for line in f for n in line.split(delimiter)]
+        return result_set
