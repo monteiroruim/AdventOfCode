@@ -14,7 +14,7 @@ class d5:
         if p:
             print(" ----- Result part 1 ----- ")
             print(self.result1)
-            return 5
+            return self.result1
 
         return self.result1
 

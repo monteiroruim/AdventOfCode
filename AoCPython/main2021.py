@@ -1,9 +1,25 @@
 import os
 import time
 from utils import utils
-from AoC2021 import d1, d2, d3, d4, d5
+from AoC2021 import d1, d2, d3, d4, d5, d6
 
-
+# day 6 
+print("Day 6: Lanternfish")
+start_time = time.time()
+print("- testing")
+tst = d6.test().run()
+start_time = time.time()
+print("- calculation")
+inputHandler = utils.fileHandler()
+input_set = inputHandler.parse_line_2_int_array(os.getcwd() 
+    + "/AoCPython/AoC2021/input/d6.txt")
+lantern_fish = d6.d6(input_set)
+lantern_fish.forecast_growth(80)
+print("part1 :", lantern_fish.get_res_pt1())
+lantern_fish.forecast_growth(256)
+print("part2 :", lantern_fish.get_res_pt2())
+print("--- %s seconds ---" % (time.time() - start_time))
+exit()
 
 # day 5 
 print("Day 5: Hydrothermal Venture")
@@ -19,7 +35,6 @@ vents = d5.d5(input_set)
 print("part1 :", vents.get_res_pt1())
 print("part2 :", vents.get_res_pt2())
 print("--- %s seconds ---" % (time.time() - start_time))
-exit()
 
 # day 4
 print("Day 4: Giant Squid")
