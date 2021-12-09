@@ -1,8 +1,25 @@
 import os
 import time
 from utils import utils
-from AoC2021 import d1, d2, d3, d4, d5, d6, d7
+from AoC2021 import d1, d2, d3, d4, d5, d6, d7, d8
 
+# day 8
+print("Day 8: Seven Segment Search")
+start_time = time.time()
+print("- testing")
+tst = d8.test().run()
+start_time = time.time()
+print("- calculation")
+inputHandler = utils.fileHandler()
+input_set = inputHandler.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2021/input/d8.txt")
+display = d8.d8(input_set)
+display.output_decode()
+print("part1 :", display.get_res_pt1())
+
+print("part2 :", display.get_res_pt2())
+print("--- %s seconds ---" % (time.time() - start_time))
+exit()
 
 # day 7
 print("Day 7: The Treachery of Whales")
@@ -20,7 +37,6 @@ print("part1 :", crabs.get_res_pt1())
 
 print("part2 :", crabs.get_res_pt2())
 print("--- %s seconds ---" % (time.time() - start_time))
-exit()
 
 # day 6 
 print("Day 6: Lanternfish")
