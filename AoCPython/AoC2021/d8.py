@@ -1,6 +1,3 @@
-from difflib import SequenceMatcher
-
-
 class d8:
     def __init__(self, input):
         # https://adventofcode.com/2021/day/8
