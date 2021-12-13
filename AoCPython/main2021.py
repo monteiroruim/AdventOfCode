@@ -2,7 +2,27 @@ import os
 import time
 from utils import utils
 from AoC2021 import d1, d2, d3, d4, d5, d6, d7, d8, d9, \
-    d10
+    d10, d11
+
+
+# day 11
+print("Day 11: Dumbo Octopus ")
+start_time = time.time()
+print("- testing")
+tst = d11.test().run()
+
+start_time = time.time()
+print("- calculation")
+inputHandler = utils.fileHandler()
+input_set = inputHandler.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2021/input/d11.txt")
+octopus = d11.d11(input_set)
+octopus.simulate_flashes(100)
+print("part1 :", octopus.get_res_pt1())
+
+print("part2 :", octopus.get_res_pt2())
+print("--- %s seconds ---" % (time.time() - start_time))
+exit()
 
 # day 10
 print("Day 10: Syntax Scoring")
@@ -20,8 +40,6 @@ print("part1 :", nav_system.get_res_pt1())
 
 print("part2 :", nav_system.get_res_pt2())
 print("--- %s seconds ---" % (time.time() - start_time))
-exit()
-
 
 # day 9
 print("Day 9: Smoke Basin")
