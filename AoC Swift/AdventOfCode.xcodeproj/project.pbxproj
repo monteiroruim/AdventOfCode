@@ -55,6 +55,8 @@
 		08C19F2A2747DB9F000F5074 /* Day16TicketTranslation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C19F292747DB9F000F5074 /* Day16TicketTranslation.swift */; };
 		08C19F2C2747DBD5000F5074 /* In2020D16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C19F2B2747DBD5000F5074 /* In2020D16.swift */; };
 		08C4B653257D0CFE00301DE3 /* Day06CustomsDeclaration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C4B652257D0CFE00301DE3 /* Day06CustomsDeclaration.swift */; };
+		08C8785227638F2B00698F67 /* In2021D10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C8785127638F2B00698F67 /* In2021D10.swift */; };
+		08C8785427638F4100698F67 /* TwentyOneDay10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C8785327638F4100698F67 /* TwentyOneDay10.swift */; };
 		08CD39CF27578ACA0019674E /* In2021D02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD39CE27578ACA0019674E /* In2021D02.swift */; };
 		08CD39D127578AD70019674E /* TwentyOneDay02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD39D027578AD70019674E /* TwentyOneDay02.swift */; };
 		08CD39D327578BBB0019674E /* TemplateInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD39D227578BBB0019674E /* TemplateInput.swift */; };
@@ -149,6 +151,8 @@
 		08C19F2B2747DBD5000F5074 /* In2020D16.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = In2020D16.swift; sourceTree = "<group>"; };
 		08C4B652257D0CFE00301DE3 /* Day06CustomsDeclaration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day06CustomsDeclaration.swift; sourceTree = "<group>"; };
 		08C4B65B257DA0D700301DE3 /* Day06customs.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Day06customs.txt; sourceTree = "<group>"; };
+		08C8785127638F2B00698F67 /* In2021D10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = In2021D10.swift; sourceTree = "<group>"; };
+		08C8785327638F4100698F67 /* TwentyOneDay10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwentyOneDay10.swift; sourceTree = "<group>"; };
 		08CD39CE27578ACA0019674E /* In2021D02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = In2021D02.swift; sourceTree = "<group>"; };
 		08CD39D027578AD70019674E /* TwentyOneDay02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwentyOneDay02.swift; sourceTree = "<group>"; };
 		08CD39D227578BBB0019674E /* TemplateInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateInput.swift; sourceTree = "<group>"; };
@@ -250,6 +254,7 @@
 				08D0DF4C2760AE8F0015B22B /* TwentyOneDay07.swift */,
 				08D0DF4E2760E1B40015B22B /* TwentyOneDay08.swift */,
 				087A386C276249D5007B68D0 /* TwentyOneDay09.swift */,
+				08C8785327638F4100698F67 /* TwentyOneDay10.swift */,
 			);
 			path = 2021;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 				08D0DF4A2760AE590015B22B /* In2021D07.swift */,
 				08D0DF502760E1F00015B22B /* In2021D08.swift */,
 				087A386A276249C8007B68D0 /* In2021D09.swift */,
+				08C8785127638F2B00698F67 /* In2021D10.swift */,
 			);
 			path = Inputs;
 			sourceTree = "<group>";
@@ -425,12 +431,14 @@
 				08E93EBB274BD31200BFFEA1 /* FifteenDay04.swift in Sources */,
 				08BF4445275A5FD9009EC8ED /* In2021D04.swift in Sources */,
 				086A21C2257A1EF6009A9D6F /* Day04PassportProcessing.swift in Sources */,
+				08C8785427638F4100698F67 /* TwentyOneDay10.swift in Sources */,
 				085149C42756781700D0DC9F /* In2015D02.swift in Sources */,
 				08F03CCF258B6D34007A7EE1 /* In2020D15.swift in Sources */,
 				08CD39CF27578ACA0019674E /* In2021D02.swift in Sources */,
 				08FAF96525810CBE00D28B99 /* In2020D07.swift in Sources */,
 				08E93EBD274BDBD900BFFEA1 /* In2015D05.swift in Sources */,
 				080A5B622589F27F000EDCBA /* In2020D14.swift in Sources */,
+				08C8785227638F2B00698F67 /* In2021D10.swift in Sources */,
 				08554AB62758D616009AE36B /* In2021D03.swift in Sources */,
 				0830CF59275525D200F5292F /* FifteenDay09.swift in Sources */,
 				08959FC223A3A42700A091C8 /* NineteenDay02.swift in Sources */,
