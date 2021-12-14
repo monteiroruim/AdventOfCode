@@ -2,8 +2,27 @@ import os
 import time
 from utils import utils
 from AoC2021 import d1, d2, d3, d4, d5, d6, d7, d8, d9, \
-    d10, d11
+    d10, d11, d12
 
+
+# day 12
+print("Day 12: Passage Pathing")
+start_time = time.time()
+print("- testing")
+tst = d12.test().run()
+
+start_time = time.time()
+print("- calculation")
+inputHandler = utils.fileHandler()
+input_set = inputHandler.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2021/input/d12.txt")
+cave = d12.d12(input_set)
+cave.find_paths()
+print("part1 :", cave.get_res_pt1())
+cave.find_paths2()
+print("part2 :", cave.get_res_pt2())
+print("--- %s seconds ---" % (time.time() - start_time))
+exit()
 
 # day 11
 print("Day 11: Dumbo Octopus ")
@@ -22,7 +41,6 @@ print("part1 :", octopus.get_res_pt1())
 
 print("part2 :", octopus.get_res_pt2())
 print("--- %s seconds ---" % (time.time() - start_time))
-exit()
 
 # day 10
 print("Day 10: Syntax Scoring")

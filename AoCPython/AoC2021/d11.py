@@ -3,7 +3,7 @@ from copy import deepcopy
 
 class d11:
     def __init__(self, input):
-        # https://adventofcode.com/2021/day/10
+        # https://adventofcode.com/2021/day/11
         self.init_val = input
         self.working_set = dict()
 
@@ -39,7 +39,6 @@ class d11:
                 self.working_set[(i,j)] = int(val)
 
 
-    from copy import deepcopy
     def get_adjacents(self, r, c):
         adj_list = []
         working_adj = deepcopy(self.adjacent_list)
@@ -69,7 +68,6 @@ class d11:
         return flash
 
 
-
     def simulate_flashes(self, steps=10):
         path = False
         step = 1
@@ -86,8 +84,7 @@ class d11:
                 break
             
             step += 1
-            
-                
+                          
 
 import unittest
 class test(unittest.TestCase):
