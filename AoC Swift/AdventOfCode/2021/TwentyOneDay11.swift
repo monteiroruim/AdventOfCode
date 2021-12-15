@@ -83,7 +83,7 @@ class TwentyOneDay11 {
             }
         }
         
-        fatalError("This shouldn't happen")
+        fatalError("Error")
     }
 
     private func Tests() {
