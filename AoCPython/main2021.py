@@ -2,8 +2,26 @@ import os
 import time
 from utils import utils
 from AoC2021 import d1, d2, d3, d4, d5, d6, d7, d8, d9, \
-    d10, d11, d12, d13
+    d10, d11, d12, d13, d14
 
+
+# day 12
+print("Day 14: Extended Polymerization")
+start_time = time.time()
+print("- testing")
+tst = d14.test().run()
+start_time = time.time()
+print("- calculation")
+inputHandler = utils.fileHandler()
+input_set = inputHandler.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2021/input/d14.txt")
+polymerization = d14.d14(input_set)
+polymerization.extend(10)
+print("part1 :", polymerization.get_res_pt1())
+
+print("part2 :", polymerization.get_res_pt2())
+print("--- %s seconds ---" % (time.time() - start_time))
+exit()
 
 # day 13
 print("Day 13: Transparent Origami")
@@ -21,7 +39,6 @@ print("part1 :", thermal_camera.get_res_pt1())
 print("part2 :")
 thermal_camera.get_activation_code()
 print("--- %s seconds ---" % (time.time() - start_time))
-exit()
 
 # day 12
 print("Day 12: Passage Pathing")
