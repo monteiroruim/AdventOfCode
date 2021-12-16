@@ -5,7 +5,7 @@ from AoC2021 import d1, d2, d3, d4, d5, d6, d7, d8, d9, \
     d10, d11, d12, d13, d14
 
 
-# day 12
+# day 14
 print("Day 14: Extended Polymerization")
 start_time = time.time()
 print("- testing")
@@ -16,7 +16,7 @@ inputHandler = utils.fileHandler()
 input_set = inputHandler.parse_line_2_list(os.getcwd() 
     + "/AoCPython/AoC2021/input/d14.txt")
 polymerization = d14.d14(input_set)
-polymerization.extend(10)
+polymerization.extend(40)
 print("part1 :", polymerization.get_res_pt1())
 
 print("part2 :", polymerization.get_res_pt2())

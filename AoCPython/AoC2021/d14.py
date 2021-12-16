@@ -1,11 +1,9 @@
-from typing import OrderedDict
-
-
 class d14:
     def __init__(self, input):
         # https://adventofcode.com/2021/day/14
         self.init_val = input
         self.polymer_template =  self.init_polymer_template()
+        self.polymer_dict = self.set_polymer_template_dict()
         self.insertion_rules = self.init_insertion_rules()
         self.num_steps = 1
 
@@ -44,60 +42,67 @@ class d14:
                 continue
             elif len(line) > 0:
                 # clean up and prep value to use/ replace
-                print(line)
                 p, k = line.split('->')     
-                # new = p[0].strip()  + k.strip() + p[1].strip()  
-                # tmp_rules.append((p.strip(), new))
                 tmp_rules.append((p.strip(), k.strip()))
 
         return tmp_rules
 
 
+    def set_polymer_template_dict(self):
+        tmp_rules = {}
+        for i in range(len(self.polymer_template)):
+            ks = self.polymer_template[i:i+2]
+            if ks not in tmp_rules.keys():
+                tmp_rules[ks] = 1
+            else:
+                tmp_rules[ks] += 1
+
+        return tmp_rules
+
+
     def calc_results(self):
-        unique_pos = set(self.polymer_template)
-        least_common = 99999
-        most_common = 0
-        # print(unique_pos)
-        for c in unique_pos:
-            cnt = self.polymer_template.count(c)
-            if cnt < least_common:
-                least_common = cnt
-            if cnt > most_common:
-                most_common = cnt
-        
-        self.result1 = most_common - least_common
+        # extract key pair first
+        # first iteration create a single B entry that needs to be taken in account whem summing
+        results = {}
+        results[self.polymer_template[-1]] = 1
+        pls = [(k,v) for k,v in self.polymer_dict.items()]        
+        for polimer in pls:
+            k, v = polimer            
+            if k[0] not in results.keys():
+                results[k[0]] = v
+            else:
+                results[k[0]] += v
 
-
+        least_common = min([v for v in results.values()])
+        most_common = max([v for v in results.values()])
+        return most_common - least_common
 
     def extend(self, steps):
-        # print("template", self.polymer_template)
-        # print("rules ", self.insertion_rules)   
-        self.set_num_steps(steps)     
+        self.set_num_steps(steps)
         for step in range(self.num_steps):
-            l_template = {}
-            new_add = 0
-            for i in range(len(self.polymer_template) - 1):
-                val_found = [v for v in self.insertion_rules if v[0] == self.polymer_template[i:i+2]]
-                if val_found:
-                    l_template[i + 1 + new_add] = val_found[0]
-                    new_add += 1
+            new_template = {}
+            for i in self.insertion_rules:
+                if i[0] in self.polymer_dict.keys():
+                    cnt = self.polymer_dict[i[0]]
+                    # reset value
+                    self.polymer_dict[i[0]] = 0
+                    pair = list(i[0])
+                    r_pair = pair[0] + i[1]
+                    l_pair = i[1] + pair[1]
+                    if r_pair not in new_template.keys():
+                        new_template[r_pair] = cnt
+                    else:
+                        new_template[r_pair] += cnt
+                    if l_pair not in new_template.keys():
+                        new_template[l_pair] = cnt
+                    else:
+                        new_template[l_pair] += cnt
+            self.polymer_dict = new_template
+            if step == 9:
+                self.result1 = self.calc_results()
                 
-            
-            new_template = list(self.polymer_template)
-            for i,v in l_template.items():
-                new_template.insert(i, v[1])
-            self.polymer_template = ''.join(new_template)
-            # print("step collected ", step, len(self.polymer_template), self.polymer_template)
-            '''
-            Template:     NNCB
-            After step 1: NCNBCHB
-            After step 2: NBCCNBBBCBHCB
-            After step 3: NBBBCNCCNBBNBNBBCHBHHBCHB
-            After step 4: NBBNBNBBCCNBCNCCNBBNBBNBBBNBBNBBCBHCBHHNHCBBCBHCB
-            After step 5: 97
-            10: 3073
-            '''
-        self.calc_results()
+        
+        self.result2 = self.calc_results()
 
 
 import unittest
@@ -108,5 +113,9 @@ class test(unittest.TestCase):
                     "BN -> B","BB -> N","BC -> B","CC -> N","CN -> C"
         ]
         init = d14(test_set)
-        init.extend(10)
-        self.assertEqual(init.get_res_pt1(True), 1588)      
+        init.extend(40)
+        self.assertEqual(init.get_res_pt1(True), 1588)   
+        # continue extension instead of restarting
+  
+
+        self.assertEqual(init.get_res_pt2(True), 2188189693529)
