@@ -2,8 +2,26 @@ import os
 import time
 from utils import utils
 from AoC2021 import d1, d2, d3, d4, d5, d6, d7, d8, d9, \
-    d10, d11, d12, d13, d14
+    d10, d11, d12, d13, d14, d15
 
+# day 15
+print("Day 15: Chiton")
+start_time = time.time()
+print("- testing")
+tst = d15.test().run()
+
+start_time = time.time()
+print("- calculation")
+inputHandler = utils.fileHandler()
+input_set = inputHandler.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2021/input/d15.txt")
+navigation = d15.d15(input_set)
+navigation.calc_risk_path()
+print("part1 :", navigation.get_res_pt1())
+
+print("part2 :", navigation.get_res_pt2())
+print("--- %s seconds ---" % (time.time() - start_time))
+exit()
 
 # day 14
 print("Day 14: Extended Polymerization")
@@ -21,7 +39,6 @@ print("part1 :", polymerization.get_res_pt1())
 
 print("part2 :", polymerization.get_res_pt2())
 print("--- %s seconds ---" % (time.time() - start_time))
-exit()
 
 # day 13
 print("Day 13: Transparent Origami")
