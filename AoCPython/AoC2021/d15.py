@@ -31,6 +31,7 @@ class d15:
 
 
     def parse_input(self, input):
+        # convert to dictionary as a map
         map_dict = {}
         for y, row in enumerate(input):
             for x, risk_level in enumerate(row):
@@ -38,13 +39,12 @@ class d15:
         return map_dict
 
 
-
     def get_adjacents(self, r, c):
         adj_list = []
         working_adj = deepcopy(self.adjacent_list)
         working_adj = [(r + t[0], c + t[1]) for t in working_adj]
         for x,y in working_adj: 
-            if x < self.rows and x>= 0 and y>=0 and y<self.cols:
+            if x <= self.rows and x>= 0 and y>=0 and y<=self.cols:
                 adj_list.append((x,y))
         return adj_list
 
@@ -53,21 +53,18 @@ class d15:
     # shortest path algorithm for a graph represented
     # source for method in 
     # https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/
-    # using adjacency matrix representation
-    def dijkstra(self, map, endpoit):
+    # using adjacent matrix representation
+    def get_path(self, map, endpoit):
         tocheck = set(map.keys())
-        print(tocheck)
         node_dict = {(0, 0): 0}
         node = (0, 0)
         while node_dict:
             i, j = node
             path = node_dict[node]
-
             adj_list = self.get_adjacents(i,j)
-            for adj in adj_list:
+            for adj in adj_list:                
                 if adj not in tocheck:
                     continue
-
                 current_path = node_dict.get(adj, None)
                 new_path = path + map[adj]
                 if not current_path or new_path < current_path:
@@ -75,13 +72,11 @@ class d15:
 
             tocheck.remove(node)
             del node_dict[node]
-
             min_path = min(node_dict.values())
-            for coords, path in node_dict.items():
-                if path == min_path:
+            for coords, d_path in node_dict.items():
+                if d_path == min_path:
                     node = coords
                     break
-
             if node == endpoit:
                 return node_dict[endpoit]
 
@@ -89,36 +84,34 @@ class d15:
 
 
     def extend_map(self):
-        # Build full map
-        full_map = self.init_val.copy()
+        full_map = deepcopy(self.init_val)
         for coords, path in self.init_val.items():
             x, y = coords
             for i in range(1, 5):
                 new_path = (path + i) % 9
                 new_path = 9 if new_path == 0 else new_path
-
                 new_x = x + ((self.final_coord[0] + 1) * i)
                 full_map[(new_x, y)] = new_path
 
-        map_dict = full_map.copy()
-        for coords, risk in map_dict.items():
+        map_copy = full_map.copy()
+        for coords, path in map_copy.items():
             x, y = coords
             for i in range(1, 5):
-                new_path = (risk + i) % 9
+                new_path = (path + i) % 9
                 new_path = 9 if new_path == 0 else new_path
                 new_y = y + ((self.final_coord[1] + 1) * i)
                 full_map[(x, new_y)] = new_path
 
-        new_final_coords = ((self.final_coord[0] + 1) * 5 - 1, (self.final_coord[1] + 1) * 5 - 1)
-
-        return self.dijkstra(full_map, new_final_coords)
+        self.rows = (self.final_coord[0] + 1) * 5 - 1
+        self.cols = (self.final_coord[1] + 1) * 5 - 1
+        new_final_coords = (self.rows, self.cols)
+        
+        self.result2 = self.get_path(full_map, new_final_coords)
 
 
 
     def calc_risk_path(self):
-        self.result1 = self.dijkstra(self.init_val, self.final_coord)
-        
-        self.result2 = self.extend_map()
+        self.result1 = self.get_path(self.init_val, self.final_coord)
                     
 
 import unittest
@@ -129,5 +122,7 @@ class test(unittest.TestCase):
         ]
         init = d15(test_set)
         init.calc_risk_path()
-        self.assertEqual(init.get_res_pt1(True), 40)   
+        self.assertEqual(init.get_res_pt1(True), 40)
+   
+        init.extend_map()
         self.assertEqual(init.get_res_pt2(True), 315) # 315

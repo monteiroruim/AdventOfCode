@@ -18,7 +18,7 @@ input_set = inputHandler.parse_line_2_list(os.getcwd()
 navigation = d15.d15(input_set)
 navigation.calc_risk_path()
 print("part1 :", navigation.get_res_pt1())
-
+navigation.extend_map()
 print("part2 :", navigation.get_res_pt2())
 print("--- %s seconds ---" % (time.time() - start_time))
 exit()
