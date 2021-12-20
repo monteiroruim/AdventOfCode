@@ -36,6 +36,8 @@
 		085B7F39275F5CE60096EA89 /* TwentyOneDay05.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085B7F38275F5CE60096EA89 /* TwentyOneDay05.swift */; };
 		085B7F3B275FB52D0096EA89 /* In2021D06.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085B7F3A275FB52D0096EA89 /* In2021D06.swift */; };
 		085B7F3D275FB5510096EA89 /* TwentyOneDay06.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085B7F3C275FB5510096EA89 /* TwentyOneDay06.swift */; };
+		08626EC72770A371001A1B36 /* In2021D14.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08626EC62770A371001A1B36 /* In2021D14.swift */; };
+		08626EC92770A391001A1B36 /* TwentyOneDay14.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08626EC82770A391001A1B36 /* TwentyOneDay14.swift */; };
 		086A21C2257A1EF6009A9D6F /* Day04PassportProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A21C1257A1EF6009A9D6F /* Day04PassportProcessing.swift */; };
 		08745991276C694500190D44 /* In2021D13.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08745990276C694500190D44 /* In2021D13.swift */; };
 		08745993276C695500190D44 /* TwentyOneDay13.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08745992276C695500190D44 /* TwentyOneDay13.swift */; };
@@ -134,6 +136,8 @@
 		085B7F38275F5CE60096EA89 /* TwentyOneDay05.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwentyOneDay05.swift; sourceTree = "<group>"; };
 		085B7F3A275FB52D0096EA89 /* In2021D06.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = In2021D06.swift; sourceTree = "<group>"; };
 		085B7F3C275FB5510096EA89 /* TwentyOneDay06.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwentyOneDay06.swift; sourceTree = "<group>"; };
+		08626EC62770A371001A1B36 /* In2021D14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = In2021D14.swift; sourceTree = "<group>"; };
+		08626EC82770A391001A1B36 /* TwentyOneDay14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwentyOneDay14.swift; sourceTree = "<group>"; };
 		086A21C1257A1EF6009A9D6F /* Day04PassportProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day04PassportProcessing.swift; sourceTree = "<group>"; };
 		08745990276C694500190D44 /* In2021D13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = In2021D13.swift; sourceTree = "<group>"; };
 		08745992276C695500190D44 /* TwentyOneDay13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwentyOneDay13.swift; sourceTree = "<group>"; };
@@ -270,6 +274,7 @@
 				0847E4B32768CC890046B7E4 /* TwentyOneDay11.swift */,
 				0842EE7C276A18900047E7E7 /* TwentyOneDay12.swift */,
 				08745992276C695500190D44 /* TwentyOneDay13.swift */,
+				08626EC82770A391001A1B36 /* TwentyOneDay14.swift */,
 			);
 			path = 2021;
 			sourceTree = "<group>";
@@ -290,6 +295,7 @@
 				0847E4B12768CC6B0046B7E4 /* In2021D11.swift */,
 				0842EE7A276A18830047E7E7 /* In2021D12.swift */,
 				08745990276C694500190D44 /* In2021D13.swift */,
+				08626EC62770A371001A1B36 /* In2021D14.swift */,
 			);
 			path = Inputs;
 			sourceTree = "<group>";
@@ -439,6 +445,7 @@
 				08E93EBF274BDC7400BFFEA1 /* Template.swift in Sources */,
 				087A386D276249D5007B68D0 /* TwentyOneDay09.swift in Sources */,
 				08D0DF512760E1F00015B22B /* In2021D08.swift in Sources */,
+				08626EC72770A371001A1B36 /* In2021D14.swift in Sources */,
 				085B7F39275F5CE60096EA89 /* TwentyOneDay05.swift in Sources */,
 				08FAF96625810CBE00D28B99 /* In2020D05.swift in Sources */,
 				08E1FD2725836ABD009822D5 /* In2020D11.swift in Sources */,
@@ -497,6 +504,7 @@
 				08C09DCA275117E300F99711 /* In2015D07.swift in Sources */,
 				0842EE7D276A18900047E7E7 /* TwentyOneDay12.swift in Sources */,
 				08C19F2C2747DBD5000F5074 /* In2020D16.swift in Sources */,
+				08626EC92770A391001A1B36 /* TwentyOneDay14.swift in Sources */,
 				080A5B5F2589F233000EDCBA /* Day14DockingData.swift in Sources */,
 				085149C22756780D00D0DC9F /* In2015D01.swift in Sources */,
 				085149CB27567B9900D0DC9F /* TwentyOneDay01.swift in Sources */,
