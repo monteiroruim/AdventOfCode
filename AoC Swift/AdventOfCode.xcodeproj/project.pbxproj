@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		080A5B5F2589F233000EDCBA /* Day14DockingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080A5B5E2589F233000EDCBA /* Day14DockingData.swift */; };
 		080A5B622589F27F000EDCBA /* In2020D14.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080A5B612589F27F000EDCBA /* In2020D14.swift */; };
+		0810834E2771FDCE00D3C454 /* In2021D15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0810834D2771FDCE00D3C454 /* In2021D15.swift */; };
+		081083502771FDD500D3C454 /* In2021D16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0810834F2771FDD500D3C454 /* In2021D16.swift */; };
+		081083522771FDDE00D3C454 /* In2021D17.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081083512771FDDE00D3C454 /* In2021D17.swift */; };
+		081083542771FDE500D3C454 /* In2021D18.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081083532771FDE500D3C454 /* In2021D18.swift */; };
+		081083562771FE1800D3C454 /* TwentyOneDay15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081083552771FE1800D3C454 /* TwentyOneDay15.swift */; };
+		081083582771FE1E00D3C454 /* TwentyOneDay16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081083572771FE1E00D3C454 /* TwentyOneDay16.swift */; };
+		0810835A2771FE2400D3C454 /* TwentyOneDay17.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081083592771FE2400D3C454 /* TwentyOneDay17.swift */; };
+		0810835C2771FE2D00D3C454 /* TwentyOneDay18.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0810835B2771FE2D00D3C454 /* TwentyOneDay18.swift */; };
 		08198962258782EC005BDFD5 /* In2020D10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08198961258782EC005BDFD5 /* In2020D10.swift */; };
 		0819896525878314005BDFD5 /* Day10AdapterArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819896425878314005BDFD5 /* Day10AdapterArray.swift */; };
 		0819896C25879730005BDFD5 /* In2020D12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0819896B25879730005BDFD5 /* In2020D12.swift */; };
@@ -109,6 +117,14 @@
 /* Begin PBXFileReference section */
 		080A5B5E2589F233000EDCBA /* Day14DockingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day14DockingData.swift; sourceTree = "<group>"; };
 		080A5B612589F27F000EDCBA /* In2020D14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = In2020D14.swift; sourceTree = "<group>"; };
+		0810834D2771FDCE00D3C454 /* In2021D15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = In2021D15.swift; sourceTree = "<group>"; };
+		0810834F2771FDD500D3C454 /* In2021D16.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = In2021D16.swift; sourceTree = "<group>"; };
+		081083512771FDDE00D3C454 /* In2021D17.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = In2021D17.swift; sourceTree = "<group>"; };
+		081083532771FDE500D3C454 /* In2021D18.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = In2021D18.swift; sourceTree = "<group>"; };
+		081083552771FE1800D3C454 /* TwentyOneDay15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwentyOneDay15.swift; sourceTree = "<group>"; };
+		081083572771FE1E00D3C454 /* TwentyOneDay16.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwentyOneDay16.swift; sourceTree = "<group>"; };
+		081083592771FE2400D3C454 /* TwentyOneDay17.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwentyOneDay17.swift; sourceTree = "<group>"; };
+		0810835B2771FE2D00D3C454 /* TwentyOneDay18.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwentyOneDay18.swift; sourceTree = "<group>"; };
 		08198961258782EC005BDFD5 /* In2020D10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = In2020D10.swift; sourceTree = "<group>"; };
 		0819896425878314005BDFD5 /* Day10AdapterArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day10AdapterArray.swift; sourceTree = "<group>"; };
 		0819896B25879730005BDFD5 /* In2020D12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = In2020D12.swift; sourceTree = "<group>"; };
@@ -275,6 +291,10 @@
 				0842EE7C276A18900047E7E7 /* TwentyOneDay12.swift */,
 				08745992276C695500190D44 /* TwentyOneDay13.swift */,
 				08626EC82770A391001A1B36 /* TwentyOneDay14.swift */,
+				081083552771FE1800D3C454 /* TwentyOneDay15.swift */,
+				081083572771FE1E00D3C454 /* TwentyOneDay16.swift */,
+				081083592771FE2400D3C454 /* TwentyOneDay17.swift */,
+				0810835B2771FE2D00D3C454 /* TwentyOneDay18.swift */,
 			);
 			path = 2021;
 			sourceTree = "<group>";
@@ -296,6 +316,10 @@
 				0842EE7A276A18830047E7E7 /* In2021D12.swift */,
 				08745990276C694500190D44 /* In2021D13.swift */,
 				08626EC62770A371001A1B36 /* In2021D14.swift */,
+				0810834D2771FDCE00D3C454 /* In2021D15.swift */,
+				0810834F2771FDD500D3C454 /* In2021D16.swift */,
+				081083512771FDDE00D3C454 /* In2021D17.swift */,
+				081083532771FDE500D3C454 /* In2021D18.swift */,
 			);
 			path = Inputs;
 			sourceTree = "<group>";
@@ -442,6 +466,7 @@
 				082B95D52578CCFD0059C418 /* Day03TobogganTrajectory.swift in Sources */,
 				08747E8D257E1210000FA898 /* Day07LugaggeProcessing.swift in Sources */,
 				08CD39D327578BBB0019674E /* TemplateInput.swift in Sources */,
+				0810834E2771FDCE00D3C454 /* In2021D15.swift in Sources */,
 				08E93EBF274BDC7400BFFEA1 /* Template.swift in Sources */,
 				087A386D276249D5007B68D0 /* TwentyOneDay09.swift in Sources */,
 				08D0DF512760E1F00015B22B /* In2021D08.swift in Sources */,
@@ -455,9 +480,11 @@
 				08D0DF4B2760AE590015B22B /* In2021D07.swift in Sources */,
 				08E93EBB274BD31200BFFEA1 /* FifteenDay04.swift in Sources */,
 				0847E4B42768CC890046B7E4 /* TwentyOneDay11.swift in Sources */,
+				0810835A2771FE2400D3C454 /* TwentyOneDay17.swift in Sources */,
 				08BF4445275A5FD9009EC8ED /* In2021D04.swift in Sources */,
 				086A21C2257A1EF6009A9D6F /* Day04PassportProcessing.swift in Sources */,
 				08C8785427638F4100698F67 /* TwentyOneDay10.swift in Sources */,
+				081083542771FDE500D3C454 /* In2021D18.swift in Sources */,
 				085149C42756781700D0DC9F /* In2015D02.swift in Sources */,
 				08F03CCF258B6D34007A7EE1 /* In2020D15.swift in Sources */,
 				08CD39CF27578ACA0019674E /* In2021D02.swift in Sources */,
@@ -467,6 +494,7 @@
 				08C8785227638F2B00698F67 /* In2021D10.swift in Sources */,
 				08554AB62758D616009AE36B /* In2021D03.swift in Sources */,
 				0830CF59275525D200F5292F /* FifteenDay09.swift in Sources */,
+				081083502771FDD500D3C454 /* In2021D16.swift in Sources */,
 				08959FC223A3A42700A091C8 /* NineteenDay02.swift in Sources */,
 				085B7F37275F5CDB0096EA89 /* In2021D05.swift in Sources */,
 				08AFDB8F238FF6C500E72EAF /* main.swift in Sources */,
@@ -481,8 +509,11 @@
 				0819896525878314005BDFD5 /* Day10AdapterArray.swift in Sources */,
 				0881448E257B74C1007B46C4 /* Day05BinaryBoarding.swift in Sources */,
 				0842EE7B276A18830047E7E7 /* In2021D12.swift in Sources */,
+				081083562771FE1800D3C454 /* TwentyOneDay15.swift in Sources */,
 				08D0DF4D2760AE8F0015B22B /* TwentyOneDay07.swift in Sources */,
+				081083582771FE1E00D3C454 /* TwentyOneDay16.swift in Sources */,
 				08554AB82758D63B009AE36B /* TwentyOneDay03.swift in Sources */,
+				0810835C2771FE2D00D3C454 /* TwentyOneDay18.swift in Sources */,
 				08959FC523A3A42C00A091C8 /* NineteenDay03.swift in Sources */,
 				082B95DD25793B040059C418 /* FifteenDay02.swift in Sources */,
 				08AFDB962390059A00E72EAF /* FifteenDay25.swift in Sources */,
@@ -492,6 +523,7 @@
 				08FAF95F25810CBE00D28B99 /* In2020D01.swift in Sources */,
 				08FAF95E25810CBE00D28B99 /* In2020D09.swift in Sources */,
 				08FAF96325810CBE00D28B99 /* In2020D06.swift in Sources */,
+				081083522771FDDE00D3C454 /* In2021D17.swift in Sources */,
 				08BF4447275A5FF5009EC8ED /* TwentyOneDay04.swift in Sources */,
 				08F03CCC258B6D1F007A7EE1 /* Day15RambunctiousRecitation.swift in Sources */,
 				08E1FD2425836A81009822D5 /* Day11SeatingSystem.swift in Sources */,
