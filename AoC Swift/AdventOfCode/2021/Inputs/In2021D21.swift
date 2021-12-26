@@ -11,10 +11,12 @@ import Foundation
 class In2021D21 {
     
     private var inputDebug = """
-
+Player 1 starting position: 4
+Player 2 starting position: 8
 """
     private var input = """
-
+Player 1 starting position: 5
+Player 2 starting position: 6
 """
     
     public init() {
