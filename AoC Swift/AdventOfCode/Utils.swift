@@ -20,7 +20,6 @@ func between<T>(x: T, _ ys: [T]) -> [[T]] {
     return [[x] + ys] + between(x:x, tail).map { [head] + $0 }
 }
 
-
 @available (macOS 10.15, * )
 extension String {
     subscript(idx: Int) -> String {
@@ -36,15 +35,13 @@ extension Int {
 }
 
 extension String {
-    func split(usingRegex pattern: String) -> [String] {
+    func splitUsingRegex(usingRegex pattern: String) -> [String] { // have deps at LugaggeProcessing
         let regex = try! NSRegularExpression(pattern: pattern)
         let matches = regex.matches(in: self, range: NSRange(0..<utf16.count))
         let ranges = [startIndex..<startIndex] + matches.map{Range($0.range, in: self)!} + [endIndex..<endIndex]
         return (0...matches.count).map {String(self[ranges[$0].upperBound..<ranges[$0+1].lowerBound])}
     }
-}
-
-extension String {
+    
     var isNumericalOnly: String {
         let pattern = UnicodeScalar("0")..."9"
         return String(unicodeScalars.compactMap { pattern ~= $0 ? Character($0) : nil })

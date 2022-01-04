@@ -10,7 +10,7 @@ import Foundation
 
 class In2015D07 {
     
-    private var inputDebug = """
+    let inputDebug = """
 123 -> x
 456 -> y
 x AND y -> d
@@ -21,7 +21,7 @@ NOT x -> h
 NOT y -> i
 """
     
-    private var input = """
+    let input = """
 bn RSHIFT 2 -> bo
 lf RSHIFT 1 -> ly
 fo RSHIFT 3 -> fq
@@ -362,13 +362,5 @@ NOT ac -> ad
 1 AND ht -> hu
 NOT hn -> ho
 """
- 
-    public func getInputDebug() -> String {
-        return inputDebug
-    }
-    
-    public func getInput() -> String {
-        return input
-    }
     
 }

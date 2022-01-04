@@ -10,13 +10,13 @@ import Foundation
 
 class In2015D06 {
     
-    private let instructionsDebug = """
+    let inputDebug = """
 turn on 489,959 through 759,964
 turn off 820,516 through 871,914
 toggle 756,965 through 812,992
 """
     
-    private let instructions = """
+    let input = """
 turn on 489,959 through 759,964
 turn off 820,516 through 871,914
 turn off 427,423 through 929,502
@@ -318,17 +318,5 @@ turn on 550,460 through 964,782
 turn on 31,760 through 655,892
 toggle 628,958 through 811,992
 """
-    
-    public init(){
-        
-    }
-    
-    public func getInstructions() -> String {
-        return instructions
-    }
-    
-    public func getInstructionsDebug() -> String {
-        return instructionsDebug
-    }
-    
+
 }

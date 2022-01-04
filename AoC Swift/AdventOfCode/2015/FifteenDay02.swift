@@ -10,54 +10,26 @@ import Foundation
 
 class fifteenDay02 {
     
-    var boxesSizes: [String]
-    let separator: String
-    var l: Int
-    var w: Int
-    var h: Int
-    var sum: Int
+    private var sizes = In2015D02().input.split(separator: "\n").map{ line in
+        line.components(separatedBy: "x").map{ Int($0)! }
+    }
     
     init() {
-        self.boxesSizes = In2015D02.DayTwo
-        self.separator = "x"
-        self.l = 0
-        self.w = 0
-        self.h = 0
-        self.sum=0
-        partOne()
-        partTwo()
+        PartOneAndTwo()
     }
     
-    func partOne() {
-        sum = 0
+    private func PartOneAndTwo() {
+        var totalPaper = 0
+        var totalRibbon = 0
         
-        for i in self.boxesSizes {
-            let result = i.split(usingRegex: separator).compactMap{ Int($0) }.sorted()
+        sizes.forEach{ s in
+            totalPaper += 2*s[0]*s[1] + 2*s[1]*s[2] + 2*s[2]*s[0]
             
-            l = result[0]
-            w = result[1]
-            h = result[2]
-            
-            let size = (2*l*w) + (2*w*h) + (2*h*l) + (l*w)
-            sum += size
+            let ss = s.sorted()
+            totalPaper += ss[0]*ss[1]
+            totalRibbon += ss[0]+ss[0]+ss[1]+ss[1] + ss[0]*ss[1]*ss[2]
         }
-        print("Result Part 1: \(sum)")
+        print("Part One Result: \(totalPaper)\nPart Two Result: \(totalRibbon)")
     }
- 
-    func partTwo() {
-        sum = 0
-        
-        for i in self.boxesSizes {
-            let result = i.split(usingRegex: separator).compactMap{ Int($0) }.sorted()
-            
-            l = result[0]
-            w = result[1]
-            h = result[2]
-            
-            let ribbonFeet = l+l+w+w
-            let ribbonBow = l*w*h
-            sum += ribbonFeet+ribbonBow
-        }
-        print("Result Part 2: \(sum)")
-    }    
+
 }

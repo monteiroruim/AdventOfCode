@@ -10,7 +10,7 @@ import Foundation
 
 class In2015D05 {
     
-    static let stringsDebug = """
+    let inputDebug01 = """
 ugknbfddgicrmopn
 aaa
 jchzalrnumimnmhp
@@ -18,14 +18,14 @@ haegwjzuvuyypxyu
 dvszwmarrgswjxmb
 """
     
-    static let stringsDebugTwo = """
+    let inputDebug02 = """
 qjhvhtzxzqqjkmpb
 xxyxx
 uurcxstgmygtbstg
 ieodomkazucvgmuy
 """
     
-    static let strings = """
+    let input = """
 zgsnvdmlfuplrubt
 vlhagaovgqjmgvwq
 ffumlmqwfcsyqpss

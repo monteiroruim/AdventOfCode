@@ -9,6 +9,8 @@
 import Foundation
 import CryptoKit
 
+// 46065
+// 14134
 class FifteenDay07 {
     
     private var input = [String]()
@@ -16,7 +18,7 @@ class FifteenDay07 {
     private var wiresCheck: [String : Int] = [:]
     
     public init() {
-        self.input = In2015D07().getInput().split(usingRegex: "\n")
+        self.input = In2015D07().input.components(separatedBy: "\n")
         
         print("puzzle answer (part 1): \(PartOne())")
         print("puzzle answer (part 2): \(PartTwo())")

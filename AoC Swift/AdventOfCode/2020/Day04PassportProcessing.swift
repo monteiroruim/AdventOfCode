@@ -23,7 +23,7 @@ class PassportProcessing {
         var sum = 0
         
         for i in passports {
-            let result = i.split(usingRegex: separator)
+            let result = i.splitUsingRegex(usingRegex: separator)
             switch result[0] {
             case "byr":
                 sum+=1
@@ -48,12 +48,11 @@ class PassportProcessing {
     }
     
     func checkPassportValidityPartTwo(passports: [String]) -> Bool{
-        let separator = "\\:"
         var isValid = false
         var sum=0
         
         for i in passports {
-            let result = i.split(usingRegex: separator)
+            let result = i.components(separatedBy: ":")
             switch result[0] {
             case "byr":
                 let value = Int(result[1])!

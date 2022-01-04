@@ -8,6 +8,8 @@
 
 import Foundation
 
+//# Valid passwords (part 1): 569
+//# Valid passwords (part 2): 346
 class Day02PasswordPolicy {
     
     let passwordList: [String]
@@ -34,7 +36,9 @@ class Day02PasswordPolicy {
         
         for p in passwordList {
             let separator = "\\-|\\s|\\:"
-            let result = p.split(usingRegex: separator)
+            let result = p.splitUsingRegex(usingRegex: separator)
+//            let result = p.components(separatedBy: separator)
+            
             
             lowestNumber = Int(result[0]) ?? 0
             highestNumber = Int(result[1]) ?? 0

@@ -10,29 +10,29 @@ import Foundation
 
 class FifteenDay05 {
     
+    let strings = In2015D05().input.components(separatedBy: "\n")
+    
     init() {
         print("puzzle answer (part 1): \(PartOne())")
         print("puzzle answer (part 2): \(PartTwo())")
     }
     
+    let vowelsChar = CharacterSet.init(charactersIn: "aeiou")
+    
     private func isNicePartOne(string: String) -> Bool {
-        var countVowels = 0
-        var flagCount = false
-        var flagDouble = false
-        var flagNaughty = false
+        var flagCount = false, flagDouble = false, flagNaughty = false
         
         // It contains at least three vowels
-        for (_, chars) in string.enumerated() {
-            if (chars == ("a")) || (chars == ("e")) || (chars == ("i")) || (chars == ("o")) || (chars == ("u")) {
-                countVowels = countVowels + 1
-            }
+        let match = string.unicodeScalars.filter{ word in
+            vowelsChar.contains(word)
         }
-        if (countVowels > 2) {
-            flagCount = true
-        }
+        (match.description.count > 2) ? flagCount = true : nil
     
-        //It contains at least one letter that appears twice in a row, like xx, abcdde (dd), or aabbccdd (aa, bb, cc, or dd).
-        var letter: Character = "."
+        /*
+         It contains at least one letter that appears twice in a row,
+         like xx, abcdde (dd), or aabbccdd (aa, bb, cc, or dd).
+         */
+        var letter: Character = " "
         for (i, chars) in string.enumerated() {
             if (i > 0 && letter == chars) {
                     flagDouble = true
@@ -41,24 +41,19 @@ class FifteenDay05 {
         }
         
         // contain the strings ab, cd, pq, or xy
-        if (string.contains("ab")) || (string.contains("cd")) || (string.contains("pq")) || (string.contains("xy")) {
-            flagNaughty = true
-        }
+        (string.contains("ab") || string.contains("cd") || string.contains("pq") || string.contains("xy")) ? flagNaughty = true : nil
         
-        if (flagCount && flagDouble && !flagNaughty) {
-            return true
-        } else {
-            return false
-        }
+        return (flagCount && flagDouble && !flagNaughty)
     }
     
     private func isNicePartTwo(string: String) -> Bool {
-        var flagTwoLetters = false
-        var flagRepeats = false
-        //print("Working: ", string)
+        var flagTwoLetters = false, flagRepeats = false
         
-        /* It contains a pair of any two letters that appears at least twice in the string without
-         overlapping, like xyxy (xy) or aabcdefgaa (aa), but not like aaa (aa, but it overlaps). */
+        /*
+         It contains a pair of any two letters that appears at least twice
+         in the string without overlapping, like xyxy (xy) or aabcdefgaa (aa),
+         but not like aaa (aa, but it overlaps).
+         */
         for i in 0...string.count-4 {
             let indexOne = string.index(string.startIndex, offsetBy: i)
             let indexTwo = string.index(string.startIndex, offsetBy: i + 1)
@@ -72,67 +67,37 @@ class FifteenDay05 {
                 let charThree = string[indexThree]
                 let charFour = string[indexFour]
                 
-                if (charOne == charThree && charTwo == charFour){
-                    flagTwoLetters = true
-                }
-                
+                (charOne == charThree && charTwo == charFour) ? flagTwoLetters = true : nil
             }
         }
         
-        //It contains at least one letter which repeats with exactly one letter between them,
-        //like xyx, abcdefeghi (efe), or even aaa.
+        // It contains at least one letter which repeats with exactly one letter between them
         for (i, chars) in string.enumerated() {
             for (j, subChar) in string.enumerated() where j > i+1 {
-                if (chars == subChar) {
-                    flagRepeats = true
-                }
+                (chars == subChar) ? flagRepeats = true : nil
                 break
             }
         }
         
-        if (flagTwoLetters && flagRepeats) {
-            return true
-        } else {
-            return false
-        }
+        return (flagTwoLetters && flagRepeats)
     }
         
-    /*
-     ugknbfddgicrmopn   is nice because it has at least three vowels and a double letter
-     aaa                is nice because it has at least three vowels and a double letter
-     jchzalrnumimnmhp   is naughty because it has no double letter.
-     haegwjzuvuyypxyu   is naughty because it contains the string xy.
-     dvszwmarrgswjxmb   is naughty because it contains only one vowel.
-     */
     private func PartOne() -> Int{
-        let strings = In2015D05.strings.split(usingRegex: "\n")
         var niceCount = 0
         
-        for i in strings {
-            if (isNicePartOne(string: i)) {
-                niceCount = niceCount + 1
-            }
+        strings.forEach {
+            (isNicePartOne(string: $0)) ? niceCount += 1 : nil
         }
         return niceCount
     }
     
-    /*
-     qjhvhtzxzqqjkmpb   is nice because is has a pair that appears twice (qj)
-                        and a letter that repeats with exactly one letter between them (zxz).
-     xxyxx              is nice because it has a pair that appears twice
-                        and a letter that repeats with one between, even though the letters used by each rule overlap.
-     uurcxstgmygtbstg   is naughty because it has a pair (tg) but no repeat with a single letter between them.
-     ieodomkazucvgmuy   is naughty because it has a repeating letter with one between (odo), but no pair that appears twice.
-     */
     private func PartTwo() -> Int {
-        let strings = In2015D05.strings.split(usingRegex: "\n")
         var niceCount = 0
         
-        for i in strings {
-            if (isNicePartTwo(string: i)) {
-                niceCount = niceCount + 1
-            }
+        strings.forEach {
+            (isNicePartTwo(string: $0)) ? niceCount += 1 : nil
         }
+        
         return niceCount
     }
     

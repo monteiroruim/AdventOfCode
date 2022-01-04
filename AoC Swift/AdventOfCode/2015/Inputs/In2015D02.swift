@@ -10,12 +10,12 @@ import Foundation
 
 class In2015D02 {
     
-    static let DayTwoDebug = """
+    let inputDebug = """
     2x3x4
     1x1x10
-    """.components(separatedBy: "\n").compactMap{ String($0) }
+    """
     
-    static let DayTwo = """
+    let input = """
     29x13x26
     11x11x14
     27x2x5
@@ -1016,6 +1016,6 @@ class In2015D02 {
     3x2x22
     14x3x5
     10x9x8
-    """.components(separatedBy: "\n").compactMap{ String($0) }
+    """
     
 }

@@ -15,7 +15,7 @@ class FifteenDay06 {
     private var input = [Substring]()
     
     init() {
-        self.input = In2015D06().getInstructions().split(separator: "\n")
+        self.input = In2015D06().input.split(separator: "\n")
         
         print("puzzle answer (part 1): \(PartOne())")
         print("puzzle answer (part 2): \(PartTwo())")
