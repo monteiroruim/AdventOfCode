@@ -2,7 +2,26 @@ import os
 import time
 from utils import utils
 from AoC2021 import d1, d2, d3, d4, d5, d6, d7, d8, d9, \
-    d10, d11, d12, d13, d14, d15, d16, d17, d18, d19
+    d10, d11, d12, d13, d14, d15, d16, d17, d18, d19, \
+    d20
+
+# day 20
+print("Day 20: Trench Map")
+start_time = time.time()
+print("- testing")
+tst = d20.test().run()
+
+start_time = time.time()
+print("- calculation")
+inputHandler = utils.fileHandler()
+input_set = inputHandler.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2021/input/d20.txt")
+scanner = d20.d20(input_set)
+scanner.enhance_image()
+print("part1 :", scanner.get_res_pt1())
+print("part2 :", scanner.get_res_pt2())
+print("--- %s seconds ---" % (time.time() - start_time))
+exit()
 
 
 # day 19
@@ -22,7 +41,6 @@ print("part1 :", probe.get_res_pt1())
 
 print("part2 :", probe.get_res_pt2())
 print("--- %s seconds ---" % (time.time() - start_time))
-exit()
 
 # day 18
 print("Day 18: Snailfish")
