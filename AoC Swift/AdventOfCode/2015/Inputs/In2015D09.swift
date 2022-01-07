@@ -10,13 +10,13 @@ import Foundation
 
 class In2015D09 {
     
-    private let inputDebug = """
+    let inputDebug = """
 London to Dublin = 464
 London to Belfast = 518
 Dublin to Belfast = 141
 """
     
-    private let input = """
+    let input = """
 Faerun to Norrath = 129
 Faerun to Tristram = 58
 Faerun to AlphaCentauri = 13
@@ -46,13 +46,5 @@ Snowdin to Tambi = 15
 Snowdin to Straylight = 99
 Tambi to Straylight = 70
 """
-    
-    public func getInstructions() -> String {
-        return input
-    }
-    
-    public func getInstructionsDebug() -> String {
-        return inputDebug
-    }
     
 }

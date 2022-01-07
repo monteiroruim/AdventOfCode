@@ -197,7 +197,6 @@
 		08959FC723A3A43800A091C8 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		08A3172E2754E1410074A388 /* FifteenDay08.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifteenDay08.swift; sourceTree = "<group>"; };
 		08A317302754E3430074A388 /* Input2015Day08.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Input2015Day08.txt; sourceTree = "<group>"; };
-		08A317312754E3660074A388 /* Input2015Day08Debug.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Input2015Day08Debug.txt; sourceTree = "<group>"; };
 		08A7CBDB25762DD9009C502C /* Day01ExpenseReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day01ExpenseReport.swift; sourceTree = "<group>"; };
 		08AFDB8B238FF6C500E72EAF /* AdventOfCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AdventOfCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		08AFDB8E238FF6C500E72EAF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -435,7 +434,6 @@
 				08C09DCB2751185D00F99711 /* FifteenDay07.swift */,
 				08A3172E2754E1410074A388 /* FifteenDay08.swift */,
 				08A317302754E3430074A388 /* Input2015Day08.txt */,
-				08A317312754E3660074A388 /* Input2015Day08Debug.txt */,
 				0830CF58275525D200F5292F /* FifteenDay09.swift */,
 				08AFDB952390059A00E72EAF /* FifteenDay25.swift */,
 			);

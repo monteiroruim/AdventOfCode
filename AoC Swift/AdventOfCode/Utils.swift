@@ -55,3 +55,36 @@ extension String {
         return String(unicodeScalars.compactMap { pattern ~= $0 ? Character($0) : nil })
     }
 }
+
+// 2021 Day 16 extensions
+extension Int {
+    func binary(minLength: Int = 4) -> [Bool] {
+        var result: [Bool] = []
+        var copy = self
+        while copy > 0 {
+            result.append(copy % 2 == 1)
+            copy /= 2
+        }
+        result.append(contentsOf: Array(repeating: false, count: 4 - result.count))
+        return result.reversed()
+    }
+}
+
+extension Sequence where Element == Bool {
+    var int: Int {
+        var result = 0
+        for element in self {
+            result *= 2
+            result += element ? 1 : 0
+        }
+        return result
+    }
+}
+
+extension ArraySlice {
+    mutating func popFirst(_ count: Int) -> Self {
+        let result = self.prefix(count)
+        self = self.dropFirst(count)
+        return result
+    }
+}

@@ -10,7 +10,7 @@ import Foundation
 
 class FifteenDay09 {
     
-    private var input = In2015D09().getInstructions().components(separatedBy: CharacterSet.newlines)
+    private var input = In2015D09().inputDebug.components(separatedBy: CharacterSet.newlines)
     private var uniqueCities: [String] = []
     private var numberOfUniqueCities = 0
     
