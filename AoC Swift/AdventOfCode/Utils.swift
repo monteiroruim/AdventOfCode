@@ -54,6 +54,12 @@ extension String {
         let pattern = UnicodeScalar("a")..."f"
         return String(unicodeScalars.compactMap { pattern ~= $0 ? Character($0) : nil })
     }
+    
+    // 2021 Day 11 extension
+    var numbers: [Int] {
+        split(whereSeparator: { "-0123456789".contains($0) == false })
+            .map { Int($0)! }
+    }
 }
 
 // 2021 Day 16 extensions

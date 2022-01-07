@@ -10,22 +10,8 @@ import Foundation
 
 class In2021D17 {
     
-    private var inputDebug = """
+    let inputDebug = "target area: x=20..30, y=-10..-5"
 
-"""
-    private var input = """
-
-"""
-    
-    public init() {
-    }
-    
-    public func getInput() -> String {
-        return input
-    }
-    
-    public func getInputDebug() -> String {
-        return inputDebug
-    }
+    let input = "target area: x=79..137, y=-176..-117"
     
 }
