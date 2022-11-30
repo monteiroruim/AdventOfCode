@@ -11,45 +11,35 @@ import Foundation
 class FifteenDay06 {
     
     private var matrixPartOne = Array(repeating: Array(repeating: 0, count: 1000), count: 1000)
-    private var matrixPartTwo = Array(repeating: Array(repeating: 0, count: 1000), count: 1000)
     private var input = [Substring]()
+    private var brightness = 0
     
     init() {
-        self.input = Input2015D06().getInstructions().split(separator: "\n")
+        self.input = In2015D06().input.split(separator: "\n")
         
         print("puzzle answer (part 1): \(PartOne())")
-        print("puzzle answer (part 2): \(PartTwo())")
+        print("puzzle answer (part 2): \(self.brightness)")
     }
     
     public func matrixOperations(operation: String, startXX: Int, startYY: Int, endXX: Int, endYY: Int) {
-        if (operation == "on") {
-            for i in startXX...endXX {
-                for j in startYY...endYY {
+        
+        for i in startXX...endXX {
+            for j in startYY...endYY {
+                
+                if (operation == "on") {
                     matrixPartOne[i][j] = 1
-                    matrixPartTwo[i][j] += 1
-                }
-            }
-        } else if (operation == "off") {
-            for i in startXX...endXX {
-                for j in startYY...endYY {
+                    brightness += 1
+                } else if (operation == "off") {
                     matrixPartOne[i][j] = 0
-                    if (matrixPartTwo[i][j] > 0) {
-                        matrixPartTwo[i][j] -= 1
-                    }
+                    brightness -= 1
+                } else {
+                    (matrixPartOne[i][j] == 1) ? (matrixPartOne[i][j] = 0) : (matrixPartOne[i][j] = 1)
+                    brightness += 2
                 }
-            }
-        } else { // toggle
-            for i in startXX...endXX {
-                for j in startYY...endYY {
-                    if (matrixPartOne[i][j] == 1) {
-                        matrixPartOne[i][j] = 0
-                    } else {
-                        matrixPartOne[i][j] = 1
-                    }
-                    matrixPartTwo[i][j] = matrixPartTwo[i][j] + 2
-                }
+                
             }
         }
+        
     }
     
     public func countMatrix() -> Int {
@@ -59,16 +49,6 @@ class FifteenDay06 {
                 if (matrixPartOne[i][j] == 1) {
                     total = total + 1
                 }
-            }
-        }
-        return total
-    }
-    
-    public func countBrightness() -> Int {
-        var total = 0
-        for i in 0...999 {
-            for j in 0...999 {
-                total = total + matrixPartTwo[i][j]
             }
         }
         return total
@@ -100,10 +80,6 @@ class FifteenDay06 {
             }
         }
         return countMatrix()
-    }
-    
-    private func PartTwo() -> Int{
-        return countBrightness()
     }
     
 }

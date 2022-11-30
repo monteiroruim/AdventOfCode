@@ -10,7 +10,7 @@ import Foundation
 
 class Day15RambunctiousRecitation {
     
-    var input = Input2020d15.d15RambunctiousRecitation.components(separatedBy: ",").compactMap{ Int($0) }
+    var input = In2020D15.d15RambunctiousRecitation.components(separatedBy: ",").compactMap{ Int($0) }
     
     init () {
         partOne(data: self.input)

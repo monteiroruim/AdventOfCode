@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import CryptoKit
 
 class FifteenDay07 {
     
@@ -16,7 +15,7 @@ class FifteenDay07 {
     private var wiresCheck: [String : Int] = [:]
     
     public init() {
-        self.input = Input2015D07().getInput().split(usingRegex: "\n")
+        self.input = In2015D07().input.components(separatedBy: "\n")
         
         print("puzzle answer (part 1): \(PartOne())")
         print("puzzle answer (part 2): \(PartTwo())")
@@ -54,19 +53,18 @@ class FifteenDay07 {
                     let second = v[2]
                     let wire = v[4]
                     
-                    if (Int(first) != nil ) {
-                        if (wiresCheck[second] == 1) {
-                            wires[wire] = Int(first)! & Int(wires[second]!)
-                            wiresCheck[wire] = 1
-                        }
+                    if (Int(first) != nil && (wiresCheck[second] == 1)) {
+                        wires[wire] = Int(first)! & Int(wires[second]!)
+                        wiresCheck[wire] = 1
                     }
                     if (wiresCheck[first] == 1 && wiresCheck[second] == 1) {
                         wires[wire] = Int(wires[first]!) & Int(wires[second]!)
                         wiresCheck[wire] = 1
                     }
                 }
-                if (i.contains("OR")){
-                    let v = i.components(separatedBy: CharacterSet.whitespaces)
+                
+                let v = i.components(separatedBy: CharacterSet.whitespaces)
+                if (i.contains("OR")) {
                     let first = v[0]
                     let second = v[2]
                     let wire = v[4]
@@ -75,8 +73,7 @@ class FifteenDay07 {
                         wiresCheck[wire] = 1
                     }
                 }
-                if (i.contains("LSHIFT")){
-                    let v = i.components(separatedBy: CharacterSet.whitespaces)
+                if (i.contains("LSHIFT")) {
                     let shift = Int(v[2])!
                     let wire = v[4]
                     if (wiresCheck[v[0]] == 1) {
@@ -84,8 +81,7 @@ class FifteenDay07 {
                         wiresCheck[wire] = 1
                     }
                 }
-                if (i.contains("RSHIFT")){
-                    let v = i.components(separatedBy: CharacterSet.whitespaces)
+                if (i.contains("RSHIFT")) {
                     let shift = Int(v[2])!
                     let wire = v[4]
                     if (wiresCheck[v[0]] == 1) {
@@ -104,8 +100,7 @@ class FifteenDay07 {
             }
             
         }
-        // print("Resul:", wires)
-        // print("Check:", wiresCheck)
+        
         return Int(wires["lx"]!)
     }
     

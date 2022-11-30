@@ -10,7 +10,7 @@ import Foundation
 
 class DockingData {
     
-    var program = Input2020d14.d14DockingData.trimmingCharacters(in: .whitespacesAndNewlines).components(separatedBy: .newlines)
+    var program = In2020D14.d14DockingData.trimmingCharacters(in: .whitespacesAndNewlines).components(separatedBy: .newlines)
     
     init() {
         partOne(data: self.program)

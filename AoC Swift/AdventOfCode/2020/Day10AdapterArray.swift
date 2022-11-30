@@ -14,7 +14,7 @@ class Day10AdapterArray {
     var adapterArray: [Int]
     
     init() {
-        self.adapterArray = Input2020d10.day10AdapterArray.components(separatedBy: "\n").compactMap{ Int($0)! }
+        self.adapterArray = In2020D10.day10AdapterArray.components(separatedBy: "\n").compactMap{ Int($0)! }
         self.adapterArray.append(0)
         self.adapterArray.sort()
         let last = self.adapterArray[self.adapterArray.count-1]

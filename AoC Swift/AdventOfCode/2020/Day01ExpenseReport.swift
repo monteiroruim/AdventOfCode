@@ -17,7 +17,7 @@ class Day01ExpenseReport {
     init() {
         self.valueToFind = 2020
         self.answer = 0
-        self.expense = Input2020d01.day01ExpenseList.split(separator: "\n")
+        self.expense = In2020D01.day01ExpenseList.split(separator: "\n")
             .compactMap { Int($0) }
         
         print("puzzle answer (part 1): \(partOne())")

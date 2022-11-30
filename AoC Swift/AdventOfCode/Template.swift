@@ -10,18 +10,25 @@ import Foundation
 
 class Template {
     
+    //private var input: [String]
+    
     public init() {
         print("puzzle answer (part 1): \(PartOne())")
         print("puzzle answer (part 2): \(PartTwo())")
+        //Tests()
     }
     
-    private func PartOne() {
-        
-        
+    private func PartOne() -> Int {
+        return 0
     }
     
-    private func PartTwo() {
-        
+    private func PartTwo() -> Int {
+        return 0
+    }
+
+    private func Tests() {
+        assert(PartOne() == 0, "PartOne KO")
+        assert(PartTwo() == 0, "PartTwo KO")
     }
     
 }

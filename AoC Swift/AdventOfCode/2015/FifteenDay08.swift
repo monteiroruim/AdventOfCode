@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import CoreLocation
 
 class FifteenDay08 {
     
@@ -62,9 +61,8 @@ class FifteenDay08 {
             }
         }
         
-        print("code:", codeCount)
-        print(" mem:", memoryCount)
-        
+        //print("code:", codeCount)
+        //print(" mem:", memoryCount)
         return (codeCount-memoryCount)
     }
     
@@ -104,9 +102,8 @@ class FifteenDay08 {
             }
         }
         
-        print("encoded:", encodedCount)
-        print("   code:", codeCount)
-        
+        //print("encoded:", encodedCount)
+        //print("   code:", codeCount)
         return encodedCount - codeCount
     }
     

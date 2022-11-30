@@ -8,140 +8,61 @@
 
 import Foundation
 
-private struct Point2D {
-    var x: Int
-    var y: Int
-    
-    init(x: Int, y: Int) {
-        self.x = x
-        self.y = y
-    }
-    
-}
-
 class FifteenDay03 {
     
+    private let input: String
+    
+    struct Point2D: Hashable {
+        var x, y: Int
+    }
+    
     init() {
+        self.input = In2015D03().input
         print("puzzle answer (part 1): \(PartOne())")
         print("puzzle answer (part 2): \(PartTwo())")
     }
     
-    private func PartOne() -> Int{
+    func PartOne() -> Int {
+        var deliveredPresents = Set<Point2D>()
+        var x = 0, y = 0
+        var point = Point2D(x: x, y: y)
+        deliveredPresents.insert(point)
         
-        var point = Point2D(x: 0, y: 0)
-        var points = [Point2D]()
-        points.append(point)
-        
-        for i in Input2015D03.partOne {
-            switch i { //^>v<
-            case "^":
-                point.y = point.y + 1
-                if (!points.contains(where: {$0.y == point.y && $0.x == point.x} )) {
-                    points.append(point)
-                }
-            case "v":
-                point.y = point.y - 1
-                if (!points.contains(where: {$0.y == point.y && $0.x == point.x} )) {
-                    points.append(point)
-                }
-            case "<":
-                point.x = point.x - 1
-                if (!points.contains(where: {$0.y == point.y && $0.x == point.x} )) {
-                    points.append(point)
-                }
-            case ">":
-                point.x = point.x + 1
-                if (!points.contains(where: {$0.y == point.y && $0.x == point.x} )) {
-                    points.append(point)
-                }
-            default:
-                print("NA")
-            }
-        }
-        
-        return points.count
-        
-    }
-    
-    private func PartTwo() -> Int{
-        
-        var point = Point2D(x: 0, y: 0)
-        var pointRobot = Point2D(x: 0, y: 0)
-        
-        var points = [Point2D]()
-        var pointsRobot = [Point2D]()
-        
-        points.append(point)
-        pointsRobot.append(pointRobot)
-        
-        for (i, value) in Input2015D03.partOne.enumerated() {
-            switch value {
-            case "^":
-                if (i % 2 == 0) {
-                    point.y = point.y + 1
-                    if (!points.contains(where: {$0.y == point.y && $0.x == point.x} )) {
-                        points.append(point)
-                    }
-                } else {
-                    pointRobot.y = pointRobot.y + 1
-                    if (!pointsRobot.contains(where: {$0.y == pointRobot.y && $0.x == pointRobot.x} )) {
-                        pointsRobot.append(pointRobot)
-                    }
-                }
-                
-            case "v":
-                if (i % 2 == 0) {
-                    point.y = point.y - 1
-                    if (!points.contains(where: {$0.y == point.y && $0.x == point.x} )) {
-                        points.append(point)
-                    }
-                } else {
-                    pointRobot.y = pointRobot.y - 1
-                    if (!pointsRobot.contains(where: {$0.y == pointRobot.y && $0.x == pointRobot.x} )) {
-                        pointsRobot.append(pointRobot)
-                    }
-                }
-            case "<":
-                if (i % 2 == 0) {
-                    point.x = point.x - 1
-                    if (!points.contains(where: {$0.y == point.y && $0.x == point.x} )) {
-                        points.append(point)
-                    }
-                } else {
-                    pointRobot.x = pointRobot.x - 1
-                    if (!pointsRobot.contains(where: {$0.y == pointRobot.y && $0.x == pointRobot.x} )) {
-                        pointsRobot.append(pointRobot)
-                    }
-                }
-            case ">":
-                if (i % 2 == 0) {
-                    point.x = point.x + 1
-                    if (!points.contains(where: {$0.y == point.y && $0.x == point.x} )) {
-                        points.append(point)
-                    }
-                } else {
-                    pointRobot.x = pointRobot.x + 1
-                    if (!pointsRobot.contains(where: {$0.y == pointRobot.y && $0.x == pointRobot.x} )) {
-                        pointsRobot.append(pointRobot)
-                    }
-                }
-            default:
-                print("NA")
-            }
+        input.forEach { element in
+            if (element == "^") { y+=1 }
+            if (element == ">") { x+=1 }
+            if (element == "v") { y-=1 }
+            if (element == "<") { x-=1 }
             
+            point = Point2D(x: x, y: y)
+            deliveredPresents.insert(point)
         }
+        return deliveredPresents.count
+    }
+
+    func PartTwo() -> Int {
+        var deliveredSantaPresents = Set<Point2D>()
+        var xRobot = 0, yRobot = 0, xSanta = 0, ySanta = 0
+        var point = Point2D(x: xRobot, y: yRobot)
+        deliveredSantaPresents.insert(point)
         
-        var same = 0
-        for first in points {
-            for second in pointsRobot {
-                if (first.y == second.y && first.x == second.x) {
-                    same = same + 1
-                }
+        for (i, element) in input.enumerated() {
+            if (i % 2 == 0) {
+                if (element == "^") { ySanta+=1 }
+                if (element == ">") { xSanta+=1 }
+                if (element == "v") { ySanta-=1 }
+                if (element == "<") { xSanta-=1 }
+                point = Point2D(x: xSanta, y: ySanta)
+            } else {
+                if (element == "^") { yRobot+=1 }
+                if (element == ">") { xRobot+=1 }
+                if (element == "v") { yRobot-=1 }
+                if (element == "<") { xRobot-=1 }
+                point = Point2D(x: xRobot, y: yRobot)
             }
+            deliveredSantaPresents.insert(point)
         }
-        
-        //print(same)
-        return (points.count + pointsRobot.count - same)
+        return deliveredSantaPresents.count
     }
     
 }

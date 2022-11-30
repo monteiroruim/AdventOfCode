@@ -13,11 +13,12 @@ class LugaggeProcessing {
     var luggaggeList: [String]
     
     init() {
-        self.luggaggeList = Input2020d07.day07Luggage
+        self.luggaggeList = In2020D07.day07Luggage
         partOne(lugagge: self.luggaggeList)
         partTwo(luggage: self.luggaggeList)
     }
     
+    // TODO: needs rework
     func partTwo(luggage: [String]) {
         var dictBags: [String: Int] = [:]
         var dictSumPartials: [String: Int] = [:]
@@ -33,14 +34,14 @@ class LugaggeProcessing {
             
             // shiny gold bags contain 1 dark olive bag, 2 vibrant plum bags.
             for i in luggage {
-                let bagsAndContents = i.split(usingRegex: " contain ")
+                let bagsAndContents = i.components(separatedBy: " contain ")
                 //print(bagsAndContents)
-                let bigBag = bagsAndContents[0].split(usingRegex: " bags")
+                let bigBag = bagsAndContents[0].components(separatedBy: " bags")
                 //print(bigBag[0])
                 
                 if (bigBag[0] == bag && !bagsAndContents[1].contains(bag)) {
                     //print(bigBag[0], "->", bagsAndContents[1])
-                    let value = bagsAndContents[1].split(usingRegex: ", ")
+                    let value = bagsAndContents[1].components(separatedBy: ", ")
                     
                     var sumintern = 0
                     for n in value {
@@ -100,8 +101,8 @@ class LugaggeProcessing {
             let bag = toCheck.first!
             
             for i in lugagge {
-                let bagsAndContents = i.split(usingRegex: " contain ")
-                let bigBag = bagsAndContents[0].split(usingRegex: " bags")
+                let bagsAndContents = i.components(separatedBy: " contain ")
+                let bigBag = bagsAndContents[0].components(separatedBy: " bags")
                 
                 if (bigBag[0] != bag && bagsAndContents[1].contains(bag)) {
                     //print(bigBag[0], "->", bagsAndContents[1])
