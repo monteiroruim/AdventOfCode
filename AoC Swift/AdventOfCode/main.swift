@@ -47,7 +47,7 @@ print("\nExec time: ", NSString(format: "%.5f", CFAbsoluteTimeGetCurrent() - sta
 //var day09EncodingError = EncodingError()
 //var day10AdapterArray = Day10AdapterArray()
 //var day11Seating = Day11SeatingSystem()
-//var day12RainRisk = RainRisk()
+var day12RainRisk = RainRisk()
 //var day13ShuttleSearch = ShuttleSearch()
 //var day14DockingData = DockingData()
 //var day15Recitaton = Day15RambunctiousRecitation()

@@ -28,7 +28,7 @@ class RainRisk {
         
         for elem in instructions {
             let letter = elem[elem.index(elem.startIndex, offsetBy: 0)]
-            let amount = Int(elem.substring(from: elem.index(elem.startIndex, offsetBy: 1)))!
+            let amount = Int(elem[elem.index(elem.startIndex, offsetBy: 1)...])!
             
             switch letter {
             case "N":
@@ -70,7 +70,7 @@ class RainRisk {
         
         for elem in instructions {
             let letter = elem[elem.index(elem.startIndex, offsetBy: 0)]
-            let amount = Int(elem.substring(from: elem.index(elem.startIndex, offsetBy: 1)))!
+            let amount = Int(elem[elem.index(elem.startIndex, offsetBy: 1)...])!
             
             switch letter {
             case "N":
