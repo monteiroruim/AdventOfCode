@@ -1,14 +1,15 @@
 //
-//  In2021D24.swift
+//  In2022D01.swift
 //  AdventOfCode
 //
-//  Created by Pereira Orlando on 21.12.21.
-//  Copyright © 2021 Pereira Orlando. All rights reserved.
+//  Created by Orlando Pereira on 30.11.22.
+//  Copyright © 2022 Pereira Orlando. All rights reserved.
 //
 
 import Foundation
 
-class In2021D24 {
+
+class In2022D01 {
     
     private var inputDebug = """
 

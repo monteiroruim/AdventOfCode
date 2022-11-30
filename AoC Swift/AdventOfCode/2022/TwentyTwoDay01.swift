@@ -1,21 +1,21 @@
 //
-//  TwentyOneDay18.swift
+//  TwentyTwoDay01.swift
 //  AdventOfCode
 //
-//  Created by Pereira Orlando on 21.12.21.
-//  Copyright © 2021 Pereira Orlando. All rights reserved.
+//  Created by Orlando Pereira on 30.11.22.
+//  Copyright © 2022 Pereira Orlando. All rights reserved.
 //
 
 import Foundation
 
-class TwentyOneDay22 {
+class TwentyTwoDay01 {
     
     //private var input: [String]
     
     public init() {
         print("puzzle answer (part 1): \(PartOne())")
         print("puzzle answer (part 2): \(PartTwo())")
-        Tests()
+        //Tests()
     }
     
     private func PartOne() -> Int {
