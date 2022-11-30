@@ -1,8 +1,25 @@
 import os
 import time
 from utils import utils
-from AoC2015 import d9, d8, \
+
+from AoC2015 import d10, d8, \
     d7, d6, d5, d4, d3, d2, d1, d25
+        
+
+
+# day 10 
+start_time = time.time()
+# tst = d10.reslen().run_test()
+inputHandler = utils.fileHandler()
+input_set = inputHandler.parse_file_2_str(os.getcwd() 
+    + "/AoCPython/AoC2015/input/d10.txt")
+print("Day 10: Look and say")
+look_and_say = d10.d10(input_set, 50)
+look_and_say.look_say()
+print(look_and_say.result1, look_and_say.result2)
+print("--- %s seconds ---" % (time.time() - start_time))
+exit()
+
 
 # day 9
 start_time = time.time()
