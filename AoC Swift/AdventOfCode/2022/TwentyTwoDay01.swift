@@ -44,6 +44,7 @@ class TwentyTwoDay01 {
     private func PartTwo() -> Int {
         
         // idiomatic swift
+        //return totalCalories.min(count: 3, sortedBy: >).reduce(0, +)
         return totalCalories.sorted(by: >).prefix(3).reduce(0, +)
         
 //        var max = 0
