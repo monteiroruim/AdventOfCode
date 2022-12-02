@@ -8,6 +8,52 @@
 
 import Foundation
 
+private enum Move: Int {
+    case rock = 1
+    case paper = 2
+    case scissor = 3
+    
+    init(_ c: String) {
+        switch c {
+        case "A", "X": self = .rock
+        case "B", "Y": self = .paper
+        case "C", "Z": self = .scissor
+        default: fatalError("Wrong char")
+        }
+    }
+    
+    func against(_ otherMove: Move) -> Winner {
+        switch (self, otherMove) {
+        case (.rock, .rock), (.paper, .paper), (.scissor, .scissor):
+            return .draw
+        case (.rock, .scissor), (.scissor, .paper), (.paper, .rock):
+            return .win
+        case (.scissor, .rock), (.paper, .scissor), (.rock, .paper):
+            return .lose
+        }
+    }
+    
+    func winningMove() -> Move {
+        Move(rawValue: rawValue == 3 ? 1 : rawValue + 1)!
+    }
+}
+
+private enum Winner: Int {
+    case win = 6
+    case draw = 3
+    case lose = 0
+    
+    init(_ c: String) {
+        switch c {
+        case "Z": self = .win
+        case "Y": self = .draw
+        case "X": self = .lose
+        default: fatalError("Wrong char")
+        }
+    }
+    
+}
+
 class TwentyTwoDay02 {
     
     private var input: [String]
@@ -16,83 +62,42 @@ class TwentyTwoDay02 {
         self.input = In2022D02().getInput().components(separatedBy: CharacterSet.newlines)
         print("puzzle answer (part 1): \(PartOne())")
         print("puzzle answer (part 2): \(PartTwo())")
-        //Tests()
+        Tests()
     }
     
-    // A for Rock, B for Paper, and C for Scissors.
-    // X for Rock, Y for Paper, and Z for Scissors
-    // 1 for Rock, 2 for Paper, and 3 for Scissors)
-    // (0 if you lost, 3 if the round was a draw, and 6 if you won).
     private func PartOne() -> Int {
         var sum = 0
         for i in self.input {
             let line = i.components(separatedBy: " ")
-            if line[0] == "A" {
-                if line[1] == "X" {
-                    sum += 1 + 3
-                } else if line[1] == "Y" {
-                    sum += 2 + 6
-                } else if line[1] == "Z" {
-                    sum += 3 + 0
-                }
-            } else if line[0] == "B" {
-                if line[1] == "Y" {
-                    sum += 2 + 3
-                } else if line[1] == "Z" {
-                    sum += 3 + 6
-                } else if line[1] == "X" {
-                    sum += 1 + 0
-                }
-            } else if line[0] == "C" {
-                if line[1] == "Z" {
-                    sum += 3 + 3
-                } else if line[1] == "X" {
-                    sum += 1 + 6
-                } else if line[1] == "Y" {
-                    sum += 2 + 0
-                }
-            }
+            let other = Move(line.first!)
+            let you = Move(line.last!)
+            sum += you.against(other).rawValue + you.rawValue
         }
-        
         return sum
     }
     
-    //the second column says how the round needs to end:
-    // X means you need to lose, Y means you need to end the round in a draw, and Z means you need to win.
     private func PartTwo() -> Int {
         var sum = 0
         for i in self.input {
             let line = i.components(separatedBy: " ")
-            
-            if line[0] == "A" {
-                if line[1] == "Y" {
-                    sum += 1 + 3
-                } else if line[1] == "X" {
-                    sum += 3 + 0
-                } else if line[1] == "Z" {
-                    sum += 2 + 6
+            let other = Move(line.first!)
+            let result = Winner(line.last!)
+
+            let yourScore: Int = {
+                switch result {
+                case .draw:
+                    return other.rawValue
+                case .lose:
+                    return other.winningMove().winningMove().rawValue
+                case .win:
+                    return other.winningMove().rawValue
                 }
-            } else if line[0] == "B" {
-                if line[1] == "Y" {
-                    sum += 2 + 3
-                } else if line[1] == "Z" {
-                    sum += 3 + 6
-                } else if line[1] == "X" {
-                    sum += 1 + 0
-                }
-            } else if line[0] == "C" {
-                if line[1] == "Z" {
-                    sum += 1 + 6
-                } else if line[1] == "X" {
-                    sum += 2 + 0
-                } else if line[1] == "Y" {
-                    sum += 3 + 3
-                }
-            }
+            }()
+            sum += yourScore + result.rawValue
         }
         return sum
     }
-
+    
     private func Tests() {
         assert(PartOne() == 15572, "PartOne KO")
         assert(PartTwo() == 16098, "PartTwo KO")
