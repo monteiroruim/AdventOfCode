@@ -11,7 +11,8 @@ import Foundation
 let startTime = CFAbsoluteTimeGetCurrent()
 
 // 2022
-var twentyTwoDay01 = TwentyTwoDay01()
+//var twentyTwoDay01 = TwentyTwoDay01()
+var twentyTwoDay02 = TwentyTwoDay02()
 
 
 print("\nExec time: ", NSString(format: "%.5f", CFAbsoluteTimeGetCurrent() - startTime), "s")
