@@ -12,7 +12,7 @@ let startTime = CFAbsoluteTimeGetCurrent()
 
 // 2022
 //var twentyTwoDay01 = TwentyTwoDay01()
-var twentyTwoDay02 = TwentyTwoDay02()
+//var twentyTwoDay02 = TwentyTwoDay02()
 
 
 print("\nExec time: ", NSString(format: "%.5f", CFAbsoluteTimeGetCurrent() - startTime), "s")
@@ -26,7 +26,7 @@ print("\nExec time: ", NSString(format: "%.5f", CFAbsoluteTimeGetCurrent() - sta
 //var fifteenday06 = FifteenDay06()
 //var fifteenday07 = FifteenDay07()
 //var fifteenday08 = FifteenDay08()
-//var fifteenday09 = FifteenDay09()
+var fifteenday09 = FifteenDay09()
 //var fifteenday25 = fifteenDay25()
 //var fifteenday25B = fifteenDay25(maxMatrixSize: 10000)
 
