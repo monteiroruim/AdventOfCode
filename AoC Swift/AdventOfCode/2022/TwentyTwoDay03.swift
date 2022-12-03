@@ -8,23 +8,17 @@
 
 import Foundation
 
-extension Character {
-    var priority: Int {
-        Int(asciiValue! - (isUppercase ? 38 : 96))
-    }
-}
-
 class TwentyTwoDay03 {
     
     private var input: [String]
     
     public init() {
         
-        self.input = In2022D03().getInputDebug().components(separatedBy: CharacterSet.newlines)
+        self.input = In2022D03().getInput().components(separatedBy: CharacterSet.newlines)
         
         print("puzzle answer (part 1): \(PartOne())")
         print("puzzle answer (part 2): \(PartTwo())")
-        //Tests()
+        Tests()
     }
     
     private func PartOne() -> Int {
@@ -37,11 +31,7 @@ class TwentyTwoDay03 {
             while left < right {
                 if i[left] == i[right] {
                     let c = Character(i[left])
-                    if c.asciiValue! >= 97 && c.asciiValue! <= 122 {
-                        sum += Int(c.asciiValue!)-96
-                    } else {
-                        sum += Int(c.asciiValue!)-64+26
-                    }
+                    sum += Int(c.asciiValue!) - (c.isUppercase ? (64-26) : 96)
                     break
                 }
                 right += 1
@@ -56,29 +46,26 @@ class TwentyTwoDay03 {
     
     private func PartTwo() -> Int {
         
-        let lines = In2022D03().getInput().split(separator: "\n")
+        var sum = 0
+        var left = 0
+        let right = self.input.count
         
-        var array = lines.chunks(ofCount: 3).map(Array.init).map { group -> Int in
-            for character in group[0] {
-                if group[1].contains(character) && group[2].contains(character) {
-                    return Array(" abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ").firstIndex(of: character)!
+        while left < right {
+            for c in input[left] {
+                if input[1+left].contains(c) && input[2+left].contains(c){
+                    sum += Int(c.asciiValue!) - (c.isUppercase ? (64-26) : 96)
+                    break
                 }
             }
-
-            fatalError()
+            left += 3
         }
 
-        var sum = 0
-        for i in array {
-            sum += i
-        }
-        
         return sum
     }
 
     private func Tests() {
-        assert(PartOne() == 0, "PartOne KO")
-        assert(PartTwo() == 0, "PartTwo KO")
+        assert(PartOne() == 7691, "Part One KO")
+        assert(PartTwo() == 2508, "Part Two KO")
     }
     
 }
