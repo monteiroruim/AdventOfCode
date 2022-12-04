@@ -18,7 +18,7 @@ class TwentyTwoDay04 {
         
         print("puzzle answer (part 1): \(PartOne().0)")
         print("puzzle answer (part 2): \(PartOne().1)")
-        //Tests()
+        Tests()
     }
     
     private func PartOne() -> (Int,Int) {
@@ -26,9 +26,7 @@ class TwentyTwoDay04 {
         var sumFullRange = 0
         var sumOverlap = 0
         for i in self.input {
-            let r = i.components(separatedBy: "-").map{
-                Int($0)!
-            }
+            let r = i.components(separatedBy: "-").map{ Int($0)! }
             let range: ClosedRange<Int> = r[0]...r[1]
             let range2: ClosedRange<Int> = r[2]...r[3]
             

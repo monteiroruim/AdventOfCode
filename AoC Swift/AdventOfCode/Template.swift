@@ -27,8 +27,8 @@ class Template {
     }
 
     private func Tests() {
-        assert(PartOne() == 0, "PartOne KO")
-        assert(PartTwo() == 0, "PartTwo KO")
+        assert(PartOne() == 0, "Part 1 KO")
+        assert(PartTwo() == 0, "Part 2 KO")
     }
     
 }
