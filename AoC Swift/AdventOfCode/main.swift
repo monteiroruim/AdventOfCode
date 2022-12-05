@@ -10,22 +10,6 @@ import Foundation
 
 let startTime = CFAbsoluteTimeGetCurrent()
 
-// 2022
-//var twentyTwoDay01 = TwentyTwoDay01()
-<<<<<<< HEAD
-//var twentyTwoDay02 = TwentyTwoDay02()
-var twentyTwoDay03 = TwentyTwoDay03()
-||||||| 7e31807
-var twentyTwoDay02 = TwentyTwoDay02()
-=======
-//var twentyTwoDay02 = TwentyTwoDay02()
-
-var twentyTwoDay04 = TwentyTwoDay04()
->>>>>>> 7680016ecda80280d2f47fe98536c28039e9a479
-
-
-print("\nExec time: ", NSString(format: "%.5f", CFAbsoluteTimeGetCurrent() - startTime), "s")
-
 // 2015
 //var fifteenday01 = fiftteenDay01()
 //var fifteenday02 = fifteenDay02()
@@ -89,3 +73,10 @@ print("\nExec time: ", NSString(format: "%.5f", CFAbsoluteTimeGetCurrent() - sta
 //var twentyoneDay24 = TwentyOneDay24()
 //var twentyoneDay25 = TwentyOneDay25()
 
+// 2022
+//var twentyTwoDay01 = TwentyTwoDay01()
+//var twentyTwoDay02 = TwentyTwoDay02()
+//var twentyTwoDay03 = TwentyTwoDay03()
+//var twentyTwoDay04 = TwentyTwoDay04()
+
+print("\nExec time: ", NSString(format: "%.5f", CFAbsoluteTimeGetCurrent() - startTime), "s")

@@ -18,7 +18,7 @@ class FifteenDay08 {
     
     public init() {
         
-        self.file = "/Users/pereiro2/Developer/AdventOfCode/AoC Swift/AdventOfCode/2015/Input2015Day08.txt"
+        self.file = "/Users/pereiro2/Developer/AdventOfCode/AoC Swift/AdventOfCode/2015/Inputs/In2015D08.txt"
         do {
             let f = try String(contentsOfFile: file).trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
             self.lines = f.components(separatedBy: CharacterSet.newlines)
