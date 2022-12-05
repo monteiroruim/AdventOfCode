@@ -27,8 +27,16 @@ class Template {
     }
 
     private func Tests() {
+<<<<<<< HEAD
         assert(PartOne() == 0, "Part One KO")
         assert(PartTwo() == 0, "Part Two KO")
+||||||| 7e31807
+        assert(PartOne() == 0, "PartOne KO")
+        assert(PartTwo() == 0, "PartTwo KO")
+=======
+        assert(PartOne() == 0, "Part 1 KO")
+        assert(PartTwo() == 0, "Part 2 KO")
+>>>>>>> 7680016ecda80280d2f47fe98536c28039e9a479
     }
     
 }
