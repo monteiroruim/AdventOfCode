@@ -1,9 +1,25 @@
 import os
 import time
 from utils import utils
-from AoC2022 import d1, d2, d3, d4
+from AoC2022 import d1, d2, d3, d4, d5
 
+# day 5 
+print("Day 5: Supply Stacks")
+start_time = time.time()
+print("- testing")
+tst = d5.test().run()
 
+start_time = time.time()
+print("- calculation")
+inputHandler = utils.fileHandler()
+stack_state, instr_list = inputHandler.parse_inst_from_map(os.getcwd() 
+    + "/AoCPython/AoC2022/input/d5.txt")
+stacks = d5.d5(stack_state, instr_list)
+stacks.get_top_crates()
+print("part1 :", stacks.get_res_pt1())
+print("part2 :", stacks.get_res_pt2())
+print("--- %s seconds ---" % (time.time() - start_time))
+exit()
 
 # day 4
 print("Day 4: Camp Cleanup")

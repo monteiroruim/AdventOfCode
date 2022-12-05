@@ -46,3 +46,9 @@ class fileHandler:
         with open(path_file_name, 'r') as f:
             result_set = [int(n) for line in f for n in line.split(delimiter)]
         return result_set
+    
+
+    def parse_inst_from_map(self, path_file_name, separator='\n\n'):
+        with open(path_file_name, 'r') as f:
+            map_state, instruction_list = f.read().split(separator)
+        return map_state, instruction_list
