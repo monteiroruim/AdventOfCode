@@ -78,5 +78,6 @@ let startTime = CFAbsoluteTimeGetCurrent()
 //var twentyTwoDay02 = TwentyTwoDay02()
 //var twentyTwoDay03 = TwentyTwoDay03()
 //var twentyTwoDay04 = TwentyTwoDay04()
+var twentyTwoDay05 = TwentyTwoDay05()
 
 print("\nExec time: ", NSString(format: "%.5f", CFAbsoluteTimeGetCurrent() - startTime), "s")
