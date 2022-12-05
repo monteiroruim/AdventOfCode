@@ -16,8 +16,8 @@ class TwentyTwoDay05 {
     public init() {
         self.input = In2022D05().getInput().components(separatedBy: "\n\n")
         
-        print("puzzle answer (part 1): \(PartOne(""))")
-        print("puzzle answer (part 2): \(PartOne("9000"))")
+        print("puzzle answer (part 1): \(PartOne("9000"))")
+        print("puzzle answer (part 2): \(PartOne("9001"))")
         Tests()
     }
     
@@ -32,7 +32,7 @@ class TwentyTwoDay05 {
             let from = Int(op[3])!
             let to = Int(op[5])!
             
-            if crane == "9000" {
+            if crane == "9001" {
                 let values = stacks[from]!.suffix(amount)
                 stacks[from]!.removeLast(amount)
                 stacks[to]!.append(contentsOf: values)
