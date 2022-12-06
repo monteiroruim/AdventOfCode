@@ -14,24 +14,41 @@ class TwentyTwoDay06 {
     
     public init() {
         
-        self.input = In2022D06().getInputDebug().components(separatedBy: CharacterSet.newlines)
+        self.input = In2022D06().getInput().components(separatedBy: CharacterSet.newlines)
         
-        print("puzzle answer (part 1): \(PartOne())")
-        print("puzzle answer (part 2): \(PartTwo())")
-        //Tests()
+        print("puzzle answer (part 1): \(PartOne(4))")
+        print("puzzle answer (part 2): \(PartOne(14) )")
+        Tests()
     }
     
-    private func PartOne() -> Int {
-        return 0
+    private func isUnique(_ subString: Substring) -> Bool {
+        let s = subString.sorted()
+        for i in 1..<s.count {
+            if (s[i-1] == s[i]) {
+                return true
+            }
+        }
+        return false
     }
     
-    private func PartTwo() -> Int {
-        return 0
+    private func PartOne(_ windowSize: Int) -> Int {
+        var sum = 0
+        for i in self.input {
+            let sequences = i.windows(ofCount: windowSize)
+            for j in sequences {
+                if !isUnique(j) {
+                    break
+                }
+                sum += 1
+            }
+            sum += windowSize
+        }
+        return sum
     }
 
     private func Tests() {
-        assert(PartOne() == 0, "Part 1 KO")
-        assert(PartTwo() == 0, "Part 2 KO")
+        assert(PartOne(4) == 1848, "Part 1 KO")
+        assert(PartOne(14) == 2308, "Part 2 KO")
     }
     
 }
