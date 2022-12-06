@@ -21,29 +21,23 @@ class TwentyTwoDay06 {
         Tests()
     }
     
-    private func isUnique(_ subString: Substring) -> Bool {
-        let s = subString.sorted()
-        for i in 1..<s.count {
-            if (s[i-1] == s[i]) {
-                return true
-            }
-        }
-        return false
+    private func isUniqueSet(_ subString: Substring, _ windowSize: Int) -> Bool {
+        return Set(subString).count == windowSize ? true : false
     }
     
     private func PartOne(_ windowSize: Int) -> Int {
+        
         var sum = 0
         for i in self.input {
             let sequences = i.windows(ofCount: windowSize)
             for j in sequences {
-                if !isUnique(j) {
+                if isUniqueSet(j, windowSize) {
                     break
                 }
                 sum += 1
             }
-            sum += windowSize
         }
-        return sum
+        return sum + windowSize
     }
 
     private func Tests() {
