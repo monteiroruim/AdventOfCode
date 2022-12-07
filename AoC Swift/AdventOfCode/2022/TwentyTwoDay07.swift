@@ -1,5 +1,5 @@
 //
-//  TwentyTwoD07.swift
+//  TwentyTwoD06.swift
 //  AdventOfCode
 //
 //  Created by Orlando Pereira on 05.12.22.
@@ -36,7 +36,7 @@ class TwentyTwoDay07 {
     
     public init() {
         
-        self.input = In2022D07().getInputDebug().components(separatedBy: CharacterSet.newlines)
+        self.input = In2022D07().getInput().components(separatedBy: CharacterSet.newlines)
         
         print("puzzle answer (part 1): \(PartOne())")
         print("puzzle answer (part 2): \(PartTwo() )")
@@ -47,7 +47,7 @@ class TwentyTwoDay07 {
         
         parseInput()
             .sizes()
-            .filter { $0 <= 100000 }
+            .filter { $0 <= 100_000 }
             .reduce(0, +)
     }
     
@@ -55,7 +55,7 @@ class TwentyTwoDay07 {
 
         let root = parseInput()
         let totalSize = root.size()
-        let maxSize = 40000000
+        let maxSize = 40_000_000
         let toDelete = totalSize - maxSize
         
         return root
