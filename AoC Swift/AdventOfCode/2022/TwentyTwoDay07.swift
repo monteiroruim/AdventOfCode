@@ -9,28 +9,112 @@
 import Foundation
 
 class TwentyTwoDay07 {
-    
+
     private var input: [String]
+    
+    final class Node {
+        weak var parent: Node? = nil
+        var name: String
+        var children: [Node] = []
+        var files: [String: Int] = [:]
+        
+        init(name: String, children: [Node] = [], files: [String: Int] = [:]) {
+            self.name = name
+            self.children = children
+            self.files = files
+        }
+        
+        func size() -> Int {
+            files.values.reduce(0, +)
+                + children.map { $0.size() }.reduce(0, +)
+        }
+        
+        func sizes() -> [Int] {
+            [size()] + children.flatMap { $0.sizes() }
+        }
+    }
+    
     
     public init() {
         
-        self.input = In2022D07().getInput().components(separatedBy: CharacterSet.newlines)
+        self.input = In2022D07().getInputDebug().components(separatedBy: CharacterSet.newlines)
         
         print("puzzle answer (part 1): \(PartOne())")
-        print("puzzle answer (part 2): \(PartOne() )")
-        //Tests()
+        print("puzzle answer (part 2): \(PartTwo() )")
+        Tests()
     }
     
     private func PartOne() -> Int {
-        
-        var sum = 0
-        
-        return sum
+                
+        return parseInput()
+            .sizes()
+            .lazy
+            .filter { $0 <= 100000 }
+            .reduce(0, +)
     }
+    
+    private func PartTwo() -> Int {
 
+        let root = parseInput()
+        let totalSize = root.size()
+        let maxSize = 40000000
+        let toDelete = totalSize - maxSize
+        
+        return root
+            .sizes()
+            .filter { $0 >= toDelete }
+            .min()!
+    }
+    
+    func parseInput() -> Node {
+        let root = Node(name: "/")
+        var current = root
+        
+        
+        for i in self.input {
+            let op = i.components(separatedBy: " ")
+            if i.hasPrefix("$") {
+                let command = op[1] // cd,ls
+                switch command {
+                case "cd":
+                    let directory = op[2]
+                    switch directory {
+                    case "/": break
+                    case "..":
+                        current = current.parent!
+                    default:
+                        if let existing = current.children.first(where: { $0.name == directory }) {
+                            current = existing
+                        } else {
+                            let newDirectory = Node(name: String(directory))
+                            current.children.append(newDirectory)
+                            newDirectory.parent = current
+                            current = newDirectory
+                        }
+                    }
+                default: continue
+                }
+            } else {
+                let isCommand = op[0] // dir
+                if isCommand.starts(with: "dir") {
+                    let newDirectory = Node(name: String(op[1]))
+                    current.children.append(newDirectory)
+                    newDirectory.parent = current
+                } else {
+                    let size = Int(op[0])!
+                    let name = String(op[1])
+                    current.files[name] = size
+                }
+            }
+            
+        }
+        
+        return root
+    }
+    
     private func Tests() {
-        assert(PartOne() == 1848, "Part 1 KO")
-        assert(PartOne() == 2308, "Part 2 KO")
+        assert(PartOne() == 1792222, "Part 1 KO")
+        assert(PartTwo() == 1112963, "Part 2 KO")
     }
     
 }
