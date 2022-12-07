@@ -1,5 +1,5 @@
 //
-//  file.swift
+//  In2022D03.swift
 //  AdventOfCode
 //
 //  Created by Orlando Pereira on 03.12.22.
