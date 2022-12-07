@@ -1,8 +1,25 @@
 import os
 import time
 from utils import utils
-from AoC2022 import d1, d2, d3, d4, d5, d6
+from AoC2022 import d1, d2, d3, d4, d5, d6, d7
 
+# day 7 
+print("Day 7: No Space Left On Device")
+start_time = time.time()
+print("- testing")
+tst = d7.test().run()
+
+start_time = time.time()
+print("- calculation")
+inputHandler = utils.fileHandler()
+input_set = inputHandler.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2022/input/d7.txt")
+signal = d7.d7(input_set)
+signal.get_directories_size()
+print("part1 :", signal.get_res_pt1())
+print("part2 :", signal.get_res_pt2())
+print("--- %s seconds ---" % (time.time() - start_time))
+exit()
 
 # day 6 
 print("Day 6: Tuning Trouble")

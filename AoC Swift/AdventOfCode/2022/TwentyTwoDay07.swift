@@ -1,5 +1,5 @@
 //
-//  TwentyTwoD06.swift
+//  TwentyTwoD07.swift
 //  AdventOfCode
 //
 //  Created by Orlando Pereira on 05.12.22.
@@ -25,15 +25,14 @@ class TwentyTwoDay07 {
         }
         
         func size() -> Int {
-            files.values.reduce(0, +)
-                + children.map { $0.size() }.reduce(0, +)
+            //print(self.name, self.files.description, children.count, children.compactMap{ $0.name })
+            return files.values.reduce(0, +) + children.map { $0.size() }.reduce(0, +)
         }
         
         func sizes() -> [Int] {
-            [size()] + children.flatMap { $0.sizes() }
+            return [size()] + children.flatMap { $0.sizes() }
         }
     }
-    
     
     public init() {
         
@@ -45,10 +44,9 @@ class TwentyTwoDay07 {
     }
     
     private func PartOne() -> Int {
-                
-        return parseInput()
+        
+        parseInput()
             .sizes()
-            .lazy
             .filter { $0 <= 100000 }
             .reduce(0, +)
     }
@@ -70,7 +68,6 @@ class TwentyTwoDay07 {
         let root = Node(name: "/")
         var current = root
         
-        
         for i in self.input {
             let op = i.components(separatedBy: " ")
             if i.hasPrefix("$") {
@@ -79,7 +76,7 @@ class TwentyTwoDay07 {
                 case "cd":
                     let directory = op[2]
                     switch directory {
-                    case "/": break
+                    case "/": current = root
                     case "..":
                         current = current.parent!
                     default:
