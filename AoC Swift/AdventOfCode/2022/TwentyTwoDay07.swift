@@ -24,13 +24,15 @@ class TwentyTwoDay07 {
             self.files = files
         }
         
-        func size() -> Int {
-            //print(self.name, self.files.description, children.count, children.compactMap{ $0.name })
-            return files.values.reduce(0, +) + children.map { $0.size() }.reduce(0, +)
+        func sizeOfNode() -> Int {
+//            print("/", name, files.description, "dir:", children.compactMap{ $0.name }, children.map { $0.sizeOfNode() })
+            return files.values.reduce(0, +) + children.map { $0.sizeOfNode() }.reduce(0, +)
         }
         
         func sizes() -> [Int] {
-            return [size()] + children.flatMap { $0.sizes() }
+            let sizesArray = [sizeOfNode()] + children.flatMap { $0.sizes() }
+            //print(self.name, sizesArray)
+            return sizesArray
         }
     }
     
@@ -54,7 +56,7 @@ class TwentyTwoDay07 {
     private func PartTwo() -> Int {
 
         let root = parseInput()
-        let totalSize = root.size()
+        let totalSize = root.sizeOfNode()
         let maxSize = 40_000_000
         let toDelete = totalSize - maxSize
         
