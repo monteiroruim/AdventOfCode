@@ -1,7 +1,25 @@
 import os
 import time
 from utils import utils
-from AoC2022 import d1, d2, d3, d4, d5, d6, d7
+from AoC2022 import d1, d2, d3, d4, d5, d6, d7, d8
+
+# day 7 
+print("Day 8: Treetop Tree House")
+start_time = time.time()
+print("- testing")
+tst = d8.test().run()
+
+start_time = time.time()
+print("- calculation")
+inputHandler = utils.fileHandler()
+input_set = inputHandler.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2022/input/d8.txt")
+signal = d8.d8(input_set)
+signal.scan_trees()
+print("part1 :", signal.get_res_pt1())
+print("part2 :", signal.get_res_pt2())
+print("--- %s seconds ---" % (time.time() - start_time))
+exit()
 
 # day 7 
 print("Day 7: No Space Left On Device")
