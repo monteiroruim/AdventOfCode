@@ -94,12 +94,8 @@ class TwentyTwoDay07 {
                 default: continue
                 }
             } else {
-                let isCommand = op[0] // dir
-                if isCommand.starts(with: "dir") {
-                    let newDirectory = Node(name: String(op[1]))
-                    current.children.append(newDirectory)
-                    newDirectory.parent = current
-                } else {
+                let isCommand = op[0]
+                if !isCommand.starts(with: "dir") {
                     let size = Int(op[0])!
                     let name = String(op[1])
                     current.files[name] = size
