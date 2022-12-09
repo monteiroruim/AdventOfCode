@@ -6,20 +6,20 @@ from AoC2022 import d1, d2, d3, d4, d5, d6, d7, d8, \
 
 
 # day 9
-print("Day 9: ")
+print("Day 9: Rope Bridge")
 start_time = time.time()
 print("- testing")
 tst = d9.test().run()
-exit()
+
 start_time = time.time()
 print("- calculation")
 inputHandler = utils.fileHandler()
 input_set = inputHandler.parse_line_2_list(os.getcwd() 
     + "/AoCPython/AoC2022/input/d9.txt")
-signal = d9.d9(input_set)
-signal.scan_trees()
-print("part1 :", signal.get_res_pt1())
-print("part2 :", signal.get_res_pt2())
+bridge = d9.d9(input_set)
+bridge.run()
+print("part1 :", bridge.get_res_pt1())
+print("part2 :", bridge.get_res_pt2())
 print("--- %s seconds ---" % (time.time() - start_time))
 exit()
 
