@@ -22,6 +22,11 @@ class TwentyTwoDay09 {
     }
     
     private func PartOne() -> Int {
+        
+        var matSize = 10
+        var visited = Array(repeating: Array(repeating: 0, count: matSize), count: matSize)
+        
+        
         return 0
     }
     
