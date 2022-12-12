@@ -2,8 +2,24 @@ import os
 import time
 from utils import utils
 from AoC2022 import d1, d2, d3, d4, d5, d6, d7, d8, \
-                d9
+                d9, d10
 
+# day 9
+print("Day 10: Cathode-Ray Tube")
+start_time = time.time()
+tst = d10.test().run()
+
+start_time = time.time()
+print("- calculation")
+inputHandler = utils.fileHandler()
+input_set = inputHandler.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2022/input/d10.txt")
+rayTube = d10.d10(input_set)
+rayTube.run()
+print("part1 :", rayTube.get_res_pt1())
+print(rayTube.get_res_pt2())
+print("--- %s seconds ---" % (time.time() - start_time))
+exit()
 
 # day 9
 print("Day 9: Rope Bridge")
