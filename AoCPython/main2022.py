@@ -2,9 +2,29 @@ import os
 import time
 from utils import utils
 from AoC2022 import d1, d2, d3, d4, d5, d6, d7, d8, \
-                d9, d10
+                d9, d10, d11
 
-# day 9
+
+# day 11
+print("Day 11: Monkey in the Middle")
+start_time = time.time()
+print("- testing")
+tst = d11.test().run()
+
+start_time = time.time()
+print("- calculation")
+inputHandler = utils.fileHandler()
+input_set = inputHandler.parse_on_line_break(os.getcwd() 
+    + "/AoCPython/AoC2022/input/d11.txt")
+
+monkey_business = d11.d11(input_set)
+monkey_business.run()
+print("part1 :", monkey_business.get_res_pt1())
+print("part2 :", monkey_business.get_res_pt2())
+print("--- %s seconds ---" % (time.time() - start_time))
+exit()
+
+# day 10
 print("Day 10: Cathode-Ray Tube")
 start_time = time.time()
 tst = d10.test().run()
