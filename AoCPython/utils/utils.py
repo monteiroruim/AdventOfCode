@@ -52,3 +52,6 @@ class fileHandler:
         with open(path_file_name, 'r') as f:
             map_state, instruction_list = f.read().split(separator)
         return map_state, instruction_list
+
+    def parse_on_line_break(self, path_file_name, separator='\n\n'):
+        return open(path_file_name).read().strip().split(separator)
