@@ -36,7 +36,7 @@ class TwentyTwoDay12 {
         
         print("puzzle answer (part 1): \(PartOne())")
         print("puzzle answer (part 2): \(PartTwo())")
-        //        Tests()
+        Tests()
     }
     
     
@@ -115,7 +115,7 @@ class TwentyTwoDay12 {
     
     private func Tests() {
         assert(PartOne() == 517, "Part 1 KO")
-        assert(PartTwo() == 0, "Part 2 KO")
+        assert(PartTwo() == 512, "Part 2 KO")
     }
     
 }
