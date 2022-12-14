@@ -2,9 +2,30 @@ import os
 import time
 from utils import utils
 from AoC2022 import d1, d2, d3, d4, d5, d6, d7, d8, \
-                d9, d10, d11, d12
+                d9, d10, d11, d12, d13
 
-# day 11
+
+
+# day 13
+print("Day 13: Distress Signal")
+start_time = time.time()
+print("- testing")
+tst = d13.test().run()
+
+start_time = time.time()
+print("- calculation")
+inputHandler = utils.fileHandler()
+input_set = inputHandler.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2022/input/d13.txt")
+
+handheld = d13.d13(input_set)
+handheld.run()
+print("part1 :", handheld.get_res_pt1())
+print("part2 :", handheld.get_res_pt2())
+print("--- %s seconds ---" % (time.time() - start_time))
+exit()
+
+# day 12
 print("Day 12: Hill Climbing Algorithm")
 start_time = time.time()
 print("- testing")
