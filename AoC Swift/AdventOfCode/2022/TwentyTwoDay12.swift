@@ -104,6 +104,10 @@ class TwentyTwoDay12 {
                     // not visited, no more than 1 difference
                     if visited == 0, ((valueOfCell - currentValue) ) <= 1 {
                         visitedGrid[newDirection[0]][newDirection[1]] = 1
+                        
+//                        for i in queue {
+//                            print("from:", path.points, currentValue, UnicodeScalar(currentValue)!, "neighbour:", newDirection, valueOfCell, UnicodeScalar(valueOfCell)!, "steps:",  i.steps)
+//                        }
                         queue.append(Paths(points: newDirection, steps: path.steps + 1))
                     }
                 }
