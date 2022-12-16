@@ -2,10 +2,26 @@ import os
 import time
 from utils import utils
 from AoC2022 import d1, d2, d3, d4, d5, d6, d7, d8, \
-                d9, d10, d11, d12, d13
+                d9, d10, d11, d12, d13, d14
 
 
+# day 14
+print("Day 14: Regolith Reservoir")
+start_time = time.time()
+print("- testing")
+tst = d14.test().run()
 
+start_time = time.time()
+print("- calculation")
+inputHandler = utils.fileHandler()
+input_set = inputHandler.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2022/input/d14.txt")
+scaner = d14.d14(input_set)
+scaner.run()
+print("part1 :", scaner.get_res_pt1())
+print("part2 :", scaner.get_res_pt2())
+print("--- %s seconds ---" % (time.time() - start_time))
+exit()
 # day 13
 print("Day 13: Distress Signal")
 start_time = time.time()
