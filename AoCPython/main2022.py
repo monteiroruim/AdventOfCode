@@ -2,8 +2,26 @@ import os
 import time
 from utils import utils
 from AoC2022 import d1, d2, d3, d4, d5, d6, d7, d8, \
-                d9, d10, d11, d12, d13, d14
+                d9, d10, d11, d12, d13, d14, d15
 
+
+# day 15
+print("Day 15: Beacon Exclusion Zone")
+start_time = time.time()
+print("- testing")
+tst = d15.test().run()
+exit()
+start_time = time.time()
+print("- calculation")
+inputHandler = utils.fileHandler()
+input_set = inputHandler.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2022/input/d15.txt")
+sensors = d15.d15(input_set)
+sensors.run(2000000,4000000)
+print("part1 :", sensors.get_res_pt1())
+print("part2 :", sensors.get_res_pt2())
+print("--- %s seconds ---" % (time.time() - start_time))
+exit()
 
 # day 14
 print("Day 14: Regolith Reservoir")
