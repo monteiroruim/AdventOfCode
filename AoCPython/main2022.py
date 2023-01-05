@@ -3,7 +3,26 @@ import time
 from utils import utils
 from AoC2022 import d1, d2, d3, d4, d5, d6, d7, d8, \
                 d9, d10, d11, d12, d13, d14, d15, d16, \
-                d17
+                d17, d18
+
+
+# day 17
+print("Day 18: Boiling Boulders")
+start_time = time.time()
+print("- testing")
+tst = d18.test().run()
+
+start_time = time.time()
+print("- calculation")
+inputHandler = utils.fileHandler()
+input_set = inputHandler.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2022/input/d18.txt")
+device = d18.d18(input_set)
+device.run()
+print("part1 :", device.get_res_pt1())
+print("part2 :", device.get_res_pt2())
+print("--- %s seconds ---" % (time.time() - start_time))
+exit()
 
 # day 17
 print("Day 17: Pyroclastic Flow")
