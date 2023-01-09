@@ -1,13 +1,13 @@
 from itertools import cycle
 class d17:
     def __init__(self, input):
-        self.init_val = input # jetpack
+        self.init_val = input
 
         self.result1 = 0
         self.result2 = 0
 
         self.rock_stack = {}
-        self.cave_width = 7 # LENGTH
+        self.cave_width = 7 
         self.rocks  = [
             ((0, 0), (1, 0), (2, 0), (3, 0)),
             ((1, 0), (1, -1), (0, -1), (1, -2), (2, -1)),
@@ -35,13 +35,12 @@ class d17:
     
 
     def get_rock_tower_height(self, n_rocks):
-        jet_moves = cycle(enumerate(self.init_val)) # jets
-        rock_sequence = cycle(enumerate(self.rocks)) # blocks
-        stack = set((w,0) for w in range(self.cave_width)) # grid
+        jet_moves = cycle(enumerate(self.init_val))
+        rock_sequence = cycle(enumerate(self.rocks)) 
+        stack = set((w,0) for w in range(self.cave_width))
         heigth, idx = 0, 0
         done = False
         while idx <n_rocks:
-            # print(heigth)
             if idx%1000000 == 0:
                 print(idx)
             if idx == 2022:
