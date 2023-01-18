@@ -28,7 +28,6 @@ class d19:
         dataset = dict()
         for bp in self.init_val:
             k, v = bp.split(':')
-            # print('1 ', k)
             k = [int(w) for w in k.split() if w.isdigit()][0]
             ore_robot, clay_robot, obsidian_robot,geode_robot = v.split('. ')
             ore_robot = [int(w) for w in ore_robot.split() if w.isdigit()][0]
@@ -53,26 +52,19 @@ class d19:
             tmp = []
             for q,p in cnt:
                 for u,r in bp:
-                    # print(q, u)
                     q_units = [q-c for q, c in zip(q,u)]
                     # print("number of items available", q_units)
                     if all(item>=0 for item in q_units):
                         prod_robot = [sum(v) for v in zip(p,r)]
                         # print("robots production ",prod_robot)
                         tmp.append([[sum(v) for v in zip(q_units,p)], prod_robot])
-            # print(len(tmp))
             tmp.sort(key = lambda x: tuple((b, a) for a, b in zip(*map(reversed, x))), reverse = True)
             cnt = tmp[:5000]
-        # print(cnt)
-        print("Max egeod", max(robot[3] for robot, _ in cnt))
         return max(robot[3] for robot, _ in cnt)
 
     def run(self):
-        # print(self.blueprints)
-        print("parte 1" )
         for k,v in self.blueprints.items():
             self.result1 += (k * self.get_quality_level(v,24))
-        print("parte 2")
         for i,v in enumerate(self.blueprints.items()):
             if i >2:
                 break

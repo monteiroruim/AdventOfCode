@@ -3,8 +3,26 @@ import time
 from utils import utils
 from AoC2022 import d1, d2, d3, d4, d5, d6, d7, d8, \
                 d9, d10, d11, d12, d13, d14, d15, d16, \
-                d17, d18, d19, d20
+                d17, d18, d19, d20, d21
 
+
+# day 21
+print("Day 21: Monkey Math")
+start_time = time.time()
+print("- testing")
+tst = d21.test().run()
+
+start_time = time.time()
+print("- calculation")
+inputHandler = utils.fileHandler()
+input_set = inputHandler.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2022/input/d21.txt")
+device = d21.d21(input_set)
+device.run()
+print("part1 :", device.get_res_pt1())
+print("part2 :", device.get_res_pt2())
+print("--- %s seconds ---" % (time.time() - start_time))
+exit()
 
 # day 20
 print("Day 20: Grove Positioning System")
