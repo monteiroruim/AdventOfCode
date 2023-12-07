@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Collections
+//import Collections
 
 class TwentyTwoDay05 {
     
