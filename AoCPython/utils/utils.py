@@ -55,3 +55,8 @@ class fileHandler:
 
     def parse_on_line_break(self, path_file_name, separator='\n\n'):
         return open(path_file_name).read().strip().split(separator)
+
+    def split_line_to_list(self, path_file_name, separator=','):
+        with open(path_file_name, 'r') as f:
+            result_set = [n.strip() for line in f for n in line.split(separator)]
+        return result_set 
