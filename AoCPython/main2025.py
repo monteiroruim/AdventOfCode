@@ -3,15 +3,15 @@ import time
 from utils import utils
 from AoC2025 import d1, d2, d3, d4
 
-# day 3
+# day 4
 print("Day 4: Printing Department")
 start_time = time.time()
 print("- testing")
-tst = d3.test().run()
+tst = d4.test().run()
 start_time = time.time()
 print("- calculation")
 inputHandler = utils.fileHandler()
-input_set = inputHandler.split_line_to_list(os.getcwd() 
+input_set = inputHandler.parse_line_2_list(os.getcwd() 
     + "/AoCPython/AoC2025/input/d4.txt")
 solution = d4.d4(input_set)
 solution.resolve()
