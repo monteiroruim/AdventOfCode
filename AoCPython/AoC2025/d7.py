@@ -1,5 +1,6 @@
 from collections import deque
 import re
+from functools import cache
 class d7:
     def __init__(self, input):
         self.get_data(input)
@@ -57,10 +58,18 @@ class d7:
         # tachyon beams always move downward
         #if a tachyon beam encounters a splitter (^), the beam is stopped
 
-    def solve_part_2(self)-> int:
-        res = 0
-        
-        return res
+    @cache
+    def solve_part_2(self, row, col)-> int:
+        # it isn't a classical tachyon manifold - it's a quantum tachyon manifold
+        # only a single tachyon particle is sent
+        # it's actually time itself which splits. In one timeline, the particle went left, and in the other timeline, the particle went right.
+        if row+1 == self.len_r:
+            return 1
+        if self.data[row+1][col] == self.splitter:
+            return self.solve_part_2(row+1, col-1) + self.solve_part_2(row+1, col+1)
+        else:
+            return self.solve_part_2(row + 1, col)
+
 
     def resolve(self) -> None:
         # To repair the teleporter, 
@@ -68,7 +77,9 @@ class d7:
         # tachyon beam enters the manifold at the location marked S
         beams_queue = deque([(0, self.data[0].find(self.manifold_location))])
         self.solve_part_1(beams_queue)
-        self.result2 = self.solve_part_2()
+        # you really need to know is the number of timelines active after 
+        # a single particle completes all of its possible journeys through the manifold
+        self.result2 = self.solve_part_2(0, self.data[0].find(self.manifold_location))
         
         
 import unittest
@@ -95,6 +106,6 @@ class test(unittest.TestCase):
         init = d7(test_set)
         init.resolve()
         self.assertEqual(init.test_pt1(), 21) # 21 
-        self.assertEqual(init.test_pt2(), 0)
+        self.assertEqual(init.test_pt2(), 40)
     
 
