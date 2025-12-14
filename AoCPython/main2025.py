@@ -1,7 +1,26 @@
 import os
 import time
 from utils import utils
-from AoC2025 import d1, d2, d3, d4, d5, d6 
+from AoC2025 import d1, d2, d3, d4, d5, d6, \
+                    d7
+
+
+# day 7
+print("Day 7: Laboratories")
+start_time = time.time()
+print("- testing")
+tst = d7.test().run()
+start_time = time.time()
+print("- calculation")
+inputHandler = utils.fileHandler()
+input_set = inputHandler.parse_line_2_list(os.getcwd() 
+    + "/AoCPython/AoC2025/input/d7.txt")
+solution = d7.d7(input_set)
+solution.resolve()
+print("part1 :", solution.get_res_pt1()) # 
+print("part2 :", solution.get_res_pt2()) #  
+print("--- %s seconds ---" % (time.time() - start_time))
+exit()
 
 # day 6
 print("Day 6: Trash Compactor")
